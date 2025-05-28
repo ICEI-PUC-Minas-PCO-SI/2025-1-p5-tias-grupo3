@@ -1,0 +1,55 @@
+﻿@model BlackBelt.Models.Usuario
+<h3>Editar Usuário</h3>
+<form asp-action="EditarUsuario" asp-controller="Usuarios" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome" value="@Model.Nome.ToString()">
+        <label for="Nome">Nome</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Cpf" value="@Model.Cpf.ToString()">
+        <label for="Cpf">CPF</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" asp-for="Email" value="@Model.Email.ToString()">
+        <label for="Email">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Telefone" value="@Model.Telefone.ToString()">
+        <label for="Telefone">Telefone</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" asp-for="Dt_Nascimento" value="@Model.Dt_Nascimento.ToString()">
+        <label for="Dt_Nascimento">Data de nascimento</label>
+    </div>
+    <div class="form-floating">
+        <select class="form-select" asp-for="Tipo_Usuario">
+            @switch (Model.Tipo_Usuario)
+            {
+                case 1:
+                    <option value="1" selected>Administrador</option>
+                    break;
+                case 2:
+                    <option value="2" selected>Auxiliar</option>
+                    break;
+                case 3:
+                    <option value="3" selected>Instrutor</option>
+                    break;
+            }
+            <option value="1">Administrador</option>
+            <option value="2">Auxiliar</option>
+            <option value="3">Instrutor</option>
+        </select>
+        <label for="floatingSelect">Tipo de Usuário</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" asp-for="Senha" value="@Model.Senha.ToString()">
+        <label for="Senha">Senha</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
+
+
