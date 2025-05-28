@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj": {}
+    "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj": {
+    "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
+        "projectUniqueName": "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
         "projectName": "BlackBelt",
-        "projectPath": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
+        "projectPath": "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
         "packagesPath": "C:\\Users\\vinicius.andrade\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\obj\\",
+        "outputPath": "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinicius.andrade\\AppData\\Roaming\\NuGet\\NuGet.Config",

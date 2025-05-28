@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I3JOdZLBcGv03Ech8ZVZVLd4/t+YLzm2rcVXwWiMIYhcjhrybC5+bXOq/sg+cHWPDJNYfoh8pGbAKBGF4093eQ==",
+  "dgSpecHash": "UYr8GDDgq/Sy2kaX5L1Sskq4uGK1hOvIMaI33pB2Mb+c8TMZqOyhKxRKteZjSmsqeV/lcMNJhNyIi/5V0/4TNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
+  "projectFilePath": "C:\\Users\\vinicius.andrade\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinicius.andrade\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vinicius.andrade\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlackBelt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9e0f44c3cfe9082babd15b275e83cc3c5ca96d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4585d5fe4dedce0d605987b74b9ff9952ae26523")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlackBelt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlackBelt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

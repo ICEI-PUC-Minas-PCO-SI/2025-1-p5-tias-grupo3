@@ -1,4 +1,5 @@
 using BlackBelt.Context;
+using BlackBelt.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlackBelt
@@ -22,6 +23,8 @@ namespace BlackBelt
                 });
             
             builder.Services.AddAuthorization();
+
+            builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
 
             var app = builder.Build();
 

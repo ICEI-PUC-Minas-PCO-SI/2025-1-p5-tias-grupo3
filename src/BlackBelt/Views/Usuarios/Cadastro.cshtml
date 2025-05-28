@@ -3,7 +3,8 @@
     Layout = "_Layout";
 }
 @model BlackBelt.Models.Usuario
-<form asp-action="CadastrarUsuario" asp-controller="Usuario" method="post">
+<h3>Cadastrar Usuário</h3>
+<form asp-action="CadastrarUsuario" asp-controller="Usuarios" method="post">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome">
         <label for="Nome">Nome</label>
@@ -32,6 +33,10 @@
             <option value="3">Instrutor</option>
         </select>
         <label for="floatingSelect">Tipo de Usuário</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" asp-for="Senha">
+        <label for="Senha">Senha</label>
     </div>
     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
 
