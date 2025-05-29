@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YyeqhS1ludA=",
+  "dgSpecHash": "oz3czFYHuKs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vinic\\source\\repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\BlackBelt.csproj",
+  "projectFilePath": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\src\\BlackBelt\\BlackBelt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinic\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vinic\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -1,4 +1,5 @@
 using BlackBelt.Context;
+using BlackBelt.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlackBelt
@@ -23,6 +24,8 @@ namespace BlackBelt
             
             builder.Services.AddAuthorization();
 
+            builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -42,7 +45,7 @@ namespace BlackBelt
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Login}/{action=Index}");
+                pattern: "{controller=Login}/{action=Index}/{id?}");
 
             app.Run();
         }

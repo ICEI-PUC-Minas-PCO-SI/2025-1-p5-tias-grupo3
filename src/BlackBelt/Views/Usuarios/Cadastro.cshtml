@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Cadastrar Usuário";
+}
+@model BlackBelt.Models.Usuario
+<h3>Cadastrar Usuário</h3>
+<form asp-action="CadastrarUsuario" asp-controller="Usuarios" method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Cpf">
+        <label for="Cpf">CPF</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" asp-for="Email">
+        <label for="Email">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Telefone">
+        <label for="Telefone">Telefone</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" asp-for="Dt_Nascimento">
+        <label for="Dt_Nascimento">Data de nascimento</label>
+    </div>
+    <div class="form-floating">
+        <select class="form-select" asp-for="Tipo_Usuario">
+            <option selected>Selecione o tipo</option>
+            <option value="1">Administrador</option>
+            <option value="2">Auxiliar</option>
+            <option value="3">Instrutor</option>
+        </select>
+        <label for="floatingSelect">Tipo de Usuário</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" asp-for="Senha">
+        <label for="Senha">Senha</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
+
+@{
+}
