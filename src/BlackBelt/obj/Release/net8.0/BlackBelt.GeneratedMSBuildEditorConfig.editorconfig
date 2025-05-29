@@ -17,13 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlackBelt
 build_property.RootNamespace = BlackBelt
-build_property.ProjectDir = C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\
+build_property.ProjectDir = C:\Users\vinicius.andrade\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt
+build_property.MSBuildProjectDirectory = C:\Users\vinicius.andrade\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/vinicius.andrade/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Home/Index.cshtml]
