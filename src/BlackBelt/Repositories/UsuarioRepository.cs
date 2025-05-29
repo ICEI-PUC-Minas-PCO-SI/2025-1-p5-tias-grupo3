@@ -49,7 +49,6 @@ namespace BlackBelt.Repositories
 
         public void EditarUsuario(Usuario usuario)
         {
-            //no momento ele está realizando a edição mas está jogando a data de nascimento para 01/01/0001
             _context.Usuarios.Update(usuario);
             _context.SaveChanges();
         }

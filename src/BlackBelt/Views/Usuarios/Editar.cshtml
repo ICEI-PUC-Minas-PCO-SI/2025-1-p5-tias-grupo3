@@ -19,7 +19,7 @@
         <label for="Telefone">Telefone</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="date" class="form-control" asp-for="Dt_Nascimento" value="@Model.Dt_Nascimento.ToString()">
+        <input type="date" class="form-control" asp-for="Dt_Nascimento" value="@Model.Dt_Nascimento.ToString("yyyy-MM-dd")">
         <label for="Dt_Nascimento">Data de nascimento</label>
     </div>
     <div class="form-floating">
