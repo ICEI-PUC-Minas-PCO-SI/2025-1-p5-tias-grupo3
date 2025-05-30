@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Cadastrar Turma";
+}
+@model BlackBelt.Models.Turma
+<h3>Cadastrar Turma</h3>
+<form asp-action="CadastrarTurma" asp-controller="Turmas" method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome</label>
+    </div>
+    <div class="form-floating">
+        <select class="form-select" asp-for="Id_Instrutor">
+            <option selected>Selecione o instrutor</option>
+            @if(ViewData["Instrutores"] != null)
+                    { //Estou aqui tentando descobrir como registrar a informação da FK do instrutor
+                        var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
+                        foreach (var instrutor in instrutores)
+                        {
+                            <option value="@instrutor.Id_Instrutor">@instrutor.Nome.ToString()</option>
+                        }
+                    }
+        </select>
+        <label for="floatingSelect">Instrutor</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="time" class="form-control" asp-for="Horario">
+        <label for="Horario">Horario</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+
+@{
+}

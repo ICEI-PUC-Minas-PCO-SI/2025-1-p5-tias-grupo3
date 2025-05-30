@@ -11,6 +11,14 @@ namespace BlackBelt.Repositories
         {
             _context = context;
         }
+
+        public IEnumerable<Usuario> BuscarInstrutores()
+        {
+            return _context.Usuarios
+                .Where(u => u.Tipo_Usuario == 3)
+                .ToList();
+        }
+
         public IEnumerable<Usuario> BuscarTodosUsuarios()
         {
             return _context.Usuarios

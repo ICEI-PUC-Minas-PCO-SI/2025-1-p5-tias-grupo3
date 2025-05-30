@@ -25,6 +25,7 @@ namespace BlackBelt
             builder.Services.AddAuthorization();
 
             builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+            builder.Services.AddScoped<ITurmaRepository, TurmaRepository>();
 
             var app = builder.Build();
 

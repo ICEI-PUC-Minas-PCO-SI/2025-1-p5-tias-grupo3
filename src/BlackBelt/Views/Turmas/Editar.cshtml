@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Editar Turma";
+}
+@model BlackBelt.Models.Turma
+<h3>Editar Turma</h3>
+<form asp-action="EditarTurma" asp-controller="Turmas" method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome</label>
+    </div>
+    <div class="form-floating">
+        <select class="form-select" asp-for="Instrutor">
+            <option selected>Selecione o instrutor</option>
+            <option value="1">Instrutor 1</option>
+            <option value="2">Instrutor 2</option>
+            <option value="3">Instrutor 3</option>
+        </select>
+        <label for="floatingSelect">Instrutor</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="time" class="form-control" asp-for="Horario">
+        <label for="Horario">Horario</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+
+@{
+}
