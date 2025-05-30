@@ -1,8 +1,7 @@
-﻿@model BlackBelt.Models.Usuario
-<div class="container">
-    <h4>Tem certeza que deseja excluir @Model.Nome da lista de usuários?</h4>
+﻿<div class="container">
+    <h4>Tem certeza que deseja excluir o usuário da lista de usuários?</h4>
     <form asp-action="ExcluirUsuario" asp-controller="Usuarios" method="post">
-        <input type="hidden" value="@Model.Id" asp-for="Id" />
+        <input type="hidden" value="" />
         <button class="btn btn-primary" type="submit">Excluir</button>
     </form>
 

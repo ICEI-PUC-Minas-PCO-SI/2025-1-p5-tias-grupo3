@@ -12,53 +12,36 @@ namespace BlackBelt.Controllers
             _usuarioRepository = usuarioRepository;
         }
 
-        [HttpGet]
         public IActionResult Index()
         {
-            IEnumerable<Usuario> usuarios = _usuarioRepository.BuscarTodosUsuarios();
-            return View(usuarios);
+            return View();
         }
 
         public IActionResult Cadastro()
         {
             return View();
         }
-        public IActionResult Editar(int id)
+        public IActionResult Editar()
         {
-            var usuario = _usuarioRepository.BuscarUsuario(id);
-            return View(usuario);
+            return View();
         }
-        public IActionResult Excluir(int id)
+        public IActionResult Excluir()
         {
-            var usuario = _usuarioRepository.BuscarUsuario(id);
-            if (usuario != null)
-            {
-                return View(usuario);
-            }
-            else
-            {
-                return View();
-            }
+            return View();
         }
 
-        [HttpPost]
-        public IActionResult CadastrarUsuario(Usuario usuario)
+        public IActionResult CadastrarUsuario()
         {
-            _usuarioRepository.CadastrarUsuario(usuario);
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public IActionResult EditarUsuario(Usuario usuario)
+        public IActionResult EditarUsuario()
         {
-            _usuarioRepository.EditarUsuario(usuario);
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public IActionResult ExcluirUsuario(int id)
+        public IActionResult ExcluirUsuario()
         {
-            _usuarioRepository.ExcluirUsuario(id);
             return RedirectToAction("Index");
         }
     }
