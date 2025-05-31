@@ -48,6 +48,21 @@ namespace BlackBelt.Repositories
             
         }
 
+        public Usuario BuscarUsuarioLogin(string cpf, string senha)
+        {
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Cpf == cpf);
+            if (usuario != null)
+            {
+                return usuario;
+            }
+            else
+            {
+                //Revisar este trecho, pois é um crime retornar null
+                return null;
+            }
+
+        }
+
         public Usuario CadastrarUsuario(Usuario usuario)
         {
             _context.Usuarios.Add(usuario);

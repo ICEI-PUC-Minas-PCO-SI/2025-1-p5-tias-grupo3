@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlackBelt.Models
 {
@@ -15,8 +16,14 @@ namespace BlackBelt.Models
         [DataType(DataType.Date)]
         public DateOnly Dt_Nascimento { get; set; }
         public int Tipo_Usuario { get; set; }
+
         [Required]
         [DataType(DataType.Password)]
+        [NotMapped]
         public string Senha { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string SenhaHash { get; set; }
     }
 }

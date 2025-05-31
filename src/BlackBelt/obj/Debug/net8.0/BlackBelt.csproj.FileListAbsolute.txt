@@ -150,7 +150,6 @@ C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\Blac
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.RazorAssemblyInfo.cache
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.RazorAssemblyInfo.cs
-C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.sourcelink.json
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets\msbuild.BlackBelt.Microsoft.AspNetCore.StaticWebAssets.props

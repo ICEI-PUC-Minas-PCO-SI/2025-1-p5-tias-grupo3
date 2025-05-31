@@ -44,6 +44,9 @@ namespace BlackBelt.Controllers
         [HttpPost]
         public IActionResult CadastrarUsuario(Usuario usuario)
         {
+
+            usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
+            usuario.Senha = null;
             _usuarioRepository.CadastrarUsuario(usuario);
             return RedirectToAction("Index");
         }

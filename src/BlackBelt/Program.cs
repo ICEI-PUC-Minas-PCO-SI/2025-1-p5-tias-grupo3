@@ -24,8 +24,12 @@ namespace BlackBelt
             
             builder.Services.AddAuthorization();
 
+            // Aqui é o registro dos serviços de repositório que servem para fazer as operações no banco
             builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
             builder.Services.AddScoped<ITurmaRepository, TurmaRepository>();
+            builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+
+            builder.Services.AddSession();
 
             var app = builder.Build();
 
@@ -43,6 +47,7 @@ namespace BlackBelt
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
