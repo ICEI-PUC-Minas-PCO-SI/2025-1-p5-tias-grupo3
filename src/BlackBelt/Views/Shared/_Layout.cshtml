@@ -32,11 +32,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
                         </li>
+                        <li class="nav-item">
+                            @* Aqui é a informação de quem está logado *@
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-dark">Bem-vindo, @User.Identity.Name</a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                            <form asp-action="Logout" asp-controller="Login" method="post">
+                                <button class="btn btn-danger" type="submit">Sair</button>
+                            </form>
+                        </li>
+                        
                     </ul>
                 </div>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <p>@ViewData["Perfil"]</p>
-                </div>
+                
             </div>
         </nav>
     </header>

@@ -15,7 +15,7 @@ namespace BlackBelt.Models
         public string Telefone { get; set; }
         [DataType(DataType.Date)]
         public DateOnly Dt_Nascimento { get; set; }
-        public int Tipo_Usuario { get; set; }
+        public string Tipo_Usuario { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

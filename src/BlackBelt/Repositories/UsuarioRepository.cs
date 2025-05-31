@@ -15,7 +15,7 @@ namespace BlackBelt.Repositories
         public IEnumerable<Usuario> BuscarInstrutores()
         {
             return _context.Usuarios
-                .Where(u => u.Tipo_Usuario == 3)
+                .Where(u => u.Tipo_Usuario == "Instrutor")
                 .ToList();
         }
 

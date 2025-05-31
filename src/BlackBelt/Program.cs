@@ -1,5 +1,6 @@
 using BlackBelt.Context;
 using BlackBelt.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlackBelt
@@ -16,16 +17,18 @@ namespace BlackBelt
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddAuthentication("CookieAuth")
-                .AddCookie("CookieAuth", config =>
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
                 {
-                    config.LoginPath = "/Login/Index";
+                    options.LoginPath = "/Login/Index";
+                    options.LogoutPath = "/Login/Logout";
+                    options.AccessDeniedPath = "/Login/AcessoNegado";
                 });
-            
+
             builder.Services.AddAuthorization();
 
             // Aqui é o registro dos serviços de repositório que servem para fazer as operações no banco
-            builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             builder.Services.AddScoped<ITurmaRepository, TurmaRepository>();
             builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 
@@ -46,6 +49,7 @@ namespace BlackBelt
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();
 

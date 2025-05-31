@@ -1,5 +1,6 @@
 ﻿using BlackBelt.Models;
 using BlackBelt.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -16,23 +17,29 @@ namespace BlackBelt.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult Index()
         {
             IEnumerable<Turma> turmas = _turmaRepository.BuscarTodasTurmas();
             return View(turmas);
         }
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Cadastro()
         {
             ViewData["Instrutores"] = BuscarInstrutores();
             return View();
         }
+
+        [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult Editar(int id)
         {
             ViewData["Instrutores"] = BuscarInstrutores();
             var turma = _turmaRepository.BuscarTurma(id);
             return View(turma);
         }
+
         public IActionResult Excluir(int id)
         {
             var turma = _turmaRepository.BuscarTurma(id);
@@ -47,6 +54,7 @@ namespace BlackBelt.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult CadastrarTurma(Turma turma)
         {
             turma.Dt_Cadastro = DateTime.Today;
@@ -56,6 +64,7 @@ namespace BlackBelt.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult EditarTurma(Turma turma)
         {
             _turmaRepository.EditarTurma(turma);
@@ -63,6 +72,7 @@ namespace BlackBelt.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult ExcluirTurma(int id)
         {
             _turmaRepository.ExcluirTurma(id);
