@@ -24,12 +24,12 @@ namespace BlackBelt.Controllers
 
         public IActionResult Cadastro()
         {
-            IEnumerable<Usuario> instrutores = _usuarioRepository.BuscarInstrutores();
-            ViewData["Instrutores"] = instrutores;
+            ViewData["Instrutores"] = BuscarInstrutores();
             return View();
         }
         public IActionResult Editar(int id)
         {
+            ViewData["Instrutores"] = BuscarInstrutores();
             var turma = _turmaRepository.BuscarTurma(id);
             return View(turma);
         }
@@ -67,6 +67,12 @@ namespace BlackBelt.Controllers
         {
             _turmaRepository.ExcluirTurma(id);
             return RedirectToAction("Index");
+        }
+
+        public IEnumerable<Usuario> BuscarInstrutores()
+        {
+            IEnumerable<Usuario> instrutores = _usuarioRepository.BuscarInstrutores();
+            return instrutores;
         }
     }
 }

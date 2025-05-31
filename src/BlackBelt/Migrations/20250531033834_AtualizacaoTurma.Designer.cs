@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlackBelt.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250524193733_CriacaoDoBanco")]
-    partial class CriacaoDoBanco
+    [Migration("20250531033834_AtualizacaoTurma")]
+    partial class AtualizacaoTurma
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,8 +155,12 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Dt_Login")
-                        .HasColumnType("date");
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Dt_Login")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Host")
                         .IsRequired()
@@ -204,6 +208,9 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("Dt_Cadastro")
+                        .HasColumnType("datetime2");
+
                     b.Property<TimeOnly>("Horario")
                         .HasColumnType("time");
 
@@ -222,7 +229,7 @@ namespace BlackBelt.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Usuario");
+                    b.HasIndex("Id_Instrutor");
 
                     b.ToTable("Turmas");
                 });
@@ -341,7 +348,7 @@ namespace BlackBelt.Migrations
                 {
                     b.HasOne("BlackBelt.Models.Usuario", "Instrutor")
                         .WithMany()
-                        .HasForeignKey("Id_Usuario")
+                        .HasForeignKey("Id_Instrutor")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

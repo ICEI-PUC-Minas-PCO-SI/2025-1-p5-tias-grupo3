@@ -31,10 +31,18 @@
                     {
                         <tr>
                             <th scope="col">@turma.Nome.ToString()</th>
-                            <th scope="col">@turma.Instrutor.ToString()</th>
+                            <th scope="col">@turma.Instrutor.Nome.ToString()</th>
                             <th scope="col">@turma.Horario.ToString()</th>
-                            <th scope="col">@turma.Status.ToString()</th>
-                            <th scope="col">@turma.Dt_Cadastro.ToString()</th>
+                            @switch (@turma.Status)
+                            {
+                                case 1:
+                                    <th scope="col">Ativa</th>
+                                    break;
+                                case 2:
+                                    <th scope="col">Desativada</th>
+                                    break;
+                            }
+                            <th scope="col">@turma.Dt_Cadastro.ToString("dd/MM/yyyy")</th>
                             <td>
                                 <div class="btn-group" role="group">
                                     <a role="button" class="btn btn-warning" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Editar">Editar</a>

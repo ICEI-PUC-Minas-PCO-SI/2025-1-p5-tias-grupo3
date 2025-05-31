@@ -205,16 +205,13 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Dt_Cadastro")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("Dt_Cadastro")
+                        .HasColumnType("datetime2");
 
                     b.Property<TimeOnly>("Horario")
                         .HasColumnType("time");
 
                     b.Property<int>("Id_Instrutor")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id_Usuario")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
@@ -226,7 +223,7 @@ namespace BlackBelt.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Usuario");
+                    b.HasIndex("Id_Instrutor");
 
                     b.ToTable("Turmas");
                 });
@@ -345,7 +342,7 @@ namespace BlackBelt.Migrations
                 {
                     b.HasOne("BlackBelt.Models.Usuario", "Instrutor")
                         .WithMany()
-                        .HasForeignKey("Id_Usuario")
+                        .HasForeignKey("Id_Instrutor")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -16,7 +16,7 @@
                         var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
                         foreach (var instrutor in instrutores)
                         {
-                            <option value="@instrutor.Id_Instrutor">@instrutor.Nome.ToString()</option>
+                            <option value="@instrutor.Id">@instrutor.Nome.ToString()</option>
                         }
                     }
         </select>

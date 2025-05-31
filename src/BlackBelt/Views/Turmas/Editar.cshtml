@@ -4,16 +4,24 @@
 @model BlackBelt.Models.Turma
 <h3>Editar Turma</h3>
 <form asp-action="EditarTurma" asp-controller="Turmas" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Status" />
+    <input type="hidden" asp-for="Dt_Cadastro" />
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome">
         <label for="Nome">Nome</label>
     </div>
     <div class="form-floating">
-        <select class="form-select" asp-for="Instrutor">
+        <select class="form-select" asp-for="Id_Instrutor">
             <option selected>Selecione o instrutor</option>
-            <option value="1">Instrutor 1</option>
-            <option value="2">Instrutor 2</option>
-            <option value="3">Instrutor 3</option>
+            @if (ViewData["Instrutores"] != null)
+            { //Estou aqui tentando descobrir como registrar a informação da FK do instrutor
+                var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
+                foreach (var instrutor in instrutores)
+                {
+                    <option value="@instrutor.Id">@instrutor.Nome.ToString()</option>
+                }
+            }
         </select>
         <label for="floatingSelect">Instrutor</label>
     </div>
