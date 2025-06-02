@@ -57,9 +57,19 @@ namespace BlackBelt.Controllers
         [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult CadastrarTurma(Turma turma)
         {
-            turma.Dt_Cadastro = DateTime.Today;
-            turma.Status = 1;
-            _turmaRepository.CadastrarTurma(turma);
+            try
+            {
+                turma.Dt_Cadastro = DateTime.Today;
+                turma.Status = 1;
+                _turmaRepository.CadastrarTurma(turma);
+                TempData["Mensagem"] = $"Operação realizada com sucesso!";
+            }
+            catch (Exception InvalidNullException)//Estou tentando exibir mensagem de que a opreação não foi realizada
+            {
+                TempData["Mensagem"] = "Nao foi possivel realizar o cadastro! Verifique se todos os campos foram preenchidos.";
+                return RedirectToAction("Cadastro");
+            }
+
             return RedirectToAction("Index");
         }
 
