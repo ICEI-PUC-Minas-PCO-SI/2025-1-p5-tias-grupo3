@@ -318,7 +318,6 @@ C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grup
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.RazorAssemblyInfo.cache
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.RazorAssemblyInfo.cs
-C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.sourcelink.json
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets\msbuild.BlackBelt.Microsoft.AspNetCore.StaticWebAssets.props
@@ -329,9 +328,9 @@ C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grup
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\bundle\BlackBelt.styles.css
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\projectbundle\BlackBelt.bundle.scp.css
-C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.csproj.CopyComplete
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.dll
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\refint\BlackBelt.dll
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.pdb
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.genruntimeconfig.cache
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\ref\BlackBelt.dll
+C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.csproj.CopyComplete

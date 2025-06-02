@@ -230,7 +230,8 @@ namespace BlackBelt.Migrations
 
                     b.Property<string>("Cpf")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<DateOnly>("Dt_Nascimento")
                         .HasColumnType("date");
@@ -241,7 +242,8 @@ namespace BlackBelt.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("SenhaHash")
                         .IsRequired()

@@ -6,7 +6,7 @@ using System;
 
 namespace BlackBelt.Controllers
 {
-    public class TurmasController:Controller
+    public class TurmasController : Controller
     {
         private readonly ITurmaRepository _turmaRepository;
         private readonly IUsuarioRepository _usuarioRepository;
@@ -69,6 +69,7 @@ namespace BlackBelt.Controllers
         {
             _turmaRepository.EditarTurma(turma);
             return RedirectToAction("Index");
+
         }
 
         [HttpPost]

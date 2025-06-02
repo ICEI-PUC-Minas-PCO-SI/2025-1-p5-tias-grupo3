@@ -26,16 +26,14 @@ namespace BlackBelt.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Logar(string cpf, string senha) //Estou aqui tentando iniciar a tela de login pois deu erro
+        public async Task<IActionResult> Logar(string cpf, string senha)
         {
-            //Esta validação é somente para testes
-            if (cpf == "1234" && senha == "1234")
+            if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             else
             {
-                //Esta é a validação oficial
                 var usuario = _usuarioRepository.BuscarUsuarioLogin(cpf, senha);
                 if (usuario != null && CriptografiaSenha.ValidarSenha(senha, usuario.SenhaHash))
                 {

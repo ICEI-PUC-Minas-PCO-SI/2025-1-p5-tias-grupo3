@@ -20,7 +20,7 @@ namespace BlackBelt.Controllers
             IEnumerable<Usuario> usuarios = _usuarioRepository.BuscarTodosUsuarios();
             return View(usuarios);
         }
-        
+
         public IActionResult Cadastro()
         {
             return View();
@@ -51,7 +51,6 @@ namespace BlackBelt.Controllers
         [HttpPost]
         public IActionResult CadastrarUsuario(Usuario usuario)
         {
-
             usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
             usuario.Senha = null;
             _usuarioRepository.CadastrarUsuario(usuario);

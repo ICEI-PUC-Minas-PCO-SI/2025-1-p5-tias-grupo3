@@ -5,22 +5,27 @@
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome" value="@Model.Nome.ToString()">
         <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Cpf" value="@Model.Cpf.ToString()">
         <label for="Cpf">CPF</label>
+        <span asp-validation-for="Cpf" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="email" class="form-control" asp-for="Email" value="@Model.Email.ToString()">
         <label for="Email">Email</label>
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Telefone" value="@Model.Telefone.ToString()">
         <label for="Telefone">Telefone</label>
+        <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="date" class="form-control" asp-for="Dt_Nascimento" value="@Model.Dt_Nascimento.ToString("yyyy-MM-dd")">
         <label for="Dt_Nascimento">Data de nascimento</label>
+        <span asp-validation-for="Dt_Nascimento" class="text-danger"></span>
     </div>
     <div class="form-floating">
         <select class="form-select" asp-for="Tipo_Usuario">
@@ -30,10 +35,12 @@
             <option value="Instrutor">Instrutor</option>
         </select>
         <label for="floatingSelect">Tipo de Usuário</label>
+        <span asp-validation-for="Tipo_Usuario" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="password" class="form-control" asp-for="Senha" value="@Model.Senha.ToString()">
         <label for="Senha">Senha</label>
+        <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
 

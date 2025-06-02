@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BlackBelt.Migrations
 {
     /// <inheritdoc />
-    public partial class AtualizacaoTurma : Migration
+    public partial class UpgradeUsuarios : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -44,13 +44,13 @@ namespace BlackBelt.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cpf = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Cpf = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Dt_Nascimento = table.Column<DateOnly>(type: "date", nullable: false),
-                    Tipo_Usuario = table.Column<int>(type: "int", nullable: false),
-                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Tipo_Usuario = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SenhaHash = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,10 +90,8 @@ namespace BlackBelt.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Id_Usuario = table.Column<int>(type: "int", nullable: false),
                     Cpf = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Perfil = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Dt_Login = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Host = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Dt_Login = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -113,11 +111,10 @@ namespace BlackBelt.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Id_Usuario = table.Column<int>(type: "int", nullable: false),
+                    Id_Instrutor = table.Column<int>(type: "int", nullable: false),
                     Horario = table.Column<TimeOnly>(type: "time", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    Dt_Cadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Id_Instrutor = table.Column<int>(type: "int", nullable: false)
+                    Dt_Cadastro = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
