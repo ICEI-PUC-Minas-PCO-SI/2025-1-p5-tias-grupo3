@@ -7,6 +7,7 @@ using System;
 using BlackBelt.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
+using System.Reflection;
 
 namespace BlackBelt.Controllers
 {
@@ -66,9 +67,12 @@ namespace BlackBelt.Controllers
 
                     return RedirectToAction("Index", "Home");
                 }
+                else
+                {
+                    TempData["ErroLogin"] = "Usuário ou senha inválidos.";
+                    return RedirectToAction("Index");
+                }
             }
-            ModelState.AddModelError("", "Cpf ou senha inválidos");
-            return View();
         }
 
         [HttpPost]

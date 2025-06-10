@@ -1,4 +1,5 @@
 ﻿@model BlackBelt.Models.Usuario
+@using System.Text.Json
 @{
     ViewData["Title"] = "Login";
 }
@@ -19,7 +20,7 @@
             <div class="mb-3">
                 <label for="Cpf" class="form-label">CPF</label>
                 <input type="text" class="form-control" asp-for="Cpf">
-                @* <span asp-validation-for="Cpf" class="text-danger"></span> *@
+                <span asp-validation-for="Cpf" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label for="Senha" class="form-label">Password</label>
@@ -42,4 +43,11 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+}
+
+@if (TempData["ErroLogin"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroLogin"])));
+    </script>
 }

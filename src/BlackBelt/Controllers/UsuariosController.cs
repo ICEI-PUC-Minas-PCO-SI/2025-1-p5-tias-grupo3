@@ -51,26 +51,53 @@ namespace BlackBelt.Controllers
         [HttpPost]
         public IActionResult CadastrarUsuario(Usuario usuario)
         {
-            usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
-            usuario.Senha = null;
-            _usuarioRepository.CadastrarUsuario(usuario);
-            return RedirectToAction("Index");
+            try
+            {
+                usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
+                usuario.Senha = null;
+                _usuarioRepository.CadastrarUsuario(usuario);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex) 
+            {
+                TempData["ErroCadastroUsuario"] = "Não foi possível cadastrar usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Cadastro");
+            }
+            
         }
 
         [Authorize(Roles = "Admin,Auxiliar")]
         [HttpPost]
         public IActionResult EditarUsuario(Usuario usuario)
         {
-            _usuarioRepository.EditarUsuario(usuario);
-            return RedirectToAction("Index");
+            try
+            {
+                _usuarioRepository.EditarUsuario(usuario);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroEditarUsuario"] = "Não foi possível editar usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+            
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult ExcluirUsuario(int id)
         {
-            _usuarioRepository.ExcluirUsuario(id);
-            return RedirectToAction("Index");
+            try
+            {
+                _usuarioRepository.ExcluirUsuario(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroExcluirUsuario"] = "Não foi possível excluir usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+            
         }
     }
 }

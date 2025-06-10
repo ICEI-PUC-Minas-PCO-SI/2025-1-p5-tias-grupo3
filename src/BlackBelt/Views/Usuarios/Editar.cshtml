@@ -1,4 +1,5 @@
 ﻿@model BlackBelt.Models.Usuario
+@using System.Text.Json
 <h3>Editar Usuário</h3>
 <form asp-action="EditarUsuario" asp-controller="Usuarios" method="post">
     <input type="hidden" asp-for="Id" />
@@ -48,4 +49,9 @@
 
 <a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
 
-
+@if (TempData["ErroEdicaoUsuario"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroEdicaoUsuario"])));
+    </script>
+}

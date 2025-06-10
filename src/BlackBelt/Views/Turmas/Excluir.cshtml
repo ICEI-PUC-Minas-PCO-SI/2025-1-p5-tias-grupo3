@@ -1,4 +1,5 @@
-﻿@model BlackBelt.Models.Turma
+﻿@using System.Text.Json
+@model BlackBelt.Models.Turma
 <div class="container">
     <h4>Tem certeza que deseja excluir @Model.Nome da lista de turmas?</h4>
     <form asp-action="ExcluirTurma" asp-controller="Turmas" method="post">
@@ -9,6 +10,9 @@
     <a class="mb-3 btn btn-dark" asp-action="Index" asp-controller="Turmas">voltar</a>
 </div>
 
-
-@{
+@if (TempData["ErroExcluirTurma"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroTurma"])));
+    </script>
 }

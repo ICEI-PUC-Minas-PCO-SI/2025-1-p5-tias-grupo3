@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Text.Json
+@{
     ViewData["Title"] = "Cadastrar Turma";
 }
 @model BlackBelt.Models.Turma
@@ -34,9 +35,9 @@
 
 <a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
 
-@if (TempData["Mensagem"] != null)
+@if (TempData["ErroCadastroTurma"] != null)
 {
     <script>
-        alert('@TempData["Mensagem"]');
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroTurma"])));
     </script>
 }
