@@ -10,12 +10,12 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-Bruna Vitória de Oliveira Souza
-Carolina Alves Baião Pessoa
-Lucas Henrique da Silva Rabelo
-Pedro Arley Paes Maia
-Rafael Romagnoli Conforte Cesario
-Sandy Costa Santos
+Bruna Vitória de Oliveira Souza<br>
+Carolina Alves Baião Pessoa<br>
+Lucas Henrique da Silva Rabelo<br>
+Pedro Arley Paes Maia<br>
+Rafael Romagnoli Conforte Cesario<br>
+Sandy Costa Santos<br>
 Vinícius de Andrade Rodrigues
 
 ## Professor
