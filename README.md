@@ -20,7 +20,7 @@ Vinícius de Andrade Rodrigues
 
 ## Professor
 
-Maria Inês Lage de Paula
+Maria Inês Lage de Paula<br>
 Paulo Henrique Rodrigues
 
 
