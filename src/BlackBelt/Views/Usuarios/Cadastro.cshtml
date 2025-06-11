@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Text.Json
+@{
     ViewData["Title"] = "Cadastrar Usuário";
 }
 @model BlackBelt.Models.Usuario
@@ -7,35 +8,42 @@
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome">
         <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Cpf">
         <label for="Cpf">CPF</label>
+        <span asp-validation-for="Cpf" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="email" class="form-control" asp-for="Email">
         <label for="Email">Email</label>
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Telefone">
         <label for="Telefone">Telefone</label>
+        <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="date" class="form-control" asp-for="Dt_Nascimento">
         <label for="Dt_Nascimento">Data de nascimento</label>
+        <span asp-validation-for="Dt_Nascimento" class="text-danger"></span>
     </div>
-    <div class="form-floating">
+    <div class="form-floating mb-3">
         <select class="form-select" asp-for="Tipo_Usuario">
             <option selected>Selecione o tipo</option>
-            <option value="1">Administrador</option>
-            <option value="2">Auxiliar</option>
-            <option value="3">Instrutor</option>
+            <option value="Admin">Administrador</option>
+            <option value="Auxiliar">Auxiliar</option>
+            <option value="Instrutor">Instrutor</option>
         </select>
         <label for="floatingSelect">Tipo de Usuário</label>
+        <span asp-validation-for="Tipo_Usuario" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input type="password" class="form-control" asp-for="Senha">
         <label for="Senha">Senha</label>
+        <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
 
@@ -43,5 +51,10 @@
 
 <a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
 
-@{
+@if (TempData["ErroCadastroUsuario"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroUsuario"])));
+    </script>
 }
+

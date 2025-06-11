@@ -1,9 +1,14 @@
-﻿@{
+﻿@model BlackBelt.Models.Login
+@{
     ViewData["Title"] = "Menu Principal";
     Layout = "_Layout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<p>
+    Bem vindo!
+</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Bem-vindo, @User.Identity.Name</p>
+}

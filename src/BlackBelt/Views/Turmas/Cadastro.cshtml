@@ -1,0 +1,43 @@
+﻿@using System.Text.Json
+@{
+    ViewData["Title"] = "Cadastrar Turma";
+}
+@model BlackBelt.Models.Turma
+<h3>Cadastrar Turma</h3>
+<form asp-action="CadastrarTurma" asp-controller="Turmas" method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" asp-for="Id_Instrutor">
+            <option selected>Selecione o instrutor</option>
+            @if (ViewData["Instrutores"] != null)
+            {
+                var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
+                foreach (var instrutor in instrutores)
+                {
+                    <option value="@instrutor.Id">@instrutor.Nome.ToString()</option>
+                }
+            }
+        </select>
+        <label for="floatingSelect">Instrutor</label>
+        <span asp-validation-for="Id_Instrutor" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="time" class="form-control" asp-for="Horario">
+        <label for="Horario">Horario</label>
+        <span asp-validation-for="Horario" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+
+@if (TempData["ErroCadastroTurma"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroTurma"])));
+    </script>
+}

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BlackBelt.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\Turmas.css",
+      "PackagePath": "staticwebassets\\css\\Turmas.css"
+    },
+    {
       "Id": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\Usuarios.css",
       "PackagePath": "staticwebassets\\css\\Usuarios.css"
     },

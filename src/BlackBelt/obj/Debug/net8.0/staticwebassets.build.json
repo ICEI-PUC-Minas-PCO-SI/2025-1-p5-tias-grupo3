@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wxzyymw/0fCfNAuwW3he2L8y2Zjf9Kd9LJv/TWpdt1s=",
+  "Hash": "3y7fp0iPd7oOEBlw3Q+rNXLcBXo+N/JCJL4oFuWd0eU=",
   "Source": "BlackBelt",
   "BasePath": "_content/BlackBelt",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\Turmas.css",
+      "SourceId": "BlackBelt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\",
+      "BasePath": "_content/BlackBelt",
+      "RelativePath": "css/Turmas.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Turmas.css"
     },
     {
       "Identity": "C:\\Users\\vinicius.andrade\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\Usuarios.css",

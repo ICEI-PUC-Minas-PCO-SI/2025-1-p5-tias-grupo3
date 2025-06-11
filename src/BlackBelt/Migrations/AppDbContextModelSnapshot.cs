@@ -152,21 +152,17 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Dt_Login")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Host")
+                    b.Property<string>("Cpf")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Dt_Login")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Id_Usuario")
                         .HasColumnType("int");
 
                     b.Property<string>("Perfil")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -201,13 +197,13 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("Dt_Cadastro")
+                        .HasColumnType("datetime2");
+
                     b.Property<TimeOnly>("Horario")
                         .HasColumnType("time");
 
                     b.Property<int>("Id_Instrutor")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id_Usuario")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
@@ -219,7 +215,7 @@ namespace BlackBelt.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Usuario");
+                    b.HasIndex("Id_Instrutor");
 
                     b.ToTable("Turmas");
                 });
@@ -234,7 +230,8 @@ namespace BlackBelt.Migrations
 
                     b.Property<string>("Cpf")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<DateOnly>("Dt_Nascimento")
                         .HasColumnType("date");
@@ -245,9 +242,10 @@ namespace BlackBelt.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("SenhaHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -255,8 +253,9 @@ namespace BlackBelt.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Tipo_Usuario")
-                        .HasColumnType("int");
+                    b.Property<string>("Tipo_Usuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -338,7 +337,7 @@ namespace BlackBelt.Migrations
                 {
                     b.HasOne("BlackBelt.Models.Usuario", "Instrutor")
                         .WithMany()
-                        .HasForeignKey("Id_Usuario")
+                        .HasForeignKey("Id_Instrutor")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

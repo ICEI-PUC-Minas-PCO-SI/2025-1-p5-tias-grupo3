@@ -11,6 +11,14 @@ namespace BlackBelt.Repositories
         {
             _context = context;
         }
+
+        public IEnumerable<Usuario> BuscarInstrutores()
+        {
+            return _context.Usuarios
+                .Where(u => u.Tipo_Usuario == "Instrutor")
+                .ToList();
+        }
+
         public IEnumerable<Usuario> BuscarTodosUsuarios()
         {
             return _context.Usuarios
@@ -38,6 +46,21 @@ namespace BlackBelt.Repositories
                 return null;
             }
             
+        }
+
+        public Usuario BuscarUsuarioLogin(string cpf, string senha)
+        {
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Cpf == cpf);
+            if (usuario != null)
+            {
+                return usuario;
+            }
+            else
+            {
+                //Revisar este trecho, pois é um crime retornar null
+                return null;
+            }
+
         }
 
         public Usuario CadastrarUsuario(Usuario usuario)

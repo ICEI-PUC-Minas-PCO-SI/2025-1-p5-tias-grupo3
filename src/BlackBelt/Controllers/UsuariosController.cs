@@ -1,5 +1,6 @@
 ﻿using BlackBelt.Models;
 using BlackBelt.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlackBelt.Controllers
@@ -13,21 +14,27 @@ namespace BlackBelt.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             IEnumerable<Usuario> usuarios = _usuarioRepository.BuscarTodosUsuarios();
             return View(usuarios);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Cadastro()
         {
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Editar(int id)
         {
             var usuario = _usuarioRepository.BuscarUsuario(id);
             return View(usuario);
         }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Excluir(int id)
         {
             var usuario = _usuarioRepository.BuscarUsuario(id);
@@ -41,25 +48,57 @@ namespace BlackBelt.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CadastrarUsuario(Usuario usuario)
         {
-            _usuarioRepository.CadastrarUsuario(usuario);
-            return RedirectToAction("Index");
+            try
+            {
+                usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
+                usuario.Senha = null;
+                _usuarioRepository.CadastrarUsuario(usuario);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex) 
+            {
+                TempData["ErroCadastroUsuario"] = "Não foi possível cadastrar usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Cadastro");
+            }
+            
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult EditarUsuario(Usuario usuario)
         {
-            _usuarioRepository.EditarUsuario(usuario);
-            return RedirectToAction("Index");
+            try
+            {
+                _usuarioRepository.EditarUsuario(usuario);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroEditarUsuario"] = "Não foi possível editar usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+            
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult ExcluirUsuario(int id)
         {
-            _usuarioRepository.ExcluirUsuario(id);
-            return RedirectToAction("Index");
+            try
+            {
+                _usuarioRepository.ExcluirUsuario(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroExcluirUsuario"] = "Não foi possível excluir usuário. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+            
         }
     }
 }

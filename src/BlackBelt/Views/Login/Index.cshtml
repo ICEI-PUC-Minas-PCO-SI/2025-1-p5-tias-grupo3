@@ -1,4 +1,5 @@
-﻿@model BlackBelt.Models.Login
+﻿@model BlackBelt.Models.Usuario
+@using System.Text.Json
 @{
     ViewData["Title"] = "Login";
 }
@@ -19,12 +20,12 @@
             <div class="mb-3">
                 <label for="Cpf" class="form-label">CPF</label>
                 <input type="text" class="form-control" asp-for="Cpf">
-                @Html.ValidationMessageFor(x=>x.Cpf)
+                <span asp-validation-for="Cpf" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label for="Senha" class="form-label">Password</label>
                 <input type="password" class="form-control" asp-for="Senha">
-                @Html.ValidationMessageFor(x => x.Senha)
+                <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Logar</button>
         </form>
@@ -36,6 +37,17 @@
 
 </html>
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
-@{
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@if (TempData["ErroLogin"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroLogin"])));
+    </script>
 }
