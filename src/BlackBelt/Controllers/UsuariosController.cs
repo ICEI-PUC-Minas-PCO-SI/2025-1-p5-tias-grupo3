@@ -14,19 +14,20 @@ namespace BlackBelt.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin,Auxiliar")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             IEnumerable<Usuario> usuarios = _usuarioRepository.BuscarTodosUsuarios();
             return View(usuarios);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Cadastro()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin,Auxiliar")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Editar(int id)
         {
             var usuario = _usuarioRepository.BuscarUsuario(id);
@@ -66,7 +67,7 @@ namespace BlackBelt.Controllers
             
         }
 
-        [Authorize(Roles = "Admin,Auxiliar")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult EditarUsuario(Usuario usuario)
         {

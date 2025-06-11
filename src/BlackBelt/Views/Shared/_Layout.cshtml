@@ -26,28 +26,40 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
-                        </li>
-                        <li class="nav-item">
-                            @* Aqui é a informação de quem está logado *@
-                            @if (User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Admin"))
                             {
-                                <a class="nav-link text-dark">Bem-vindo, @User.Identity.Name</a>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                                </li>
                             }
-                        </li>
+                            @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
+                                </li>
+                            }
+                            @if (User.IsInRole("Instrutor"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="Index">Registrar Aula</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link text-dark">Bem-vindo, @User.Identity.Name</a>
+                            </li>
+                        }
+
                         <li class="nav-item">
                             <form asp-action="Logout" asp-controller="Login" method="post">
                                 <button class="btn btn-danger" type="submit">Sair</button>
                             </form>
                         </li>
-                        
+
                     </ul>
                 </div>
-                
+
             </div>
         </nav>
     </header>

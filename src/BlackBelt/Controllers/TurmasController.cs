@@ -25,33 +25,12 @@ namespace BlackBelt.Controllers
             return View(turmas);
         }
 
-
-        [Authorize(Roles = "Admin")]
+        //Esta é a tela do formulário para cadastrar
+        [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult Cadastro()
         {
             ViewData["Instrutores"] = BuscarInstrutores();
             return View();
-        }
-
-        [Authorize(Roles = "Admin,Auxiliar")]
-        public IActionResult Editar(int id)
-        {
-            ViewData["Instrutores"] = BuscarInstrutores();
-            var turma = _turmaRepository.BuscarTurma(id);
-            return View(turma);
-        }
-
-        public IActionResult Excluir(int id)
-        {
-            var turma = _turmaRepository.BuscarTurma(id);
-            if (turma != null)
-            {
-                return View(turma);
-            }
-            else
-            {
-                return View();
-            }
         }
 
         [HttpPost]
@@ -69,7 +48,16 @@ namespace BlackBelt.Controllers
             {
                 TempData["ErroCadastroTurma"] = "Não foi possível cadastrar turma. Tente Novamente mais tarde.";
                 return RedirectToAction("Cadastro");
-            }            
+            }
+        }
+
+        //Esta é a tela do formulário para editar
+        [Authorize(Roles = "Admin,Auxiliar")]
+        public IActionResult Editar(int id)
+        {
+            ViewData["Instrutores"] = BuscarInstrutores();
+            var turma = _turmaRepository.BuscarTurma(id);
+            return View(turma);
         }
 
         [HttpPost]
@@ -85,6 +73,21 @@ namespace BlackBelt.Controllers
             {
                 TempData["ErroEditarTurma"] = "Não foi possível editar turma. Tente Novamente mais tarde.";
                 return RedirectToAction("Cadastro");
+            }
+        }
+
+        //Esta é a tela para excluir
+        [Authorize(Roles = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            var turma = _turmaRepository.BuscarTurma(id);
+            if (turma != null)
+            {
+                return View(turma);
+            }
+            else
+            {
+                return View();
             }
         }
 
@@ -104,7 +107,8 @@ namespace BlackBelt.Controllers
             }
         }
 
-        public IEnumerable<Usuario> BuscarInstrutores()
+        //Esta função apenas busca a lista de instrutores
+        private IEnumerable<Usuario> BuscarInstrutores()
         {
             IEnumerable<Usuario> instrutores = _usuarioRepository.BuscarInstrutores();
             return instrutores;
