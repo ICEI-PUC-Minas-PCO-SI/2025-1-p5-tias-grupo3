@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vinicius.andrade/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vinicius.andrade/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vinicius.andrade/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
