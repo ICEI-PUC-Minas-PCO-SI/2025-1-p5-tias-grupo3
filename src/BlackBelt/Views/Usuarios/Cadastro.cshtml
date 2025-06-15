@@ -58,3 +58,10 @@
     </script>
 }
 
+@if (TempData["ErroCpfUsuario"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCpfUsuario"])));
+    </script>
+}
+

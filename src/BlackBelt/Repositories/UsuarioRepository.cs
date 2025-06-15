@@ -42,7 +42,6 @@ namespace BlackBelt.Repositories
             }
             else
             {
-                //Revisar este trecho, pois é um crime retornar null
                 return null;
             }
             
@@ -57,7 +56,6 @@ namespace BlackBelt.Repositories
             }
             else
             {
-                //Revisar este trecho, pois é um crime retornar null
                 return null;
             }
 
@@ -65,15 +63,31 @@ namespace BlackBelt.Repositories
 
         public Usuario CadastrarUsuario(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
-            return usuario;
+            if (VerificarCpf(usuario.Cpf))
+            {
+                _context.Usuarios.Add(usuario);
+                _context.SaveChanges();
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public void EditarUsuario(Usuario usuario)
+        public Usuario EditarUsuario(Usuario usuario)
         {
-            _context.Usuarios.Update(usuario);
-            _context.SaveChanges();
+            if (VerificarCpf(usuario.Cpf))
+            {
+                _context.Usuarios.Update(usuario);
+                _context.SaveChanges();
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         public void ExcluirUsuario(int id)
@@ -83,6 +97,19 @@ namespace BlackBelt.Repositories
             {
                 _context.Usuarios.Remove(usuario);
                 _context.SaveChanges();
+            }
+        }
+
+        private bool VerificarCpf(string cpf)
+        {
+            //Se ele retornar false não deixará cadastrar o Aluno
+            if (_context.Usuarios.SingleOrDefault(a => a.Cpf == cpf) != null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

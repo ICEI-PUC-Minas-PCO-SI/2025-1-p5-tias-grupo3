@@ -30,7 +30,7 @@
     </div>
     <div class="form-floating">
         <select class="form-select" asp-for="Tipo_Usuario">
-            <option value="Admin" selected>Administrador</option>
+            <option value="@Model.Tipo_Usuario.ToString()" selected>@Model.Tipo_Usuario.ToString()</option>
             <option value="Admin">Administrador</option>
             <option value="Auxiliar">Auxiliar</option>
             <option value="Instrutor">Instrutor</option>
@@ -38,20 +38,11 @@
         <label for="floatingSelect">Tipo de Usuário</label>
         <span asp-validation-for="Tipo_Usuario" class="text-danger"></span>
     </div>
-    <div class="form-floating mb-3">
-        <input type="password" class="form-control" asp-for="Senha" value="@Model.Senha.ToString()">
-        <label for="Senha">Senha</label>
-        <span asp-validation-for="Senha" class="text-danger"></span>
-    </div>
+    
     <button type="submit" class="btn btn-primary mb-3">Salvar</button>
 
 </form>
 
 <a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
 
-@if (TempData["ErroEdicaoUsuario"] != null)
-{
-    <script>
-        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroEdicaoUsuario"])));
-    </script>
-}
+

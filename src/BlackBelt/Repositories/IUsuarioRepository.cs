@@ -10,6 +10,6 @@ namespace BlackBelt.Repositories
         public void ExcluirUsuario(int id);
         public Usuario BuscarUsuario(int id);
         public Usuario BuscarUsuarioLogin(string cpf, string senha);
-        public void EditarUsuario(Usuario usuario);
+        public Usuario EditarUsuario(Usuario usuario);
     }
 }
