@@ -40,12 +40,19 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a>
                                 </li>
                             }
+                            @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
+                                </li>
+                            }
                             @if (User.IsInRole("Instrutor"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="Index">Registrar Aula</a>
                                 </li>
                             }
+
                             <li class="nav-item">
                                 <a class="nav-link text-dark">Bem-vindo, @User.Identity.Name</a>
                             </li>

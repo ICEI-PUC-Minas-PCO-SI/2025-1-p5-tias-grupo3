@@ -17,7 +17,7 @@
         <select class="form-select" asp-for="Id_Instrutor">
             <option selected>Selecione o instrutor</option>
             @if (ViewData["Instrutores"] != null)
-            { //Estou aqui tentando descobrir como registrar a informação da FK do instrutor
+            {
                 var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
                 foreach (var instrutor in instrutores)
                 {

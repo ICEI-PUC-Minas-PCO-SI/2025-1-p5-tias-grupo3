@@ -14,6 +14,7 @@ namespace BlackBelt.Models
         public TimeOnly Horario { get; set; }
         public int Status { get; set; }
         public DateTime Dt_Cadastro { get; set; }
+
         [ForeignKey("Id_Instrutor")]
         public Usuario Instrutor { get; set; }
     }
