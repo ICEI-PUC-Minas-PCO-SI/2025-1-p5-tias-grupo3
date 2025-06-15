@@ -31,6 +31,7 @@ namespace BlackBelt
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             builder.Services.AddScoped<ITurmaRepository, TurmaRepository>();
             builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+            builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
 
             builder.Services.AddSession();
 

@@ -30,9 +30,11 @@
                     foreach (Aluno aluno in Model)
                     {
                         <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th scope="col">@aluno.Nome.ToString()</th>
+                            <th scope="col">@aluno.Turma.Nome.ToString()</th>
+                            <th scope="col">@aluno.Telefone.ToString()</th>
+                            <th scope="col">@aluno.Faixa.ToString()</th>
+                            <th scope="col">@aluno.Dt_Nascimento.ToString()</th>
                             <td>
                                 <div class="btn-group" role="group">
                                     <a role="button" class="btn btn-warning" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Editar">Editar</a>

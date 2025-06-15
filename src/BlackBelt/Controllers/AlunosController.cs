@@ -35,7 +35,24 @@ namespace BlackBelt.Controllers
         [Authorize(Roles = "Admin,Auxiliar")]
         public IActionResult CadastrarAluno(Aluno aluno)
         {
-            return RedirectToAction("Index");
+            try
+            {
+                if (_alunoRepository.CadastrarAluno(aluno) != null)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["ErroCpfAluno"] = "Já existe aluno com este cpf";
+                    return RedirectToAction("Cadastro");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCadastroAluno"] = "Não foi possível cadastrar aluno. Tente Novamente mais tarde.";
+                return RedirectToAction("Cadastro");
+            }
         }
 
         //Esta é a tela do formulário para editar
@@ -43,7 +60,8 @@ namespace BlackBelt.Controllers
         public IActionResult Editar(int id)
         {
             ViewData["Turmas"] = BuscarTurmas();
-            return View();
+            var aluno = _alunoRepository.BuscarAluno(id);
+            return View(aluno);
         }
 
         [HttpPost]
@@ -52,7 +70,11 @@ namespace BlackBelt.Controllers
         {
             try
             {
-                _alunoRepository.EditarAluno(aluno);
+                if (_alunoRepository.EditarAluno(aluno) == null)
+                {
+                    TempData["ErroCpfAluno"] = "Já existe aluno com este cpf";
+                }
+
                 return RedirectToAction("Index");
             }
             catch (Exception ex)

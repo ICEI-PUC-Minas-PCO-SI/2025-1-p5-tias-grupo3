@@ -1,0 +1,72 @@
+﻿@using System.Text.Json
+@{
+    ViewData["Title"] = "Cadastrar Aluno";
+}
+@model BlackBelt.Models.Aluno
+<h3>Cadastrar Aluno</h3>
+<form asp-action="CadastrarAluno" asp-controller="Alunos" method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Cpf">
+        <label for="Cpf">CPF</label>
+        <span asp-validation-for="Cpf" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" asp-for="Email">
+        <label for="Email">Email</label>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Telefone">
+        <label for="Telefone">Telefone</label>
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" asp-for="Dt_Nascimento">
+        <label for="Dt_Nascimento">Data de nascimento</label>
+        <span asp-validation-for="Dt_Nascimento" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Faixa">
+        <label for="Faixa">Faixa</label>
+        <span asp-validation-for="Faixa" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select" asp-for="Id_Turma">
+            <option selected>Selecione a turma</option>
+            @if (ViewData["Turmas"] != null)
+            {
+                var turmas = ViewData["Turmas"] as IEnumerable<Turma>;
+                foreach (var turma in turmas)
+                {
+                    <option value="@turma.Id">@turma.Nome.ToString()</option>
+                }
+            }
+        </select>
+        <label for="floatingSelect">Turma</label>
+        <span asp-validation-for="Id_Turma" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+
+</form>
+
+<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
+
+@if (TempData["ErroCadastroAluno"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroAluno"])));
+    </script>
+}
+
+@if (TempData["ErroCpfAluno"] != null)
+{
+    <script>
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCpfAluno"])));
+    </script>
+}
+

@@ -8,6 +8,6 @@ namespace BlackBelt.Repositories
         public Aluno CadastrarAluno(Aluno aluno);
         public void ExcluirAluno(int id);
         public Aluno BuscarAluno(int id);
-        public void EditarAluno(Aluno aluno);
+        public Aluno EditarAluno(Aluno aluno);
     }
 }
