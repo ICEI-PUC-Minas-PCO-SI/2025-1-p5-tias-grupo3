@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Alunos.css"
     },
     {
+      "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\RegistrarPresenca.css",
+      "PackagePath": "staticwebassets\\css\\RegistrarPresenca.css"
+    },
+    {
       "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\Turmas.css",
       "PackagePath": "staticwebassets\\css\\Turmas.css"
     },

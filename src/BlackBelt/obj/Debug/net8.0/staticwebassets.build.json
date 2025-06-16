@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WspwRhNsV4py2j9Pp6KjStF2aHWP1sOEtf3rdwYCgnI=",
+  "Hash": "vrjUmcQN91z7jphGn39GopG5LngkNmKiyIzA/fLakj4=",
   "Source": "BlackBelt",
   "BasePath": "_content/BlackBelt",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Alunos.css"
+    },
+    {
+      "Identity": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\RegistrarPresenca.css",
+      "SourceId": "BlackBelt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\",
+      "BasePath": "_content/BlackBelt",
+      "RelativePath": "css/RegistrarPresenca.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\RegistrarPresenca.css"
     },
     {
       "Identity": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\css\\site.css",

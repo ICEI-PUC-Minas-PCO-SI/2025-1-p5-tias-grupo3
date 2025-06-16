@@ -16,6 +16,13 @@ namespace BlackBelt.Repositories
                 .SingleOrDefault(a => a.Id == id);
         }
 
+        public IEnumerable<Aluno> BuscarAlunosPorTurma(int id_turma)
+        {
+            return _context.Alunos
+                .Where(a => a.Id_Turma == id_turma)
+                .ToList();
+        }
+
         public IEnumerable<Aluno> BuscarTodosAlunos()
         {
             return _context.Alunos

@@ -3,7 +3,6 @@ using BlackBelt.Models;
 
 namespace BlackBelt.Repositories
 {
-    // Revisar código para implementar tratamento de exceção
     public class TurmaRepository : ITurmaRepository
     {
         private readonly AppDbContext _context;
