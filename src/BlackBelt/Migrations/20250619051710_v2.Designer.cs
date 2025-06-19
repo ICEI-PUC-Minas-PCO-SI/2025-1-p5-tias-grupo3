@@ -4,6 +4,7 @@ using BlackBelt.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlackBelt.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250619051710_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,8 +124,6 @@ namespace BlackBelt.Migrations
 
                     b.HasIndex("Id_Aluno");
 
-                    b.HasIndex("Id_Turma");
-
                     b.ToTable("Presencas");
                 });
 
@@ -226,12 +227,12 @@ namespace BlackBelt.Migrations
                     b.HasOne("BlackBelt.Models.Aluno", "Aluno")
                         .WithMany("Presencas")
                         .HasForeignKey("Id_Aluno")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BlackBelt.Models.Turma", "Turma")
                         .WithMany("Presencas")
-                        .HasForeignKey("Id_Turma")
+                        .HasForeignKey("Id_Aluno")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 

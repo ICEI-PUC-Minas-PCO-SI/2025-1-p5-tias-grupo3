@@ -4,6 +4,7 @@ using BlackBelt.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlackBelt.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250619053709_v4")]
+    partial class v4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,6 +108,9 @@ namespace BlackBelt.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AlunoId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Dt_Aula")
                         .HasColumnType("datetime2");
 
@@ -117,11 +123,18 @@ namespace BlackBelt.Migrations
                     b.Property<bool>("Presente")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("TurmaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AlunoId");
 
                     b.HasIndex("Id_Aluno");
 
                     b.HasIndex("Id_Turma");
+
+                    b.HasIndex("TurmaId");
 
                     b.ToTable("Presencas");
                 });
@@ -223,17 +236,25 @@ namespace BlackBelt.Migrations
 
             modelBuilder.Entity("BlackBelt.Models.Presenca", b =>
                 {
-                    b.HasOne("BlackBelt.Models.Aluno", "Aluno")
+                    b.HasOne("BlackBelt.Models.Aluno", null)
                         .WithMany("Presencas")
+                        .HasForeignKey("AlunoId");
+
+                    b.HasOne("BlackBelt.Models.Aluno", "Aluno")
+                        .WithMany()
                         .HasForeignKey("Id_Aluno")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("BlackBelt.Models.Turma", "Turma")
-                        .WithMany("Presencas")
+                        .WithMany()
                         .HasForeignKey("Id_Turma")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.HasOne("BlackBelt.Models.Turma", null)
+                        .WithMany("Presencas")
+                        .HasForeignKey("TurmaId");
 
                     b.Navigation("Aluno");
 

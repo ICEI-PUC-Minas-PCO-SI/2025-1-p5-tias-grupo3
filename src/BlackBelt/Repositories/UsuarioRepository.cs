@@ -16,6 +16,7 @@ namespace BlackBelt.Repositories
         {
             return _context.Usuarios
                 .Where(u => u.Tipo_Usuario == "Instrutor")
+                .OrderBy(a => a.Nome)
                 .ToList();
         }
 
@@ -30,7 +31,8 @@ namespace BlackBelt.Repositories
                     Telefone = u.Telefone,
                     Dt_Nascimento = u.Dt_Nascimento,
                     Tipo_Usuario = u.Tipo_Usuario
-                });
+                })
+                .OrderBy(u => u.Nome);
         }
 
         public Usuario BuscarUsuario(int id)

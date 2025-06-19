@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlackBelt.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250615012423_AtualizacaoAluno")]
-    partial class AtualizacaoAluno
+    [Migration("20250619021541_v1")]
+    partial class v1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,8 +38,8 @@ namespace BlackBelt.Migrations
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
 
-                    b.Property<DateOnly>("Dt_Matricula")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("Dt_Matricula")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateOnly>("Dt_Nascimento")
                         .HasColumnType("date");
@@ -71,6 +71,27 @@ namespace BlackBelt.Migrations
                     b.ToTable("Alunos");
                 });
 
+            modelBuilder.Entity("BlackBelt.Models.Aula", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Dt_Aula")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id_Turma")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id_Turma");
+
+                    b.ToTable("Aulas");
+                });
+
             modelBuilder.Entity("BlackBelt.Models.Login", b =>
                 {
                     b.Property<int>("Id")
@@ -98,6 +119,30 @@ namespace BlackBelt.Migrations
                     b.HasIndex("Id_Usuario");
 
                     b.ToTable("Logins");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Presenca", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Id_Aluno")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Turma")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id_Aluno");
+
+                    b.ToTable("Presencas");
                 });
 
             modelBuilder.Entity("BlackBelt.Models.Turma", b =>
@@ -175,13 +220,24 @@ namespace BlackBelt.Migrations
 
             modelBuilder.Entity("BlackBelt.Models.Aluno", b =>
                 {
-                    b.HasOne("BlackBelt.Models.Turma", "turma")
+                    b.HasOne("BlackBelt.Models.Turma", "Turma")
+                        .WithMany("Alunos")
+                        .HasForeignKey("Id_Turma")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Turma");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Aula", b =>
+                {
+                    b.HasOne("BlackBelt.Models.Turma", "Turma")
                         .WithMany()
                         .HasForeignKey("Id_Turma")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("turma");
+                    b.Navigation("Turma");
                 });
 
             modelBuilder.Entity("BlackBelt.Models.Login", b =>
@@ -195,15 +251,51 @@ namespace BlackBelt.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("BlackBelt.Models.Turma", b =>
+            modelBuilder.Entity("BlackBelt.Models.Presenca", b =>
                 {
-                    b.HasOne("BlackBelt.Models.Usuario", "Instrutor")
-                        .WithMany()
-                        .HasForeignKey("Id_Instrutor")
+                    b.HasOne("BlackBelt.Models.Aluno", "Aluno")
+                        .WithMany("Presencas")
+                        .HasForeignKey("Id_Aluno")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("BlackBelt.Models.Turma", "Turma")
+                        .WithMany("Presencas")
+                        .HasForeignKey("Id_Aluno")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Aluno");
+
+                    b.Navigation("Turma");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Turma", b =>
+                {
+                    b.HasOne("BlackBelt.Models.Usuario", "Instrutor")
+                        .WithMany("Turmas")
+                        .HasForeignKey("Id_Instrutor")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("Instrutor");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Aluno", b =>
+                {
+                    b.Navigation("Presencas");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Turma", b =>
+                {
+                    b.Navigation("Alunos");
+
+                    b.Navigation("Presencas");
+                });
+
+            modelBuilder.Entity("BlackBelt.Models.Usuario", b =>
+                {
+                    b.Navigation("Turmas");
                 });
 #pragma warning restore 612, 618
         }

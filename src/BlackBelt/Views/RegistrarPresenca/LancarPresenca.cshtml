@@ -1,0 +1,47 @@
+﻿@model List<Presenca>
+@{
+    ViewData["Title"] = "Lançar Presenca";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/RegistrarPresenca.css" />
+}
+
+<div class="container">
+    <form asp-action="Registrar" asp-controller="RegistrarPresenca" method="post">
+        <table class="tabelaInfo">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Faixa</th>
+                    <th>Presente</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewData["Alunos"] != null)
+                {
+                    var alunos = ViewData["Alunos"] as List<Aluno>;
+
+                    for (int i = 0; i < Model.Count; i++)
+                    {
+
+                        <tr>
+                            <td>@alunos[i].Nome</td>
+                            <td>@alunos[i].Faixa</td>
+                            <td>
+                                <!-- Hidden para garantir envio de "false" se desmarcado -->
+                                <input type="hidden" name="@Model[i].Presente" value="false" />
+                                <!-- Checkbox para marcar como presente -->
+                                <input type="checkbox" asp-for="@Model[i].Presente" class="form-check-input" />
+
+                                <input type="hidden" asp-for="@Model[i].Id_Aluno" value="@Model[i].Id_Aluno" />
+                                <input type="hidden" asp-for="@Model[i].Id_Turma" value="@Model[i].Id_Turma" />
+                                <input type="hidden" asp-for="@Model[i].Dt_Aula" value="@Model[i].Dt_Aula" />
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary col-12">Registrar</button>
+    </form>
+</div>
