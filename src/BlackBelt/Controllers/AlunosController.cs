@@ -9,14 +9,16 @@ namespace BlackBelt.Controllers
     {
         private readonly IAlunoRepository _alunoRepository;
         private readonly ITurmaRepository _turmaRepository;
-        public AlunosController(IAlunoRepository alunoRepository, ITurmaRepository turmaRepository)
+        private readonly IHabilidadeRepository _habilidadeRepository;
+        public AlunosController(IAlunoRepository alunoRepository, ITurmaRepository turmaRepository, IHabilidadeRepository habilidadeRepository)
         {
             _alunoRepository = alunoRepository;
             _turmaRepository = turmaRepository;
+            _habilidadeRepository = habilidadeRepository;
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin,Auxiliar")]
+        [Authorize(Roles = "Admin,Auxiliar,Instrutor")]
         public IActionResult Index()
         {
             IEnumerable<Aluno> alunos = _alunoRepository.BuscarTodosAlunos();
@@ -120,5 +122,33 @@ namespace BlackBelt.Controllers
             IEnumerable<Turma> turmas = _turmaRepository.BuscarTodasTurmas();
             return turmas;
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult Perfil(int id)
+        {
+            var aluno = _alunoRepository.BuscarAluno(id);
+            return View(aluno);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult CadastroHabilidade(int id)
+        {
+            Habilidade habilidade = new Habilidade
+            {
+                Id_Aluno = id
+            };
+            return View(habilidade);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult CadastrarHabilidade(Habilidade habilidade)
+        {
+            _habilidadeRepository.CadastrarHabilidade(habilidade);
+            return RedirectToAction("Perfil",habilidade.Id_Aluno);
+        }
+
     }
 }

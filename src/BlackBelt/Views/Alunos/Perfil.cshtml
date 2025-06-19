@@ -1,0 +1,23 @@
+﻿@model BlackBelt.Models.Aluno
+@{
+    ViewData["Title"] = "Perfil do aluno";
+}
+<h3>Perfil Aluno</h3>
+
+<form asp-action="CadastroHabilidade" asp-controller="Alunos" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Dt_Matricula" />
+    <div class="form-floating mb-3">
+        <input type="text" disabled="true" class="form-control" asp-for="Nome" value="@Model.Nome.ToString()">
+        <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Faixa" value="@Model.Faixa.ToString()">
+        <label for="Faixa">Faixa</label>
+        <span asp-validation-for="Faixa" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary col-12">Cadastrar Habilidade</button>
+</form>
