@@ -16,6 +16,14 @@ namespace BlackBelt.Repositories
                 .SingleOrDefault(a => a.Id == id);
         }
 
+        public IEnumerable<Aluno> BuscarAlunosPorTurma(int id_turma)
+        {
+            return _context.Alunos
+                .Where(a => a.Id_Turma == id_turma)
+                .OrderBy(a => a.Nome)
+                .ToList();
+        }
+
         public IEnumerable<Aluno> BuscarTodosAlunos()
         {
             return _context.Alunos
@@ -30,7 +38,8 @@ namespace BlackBelt.Repositories
                     Faixa = aluno.Faixa,
                     Turma = aluno.Turma,
                     Dt_Matricula = aluno.Dt_Matricula,
-                });
+                })
+                .OrderBy(a => a.Nome);
         }
 
         public Aluno CadastrarAluno(Aluno aluno)

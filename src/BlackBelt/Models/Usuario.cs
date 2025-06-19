@@ -38,5 +38,7 @@ namespace BlackBelt.Models
         [Required]
         [DataType(DataType.Password)]
         public string SenhaHash { get; set; }
+
+        public IEnumerable<Turma> Turmas { get; set; }
     }
 }

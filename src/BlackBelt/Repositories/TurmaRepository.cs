@@ -3,7 +3,6 @@ using BlackBelt.Models;
 
 namespace BlackBelt.Repositories
 {
-    // Revisar código para implementar tratamento de exceção
     public class TurmaRepository : ITurmaRepository
     {
         private readonly AppDbContext _context;
@@ -23,7 +22,8 @@ namespace BlackBelt.Repositories
                     Status = t.Status,
                     Dt_Cadastro = t.Dt_Cadastro,
                     Instrutor = t.Instrutor,
-                });
+                })
+                .OrderBy(t => t.Nome);
         }
 
         public Turma BuscarTurma(int id)

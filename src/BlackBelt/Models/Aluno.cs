@@ -29,13 +29,14 @@ namespace BlackBelt.Models
         public string Faixa { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        public int Id_Turma { get; set; }
+        public int? Id_Turma { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
         public DateTime Dt_Matricula { get; set; }
 
-
         [ForeignKey("Id_Turma")]
         public Turma Turma { get; set; }
+
+        public IEnumerable<Presenca> Presencas { get; set; }
     }
 }
