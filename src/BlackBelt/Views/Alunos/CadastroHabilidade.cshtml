@@ -1,0 +1,19 @@
+﻿@model BlackBelt.Models.Habilidade
+@{
+}
+
+<form asp-action="CadastrarHabilidade" asp-controller="Alunos" method="post">
+    <input type="hidden" asp-for="Id_Aluno" value="@Model.Id_Aluno"/>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Nome">
+        <label for="Nome">Nome Habilidade</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Avaliacao">
+        <label for="Avaliacao">Avaliacao</label>
+        <span asp-validation-for="Avaliacao" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary col-12">Cadastrar Habilidade</button>
+</form>

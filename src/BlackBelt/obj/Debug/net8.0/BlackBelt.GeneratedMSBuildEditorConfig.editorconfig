@@ -30,6 +30,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXENhZGFzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/CadastroHabilidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXENhZGFzdHJvSGFiaWxpZGFkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/EdicaoHabilidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEVkaWNhb0hhYmlsaWRhZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,8 +46,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEV4Y2x1aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/ExclusaoHabilidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEV4Y2x1c2FvSGFiaWxpZGFkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXFBlcmZpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Alunos/_ViewStart.cshtml]

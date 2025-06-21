@@ -38,5 +38,7 @@ namespace BlackBelt.Models
         public Turma Turma { get; set; }
 
         public IEnumerable<Presenca> Presencas { get; set; }
+
+        public IEnumerable<Habilidade> Habilidades { get; set; }
     }
 }

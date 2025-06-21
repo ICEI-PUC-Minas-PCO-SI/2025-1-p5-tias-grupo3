@@ -37,7 +37,14 @@
                             <th scope="col">@aluno.Dt_Nascimento.ToString()</th>
                             <td>
                                 <div class="btn-group" role="group">
-                                    <a role="button" class="btn btn-warning" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Editar">Editar</a>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
+                                    {
+                                        <a role="button" class="btn btn-warning" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Editar">Editar</a>
+                                    }
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Instrutor"))
+                                    {
+                                        <a role="button" class="btn btn-primary" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Perfil">Perfil</a>
+                                    }
                                     @if (User.IsInRole("Admin"))
                                     {
                                         <a role="button" class="btn btn-danger" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Excluir">Excluir</a>

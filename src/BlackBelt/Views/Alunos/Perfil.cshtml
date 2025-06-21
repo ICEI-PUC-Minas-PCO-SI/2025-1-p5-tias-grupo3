@@ -1,0 +1,67 @@
+﻿@model BlackBelt.Models.Aluno
+@{
+    ViewData["Title"] = "Perfil do aluno";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Alunos.css" />
+}
+<h3>Perfil Aluno</h3>
+
+<div class="container">
+
+
+
+<form asp-action="CadastroHabilidade" asp-controller="Alunos" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Dt_Matricula" />
+    <div class="form-floating mb-3">
+        <input type="text" disabled="true" class="form-control" asp-for="Nome" value="@Model.Nome.ToString()">
+        <label for="Nome">Nome</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="Faixa" value="@Model.Faixa.ToString()">
+        <label for="Faixa">Faixa</label>
+        <span asp-validation-for="Faixa" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary col-12">Cadastrar Habilidade</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                Nome Habilidade
+            </td>
+            <td>
+                Avaliação
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewData["Habilidades"] != null)
+        {
+            var habilidades = ViewData["Habilidades"] as IEnumerable<Habilidade>;
+            @foreach (var habilidade in habilidades)
+            {
+                <tr>
+                    <td>
+                        @habilidade.Nome.ToString()
+                    </td>
+                    <td>
+                        @habilidade.Avaliacao.ToString()
+                    </td>
+                    <td>
+                        <a role="button" class="btn btn-warning" asp-route-id="@habilidade.Id" asp-action="EdicaoHabilidade" asp-controller="Alunos">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-route-id="@habilidade.Id" asp-action="ExclusaoHabilidade" asp-controller="Alunos">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+</div>
