@@ -127,8 +127,19 @@ namespace BlackBelt.Controllers
         [Authorize(Roles = "Admin,Instrutor")]
         public IActionResult Perfil(int id)
         {
-            var aluno = _alunoRepository.BuscarAluno(id);
-            return View(aluno);
+            try
+            {
+                var aluno = _alunoRepository.BuscarAluno(id);
+                ViewData["Habilidades"] = _habilidadeRepository.BuscarHabilidades(id);
+                return View(aluno);
+            }
+            catch(Exception ex)
+            {
+                TempData["ErroBuscarAluno"] = "Não foi possível buscar aluno. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+            
+            
         }
 
         [HttpPost]
@@ -146,8 +157,99 @@ namespace BlackBelt.Controllers
         [Authorize(Roles = "Admin,Instrutor")]
         public IActionResult CadastrarHabilidade(Habilidade habilidade)
         {
-            _habilidadeRepository.CadastrarHabilidade(habilidade);
-            return RedirectToAction("Perfil",habilidade.Id_Aluno);
+            try
+            {
+                _habilidadeRepository.CadastrarHabilidade(habilidade);
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCadastroHabilidade"] = "Não foi possível cadastrar habilidade. Tente Novamente mais tarde.";
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+            
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult EdicaoHabilidade(int id)
+        {
+            try
+            {
+                var habilidade = _habilidadeRepository.BuscarHabilidade(id);
+                if (habilidade != null)
+                {
+                    return View(habilidade);
+                }
+                else
+                {
+                    return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroExcluirAluno"] = "Não foi possível excluir aluno. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult EditarHabilidade(Habilidade habilidade)
+        {
+            try
+            {
+                _habilidadeRepository.EditarHabilidade(habilidade);
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCadastroHabilidade"] = "Não foi possível editar habilidade. Tente Novamente mais tarde.";
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+
+        }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult ExclusaoHabilidade(int id)
+        {
+            try
+            {
+                var habilidade = _habilidadeRepository.BuscarHabilidade(id);
+                if (habilidade != null)
+                {
+                    return View(habilidade);
+                }
+                else
+                {
+                    return RedirectToAction("Perfil", new { id = id });
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroExcluirAluno"] = "Não foi possível excluir aluno. Tente Novamente mais tarde.";
+                return RedirectToAction("Index");
+            }
+        }
+
+
+        [HttpPost]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult ExcluirHabilidade(Habilidade habilidade)
+        {
+            try
+            {
+                _habilidadeRepository.ExcluirHabilidade(habilidade);
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+            catch (Exception ex)
+            {
+                TempData["ErroCadastroHabilidade"] = "Não foi possível editar habilidade. Tente Novamente mais tarde.";
+                return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
+            }
+
         }
 
     }
