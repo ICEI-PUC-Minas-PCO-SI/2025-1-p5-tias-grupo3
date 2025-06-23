@@ -23,62 +23,54 @@
         </div>
     </form>
 
-
-    <!-- Botão de cadastro -->
-    <a class="btn btn-cadastrar my-3" asp-area="" asp-controller="Turmas" asp-action="Cadastro">Cadastrar Turma</a>
-
     <!-- Tabela -->
-    <table class="table table-bordered text-center">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Instrutor</th>
-                <th>Horário</th>
-                <th>Status</th>
-                <th>Data de Cadastro</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model == null || !Model.Any())
-            {
-            <tr>
-                <td colspan="6">Nenhuma turma cadastrada.</td>
-            </tr>
-            }
-            else
-            {
-                foreach (var turma in Model)
+    <div class="container mt-4">
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Instrutor</th>
+                    <th>Horário</th>
+                    <th>Data de Cadastro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model == null || !Model.Any())
                 {
-            <tr>
-                <td>@turma.Nome</td>
-                <td>@turma.Instrutor?.Nome</td>
-                <td>@turma.Horario</td>
-                <td>
-                    @switch (turma.Status)
-                            {
-                                case 1:
-                    <text>Ativa</text>
-                                    break;
-                                case 2:
-                    <text>Desativada</text>
-                                    break;
-                                default:
-                    <text>Desconhecido</text>
-                                    break;
-                            }
-                </td>
-                <td>@turma.Dt_Cadastro.ToString("dd/MM/yyyy")</td>
-                <td>
-                    <a class="btn btn-warning" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Editar">Editar</a>
-                    @if (User.IsInRole("Admin"))
-                            {
-                    <a class="btn btn-danger" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Excluir">Excluir</a>
-                            }
-                </td>
-            </tr>
+                <tr>
+                    <td colspan="6">Nenhuma turma cadastrada.</td>
+                </tr>
                 }
-            }
-        </tbody>
-    </table>
+                else
+                {
+                    foreach (var turma in Model)
+                    {
+                <tr>
+                    <td>@turma.Nome</td>
+                    <td>@turma.Instrutor?.Nome</td>
+                    <td>@turma.Horario</td>
+                    <td>@turma.Dt_Cadastro.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a class="btn btn-perfil px-4" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Editar">Editar</a>
+                        @if (User.IsInRole("Admin"))
+    {
+                        <a class="btn btn-danger" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Excluir">Excluir</a>
+    }
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
     </div>
+
+        <div class="d-flex justify-content-between mt-4">
+            <a asp-action="Index" asp-controller="Home">
+                <button class="btn btn-voltar px-4">Voltar</button>
+            </a>
+            <a asp-action="Cadastro" asp-controller="Turmas">
+                <button class="btn btn-cadastrar px-4">Cadastrar Turma</button>
+            </a>
+        </div>
+</div>
