@@ -1,6 +1,96 @@
 ﻿/*Index*/
-table {
-    margin-top: 15px;
-    width: 100%;
+
+body {
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #b90000;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title,
+.title {
+    flex: 1;
     text-align: center;
+    font-size: 2rem;
+}
+
+.brand {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Navigation Bar */
+.top-bar a {
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.top-bar {
+    background-color: #212529;
+}
+
+/* Botões */
+.filter-btn {
+    background-color: #3b2b1a;
+    color: white;
+}
+
+.btn-perfil,
+.btn-cadastrar {
+    background-color: #b90000;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-voltar {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Formulário */
+.form-control {
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-wrapper {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.footer-btn {
+    margin: 2rem;
+}
+
+/* Tabela */
+table {
+    background-color: transparent;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 0 1rem;
+    }
 }
