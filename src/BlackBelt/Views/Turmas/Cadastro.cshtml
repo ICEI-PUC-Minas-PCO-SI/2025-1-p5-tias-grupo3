@@ -1,43 +1,54 @@
-﻿@using System.Text.Json
+﻿@model BlackBelt.Models.Turma
+
 @{
     ViewData["Title"] = "Cadastrar Turma";
 }
-@model BlackBelt.Models.Turma
-<h3>Cadastrar Turma</h3>
-<form asp-action="CadastrarTurma" asp-controller="Turmas" method="post">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="Nome">
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Turmas.css" />
+}
+
+<h1 class="text-center m-3">Cadastro de Turma</h1>
+
+<div class="container form-wrapper">
+    <form asp-action="CadastrarTurma" asp-controller="Turmas" method="post">
         <label for="Nome">Nome</label>
+        <input type="text" id="Nome" class="form-control bg-white border border-dark rounded-pill" asp-for="Nome" />
         <span asp-validation-for="Nome" class="text-danger"></span>
-    </div>
-    <div class="form-floating mb-3">
-        <select class="form-select" asp-for="Id_Instrutor">
+
+        <label for="Id_Instrutor">Instrutor</label>
+        <select id="Id_Instrutor" class="form-control bg-white border border-dark rounded-pill" asp-for="Id_Instrutor">
             <option selected>Selecione o instrutor</option>
             @if (ViewData["Instrutores"] != null)
             {
-                var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
+                var instrutores = ViewData["Instrutores"] as IEnumerable<BlackBelt.Models.Usuario>;
                 foreach (var instrutor in instrutores)
                 {
-                    <option value="@instrutor.Id">@instrutor.Nome.ToString()</option>
+            <option value="@instrutor.Id">@instrutor.Nome</option>
                 }
             }
         </select>
-        <label for="floatingSelect">Instrutor</label>
         <span asp-validation-for="Id_Instrutor" class="text-danger"></span>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="time" class="form-control" asp-for="Horario">
-        <label for="Horario">Horario</label>
-        <span asp-validation-for="Horario" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
-</form>
 
-<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+        <label for="Horario">Horário</label>
+        <input type="time" id="Horario" class="form-control bg-white border border-dark rounded-pill" asp-for="Horario" />
+        <span asp-validation-for="Horario" class="text-danger"></span>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-cadastrar w-100">Cadastrar</button>
+        </div>
+    </form>
+</div>
+
+<div class="footer-btn ms-4">
+    <a asp-action="Index" asp-controller="Turmas">
+        <button class="btn btn-voltar">Voltar</button>
+    </a>
+</div>
 
 @if (TempData["ErroCadastroTurma"] != null)
 {
-    <script>
-        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroTurma"])));
-    </script>
+<script>
+        alert('@TempData["ErroCadastroTurma"]');
+</script>
 }
