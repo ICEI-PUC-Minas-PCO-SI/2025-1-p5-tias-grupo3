@@ -3,6 +3,7 @@ using BlackBelt.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace BlackBelt.Controllers
@@ -19,10 +20,33 @@ namespace BlackBelt.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin,Auxiliar")]
-        public IActionResult Index()
+        public IActionResult Index(string filtroNome, string filtroInstrutor)
         {
+            // Consulta inicial
             IEnumerable<Turma> turmas = _turmaRepository.BuscarTodasTurmas();
-            return View(turmas);
+
+            // Filtro por nome da turma
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                turmas = turmas.Where(t => t.Nome.Contains(filtroNome));
+            }
+
+            // Filtro por nome do instrutor 
+            if (!string.IsNullOrEmpty(filtroInstrutor))
+            {
+                turmas = turmas.Where(t => t.Instrutor != null && t.Instrutor.Nome.Contains(filtroInstrutor));
+            }
+
+            // Carregar lista filtrada e ordenar 
+            List<Turma> listaFiltrada = turmas
+                .OrderBy(t => t.Nome)
+                .ToList();
+
+            // Passar filtros para ViewBag para manter preenchido
+            ViewBag.FiltroNome = filtroNome;
+            ViewBag.FiltroInstrutor = filtroInstrutor;
+
+            return View(listaFiltrada);
         }
 
         //Esta é a tela do formulário para cadastrar
