@@ -72,11 +72,7 @@ namespace BlackBelt.Controllers
         {
             try
             {
-                if (_alunoRepository.EditarAluno(aluno) == null)
-                {
-                    TempData["ErroCpfAluno"] = "Já existe aluno com este cpf";
-                }
-
+                _alunoRepository.EditarAluno(aluno);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -133,13 +129,13 @@ namespace BlackBelt.Controllers
                 ViewData["Habilidades"] = _habilidadeRepository.BuscarHabilidades(id);
                 return View(aluno);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 TempData["ErroBuscarAluno"] = "Não foi possível buscar aluno. Tente Novamente mais tarde.";
                 return RedirectToAction("Index");
             }
-            
-            
+
+
         }
 
         [HttpPost]
@@ -167,7 +163,7 @@ namespace BlackBelt.Controllers
                 TempData["ErroCadastroHabilidade"] = "Não foi possível cadastrar habilidade. Tente Novamente mais tarde.";
                 return RedirectToAction("Perfil", new { id = habilidade.Id_Aluno });
             }
-            
+
         }
 
         [HttpGet]

@@ -3,6 +3,7 @@
 <h3>Editar Usuário</h3>
 <form asp-action="EditarUsuario" asp-controller="Usuarios" method="post">
     <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="SenhaHash" />
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome" value="@Model.Nome.ToString()">
         <label for="Nome">Nome</label>

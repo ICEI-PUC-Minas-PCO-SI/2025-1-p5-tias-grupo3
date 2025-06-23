@@ -46,7 +46,7 @@ namespace BlackBelt.Repositories
             {
                 return null;
             }
-            
+
         }
 
         public Usuario BuscarUsuarioLogin(string cpf, string senha)
@@ -79,23 +79,15 @@ namespace BlackBelt.Repositories
 
         public Usuario EditarUsuario(Usuario usuario)
         {
-            if (VerificarCpf(usuario.Cpf))
-            {
-                _context.Usuarios.Update(usuario);
-                _context.SaveChanges();
-                return usuario;
-            }
-            else
-            {
-                return null;
-            }
-            
+            _context.Usuarios.Update(usuario);
+            _context.SaveChanges();
+            return usuario;
         }
 
         public void ExcluirUsuario(int id)
         {
             var usuario = BuscarUsuario(id);
-            if(usuario != null)
+            if (usuario != null)
             {
                 _context.Usuarios.Remove(usuario);
                 _context.SaveChanges();

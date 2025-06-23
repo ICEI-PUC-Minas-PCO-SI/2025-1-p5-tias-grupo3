@@ -59,17 +59,11 @@ namespace BlackBelt.Repositories
 
         public Aluno EditarAluno(Aluno aluno)
         {
-            if (VerificarCpf(aluno.Cpf))
-            {
-                _context.Alunos.Update(aluno);
-                _context.SaveChanges();
-                return aluno;
-            }
-            else
-            {
-                return null;
-            }
+            _context.Alunos.Update(aluno);
+            _context.SaveChanges();
+            return aluno;
         }
+
 
         public void ExcluirAluno(int id)
         {

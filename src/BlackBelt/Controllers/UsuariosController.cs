@@ -44,7 +44,7 @@ namespace BlackBelt.Controllers
                     TempData["ErroCpfUsuario"] = "Já existe um usuário com este cpf!";
                     return RedirectToAction("Cadastro");
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -67,11 +67,7 @@ namespace BlackBelt.Controllers
         {
             try
             {
-                if(_usuarioRepository.EditarUsuario(usuario) == null)
-                {
-                    TempData["ErroCpfUsuario"] = "Já existe um usuário com este cpf!";
-                }
-
+                _usuarioRepository.EditarUsuario(usuario);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -79,7 +75,6 @@ namespace BlackBelt.Controllers
                 TempData["ErroEditarUsuario"] = "Não foi possível editar usuário. Tente Novamente mais tarde.";
                 return RedirectToAction("Index");
             }
-
         }
 
         [Authorize(Roles = "Admin")]
@@ -110,7 +105,7 @@ namespace BlackBelt.Controllers
                 TempData["ErroExcluirUsuario"] = "Não foi possível excluir usuário. Tente Novamente mais tarde.";
                 return RedirectToAction("Index");
             }
-            
+
         }
     }
 }
