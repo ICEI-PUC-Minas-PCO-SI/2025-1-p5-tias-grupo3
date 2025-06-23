@@ -157,7 +157,6 @@ C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\Blac
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BlackBelt.props
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BlackBelt.props
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\bundle\BlackBelt.styles.css
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\projectbundle\BlackBelt.bundle.scp.css
 C:\Users\vinic\source\repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.csproj.Up2Date
@@ -334,3 +333,4 @@ C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grup
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.genruntimeconfig.cache
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\ref\BlackBelt.dll
 C:\Users\vinicius.andrade\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\BlackBelt.csproj.CopyComplete
+C:\Users\vinic\Source\Repos\ICEI-PUC-Minas-PCO-SI\2025-1-p5-tias-grupo3\src\BlackBelt\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

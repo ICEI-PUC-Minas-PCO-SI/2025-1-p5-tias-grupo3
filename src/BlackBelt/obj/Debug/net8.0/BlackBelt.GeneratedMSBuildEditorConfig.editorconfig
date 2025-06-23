@@ -66,12 +66,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/Login/IndexOriginal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXhPcmlnaW5hbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vinic/Source/Repos/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3/src/BlackBelt/Views/RegistrarPresenca/Index.cshtml]

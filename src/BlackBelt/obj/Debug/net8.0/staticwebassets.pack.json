@@ -29,6 +29,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\images\\0.png",
+      "PackagePath": "staticwebassets\\images\\0.png"
+    },
+    {
+      "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\images\\01.png",
+      "PackagePath": "staticwebassets\\images\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\images\\JIU.jpg",
+      "PackagePath": "staticwebassets\\images\\JIU.jpg"
+    },
+    {
       "Id": "C:\\Users\\vinic\\Source\\Repos\\ICEI-PUC-Minas-PCO-SI\\2025-1-p5-tias-grupo3\\src\\BlackBelt\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
