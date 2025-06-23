@@ -3,45 +3,54 @@
     ViewData["Title"] = "Editar Turma";
 }
 @model BlackBelt.Models.Turma
-<h3>Editar Turma</h3>
-<form asp-action="EditarTurma" asp-controller="Turmas" method="post">
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="Status" />
-    <input type="hidden" asp-for="Dt_Cadastro" />
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="Nome">
-        <label for="Nome">Nome</label>
-        <span asp-validation-for="Nome" class="text-danger"></span>
-    </div>
-    <div class="form-floating">
-        <select class="form-select" asp-for="Id_Instrutor">
-            <option selected>Selecione o instrutor</option>
-            @if (ViewData["Instrutores"] != null)
-            {
-                var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
-                foreach (var instrutor in instrutores)
-                {
+
+<div class="container mt-4">
+    <h3 class="mb-4">Editar Turma</h3>
+    <form asp-action="EditarTurma" asp-controller="Turmas" method="post" class="row justify-content-center">
+        <div class="col-md-6">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Status" />
+            <input type="hidden" asp-for="Dt_Cadastro" />
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" asp-for="Nome">
+                <label for="Nome">Nome</label>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" asp-for="Id_Instrutor">
+                    <option selected>Selecione o instrutor</option>
+                    @if (ViewData["Instrutores"] != null)
+                    {
+                        var instrutores = ViewData["Instrutores"] as IEnumerable<Usuario>;
+                        foreach (var instrutor in instrutores)
+                        {
                     <option value="@instrutor.Id">@instrutor.Nome.ToString()</option>
-                }
-            }
-        </select>
-        <label for="floatingSelect">Instrutor</label>
-        <span asp-validation-for="Id_Instrutor" class="text-danger"></span>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="time" class="form-control" asp-for="Horario">
-        <label for="Horario">Horario</label>
-        <span asp-validation-for="Horario" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+                        }
+                    }
+                </select>
+                <label for="floatingSelect">Instrutor</label>
+                <span asp-validation-for="Id_Instrutor" class="text-danger"></span>
+            </div>
 
-</form>
+            <div class="form-floating mb-3">
+                <input type="time" class="form-control" asp-for="Horario">
+                <label for="Horario">Horário</label>
+                <span asp-validation-for="Horario" class="text-danger"></span>
+            </div>
 
-<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn" style="background-color: #b90000; color: white; border-radius: 20px;">Salvar</button>
+                <a class="btn btn-secondary" asp-controller="Turmas" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </form>
+</div>
 
 @if (TempData["ErroEditarUsuario"] != null)
 {
-    <script>
+<script>
         alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroEditarUsuario"])));
-    </script>
+</script>
 }
