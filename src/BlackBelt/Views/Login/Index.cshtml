@@ -13,25 +13,66 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BlackBelt.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <div class="container">
-        <form asp-action="Logar" asp-controller="Login" method="post">
-            <div class="mb-3">
-                <label for="Cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" asp-for="Cpf">
-                @Html.ValidationMessageFor(x=>x.Cpf)
-            </div>
-            <div class="mb-3">
-                <label for="Senha" class="form-label">Password</label>
-                <input type="password" class="form-control" asp-for="Senha">
-                @Html.ValidationMessageFor(x => x.Senha)
-            </div>
-            <button type="submit" class="btn btn-primary">Logar</button>
-        </form>
-    </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg-login {
+      background: url('01.png') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .logo-img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    .logo-text {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .logo-text span {
+      color: #c1121f;
+    }
+</style>
+<body class="navbar-dark bg-dark">
+
+    <div class="bg-login d-flex justify-content-center align-items-center">
+        <div class="text-center login-container">
+            <img src="img/01.png" alt="Logo" class="logo-img">
+            <div class="logo-text">BLACK <span>BELT</span></div>
+            <form class="mt-4" asp-action="Logar" asp-controller="Login" method="post">
+                <div class="mb-3">
+                    <label for="Cpf" class="form-label"></label>
+                    <input placeholder="Insira seu CPF" type="text" class="form-control" asp-for="Cpf">
+                    @Html.ValidationMessageFor(x => x.Cpf)
+                </div>
+                <div class="mb-3">
+                    <label for="Senha" class="form-label"></label>
+                    <input placeholder="Insira sua senha" type="password" class="form-control" asp-for="Senha">
+                    @Html.ValidationMessageFor(x => x.Senha)
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Logar</button>
+            </form>
+        </div>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 
 </html>

@@ -3,7 +3,95 @@
     Layout = "_Layout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    .main-section {
+        background-color: #c1121f;
+        padding: 2rem 0;
+    }
+
+    .btn-card {
+        background-color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1.2rem;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+        .btn-card:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-3px);
+        }
+
+    .top-bar {
+        color: #fff;
+    }
+
+        .top-bar a {
+            color: #fff;
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+
+    .icon {
+        font-size: 1.8rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<body>
+
+    <section class="image-banner">
+        <img src="img/JIU.jpg" class="img-fluid w-100" style="height: 403px; object-fit: cover;" alt="Banner Jiu-Jitsu">
+
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="main-section text-center">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="CadastrodeAluno" asp-action="Index"><div class="icon">📋</div></a>
+                        
+                        <div>Cadastrar Aluno</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="ListadeAlunos" asp-action="Index"><div class="icon">🥋</div></a>
+                        <div>Usuarios</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="ListadeAlunos" asp-action="Index"><div class="icon">🏃‍♂️</div></a>
+                        <div>Turmas</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="ListadeAlunos" asp-action="Index"><div class="icon">👤</div></a>
+                        <div>Lista de Alunos</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="Relatorio" asp-action="Index"><div class="icon">📊</div></a>
+                        <div>Relatórios</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="btn-card">
+                        <a class="navbar-brand" asp-area="" asp-controller="RegistrarPresenca" asp-action="Index"><div class="icon">🕓</div></a>
+                        <div>Frequência</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>

@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Perfil do Aluno";
+    Layout = "_Layout";
+}
+
+<style>
+    body {
+        background-color: white;
+    }
+
+    .form-control {
+        border-radius: 15px;
+    }
+
+    .btn-black {
+        background-color: black;
+        color: white;
+    }
+
+        .btn-black:hover {
+            background-color: #333;
+        }
+
+    .btn-red {
+        background-color: #dc3545;
+        color: white;
+    }
+
+        .btn-red:hover {
+            background-color: #b02a37;
+        }
+
+    .navbar-brand, .nav-link {
+        color: white !important;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    .btn-voltar {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+</style>
+
+<body>
+
+    <!-- Formulário -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Formulário -->
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control border border-dark" id="nome">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control border border-dark" id="email">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="data" class="form-label">Data de Nascimento</label>
+                            <input type="date" class="form-control border border-dark" id="data">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control border border-dark" id="cpf">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control border border-dark" id="telefone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control border border-dark" id="endereco">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Habilidades -->
+            <div class="col-md-6">
+                <table class="table m-3">
+                    <thead>
+                        <tr>
+                            <th>Habilidade</th>
+                            <th>Nível</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chaves de braço</td>
+                            <td>1</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary me-1">Editar</button>
+                                <button class="btn btn-sm btn-red">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Estrangulamento</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary me-1">Editar</button>
+                                <button class="btn btn-sm btn-red">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Imobilizações</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary me-1">Editar</button>
+                                <button class="btn btn-sm btn-red">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Quedas</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary me-1">Editar</button>
+                                <button class="btn btn-sm btn-red">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <button class="btn btn-black px-4">Salvar</button>
+            <button class="btn btn-secondary">Adicionar habilidade</button>
+            <button class="btn btn-red">Excluir Perfil</button>
+        </div>
+    </div>
+
+    <div class="footer-btn ms-4">
+        <a class="navbar-brand" asp-area="" asp-controller="ListadeAlunos" asp-action="Index"><button class="btn btn-voltar px-4">Voltar</button></a>
+    </div>
+</body>

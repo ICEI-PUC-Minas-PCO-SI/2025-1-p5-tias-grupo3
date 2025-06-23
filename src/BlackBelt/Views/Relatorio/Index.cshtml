@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Relatorio";
+    Layout = "_Layout";
+}
+
+<style>
+   
+    .header {
+        background-color: #b90000;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-title {
+        flex: 1;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .brand {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .filter-section {
+        margin: 20px 0;
+    }
+
+    .filter-btn {
+        background-color: #3b2b1a;
+        color: white;
+    }
+
+    .btn-perfil {
+        background-color: #b90000;
+        color: white;
+        border-radius: 20px;
+    }
+
+    .btn-voltar {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+    }
+
+    .btn-cadastrar {
+        background-color: #b90000;
+        color: white;
+        border-radius: 20px;
+    }
+
+    table {
+        background-color: transparent;
+    }
+
+    th, td {
+        vertical-align: middle;
+    }
+
+    .top-bar a {
+        color: #fff;
+        margin-left: 1rem;
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+
+<h1 class="text-center m-3">Relatorio de Frequência</h1>
+<div class="container mt-4">
+        <!--  <div class="row filter-section justify-content-center">
+        <div class="col-md-3 mb-2">
+            <input type="text" class="form-control rounded-pill border border-dark" placeholder="Filtrar por Aluno">
+        </div>
+        <div class="col-md-3 mb-2">
+            <input type="text" class="form-control rounded-pill border border-dark" placeholder="Filtrar por Turma">
+        </div>
+        <div class="col-md-3 mb-2">
+            <input type="text" class="form-control rounded-pill border border-dark" placeholder="Filtrar por Período">
+        </div>
+        <div class="col-md-3 mb-2">
+            <button class="btn filter-btn w-100 rounded-pill">Filtrar</button>
+        </div>
+    </div>
+        -->
+    <ul class="list-group">
+        <!-- Cabeçalho -->
+        <li class="list-group-item text-center d-flex fw-bold">
+            <div class="col">Nome</div>
+            <div class="col">Turma</div>
+            <div class="col">Faixa</div>
+            <div class="col">Frequência</div>
+        </li>
+
+        <!-- Linha 1 -->
+        <li class="list-group-item text-center d-flex">
+            <div class="col">Lucas</div>
+            <div class="col">1</div>
+            <div class="col">Branca</div>
+            <div class="col">95%</div>
+        </li>
+
+        <!-- Linha 2 -->
+        <li class="list-group-item text-center d-flex">
+            <div class="col">Bruna</div>
+            <div class="col">2</div>
+            <div class="col">Roxa</div>
+            <div class="col">82%</div>
+        </li>
+
+        <!-- Linha 3 -->
+        <li class="list-group-item text-center d-flex">
+            <div class="col">Sandy</div>
+            <div class="col">3</div>
+            <div class="col">Preta</div>
+            <div class="col">79%</div>
+        </li>
+    </ul>
+
+
+    <div class="d-flex justify-content-between mt-4">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><button class="btn btn-voltar px-4">voltar</button></a>
+        <a href="CadastroTurma.html"><button class="btn btn-cadastrar px-4">Gerar Relatorio</button></a>
+    </div>
+</div>
+
+</body>
