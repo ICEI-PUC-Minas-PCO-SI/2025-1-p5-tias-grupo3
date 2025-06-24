@@ -20,6 +20,15 @@
         <div class="text-center login-container">
             <img src="~/images/01.png" alt="Logo" class="logo-img" />
             <div class="logo-text">BLACK <span>BELT</span></div>
+
+            <!--adicionando msg de erro de login-->
+            @if (TempData["ErroLogin"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @TempData["ErroLogin"]
+                </div>
+            }
+
             <form asp-action="Logar" asp-controller="Login" method="post" class="mt-4">
                 <div class="mb-3">
                     <input type="text" class="form-control" asp-for="Cpf" placeholder="Insira seu CPF">
