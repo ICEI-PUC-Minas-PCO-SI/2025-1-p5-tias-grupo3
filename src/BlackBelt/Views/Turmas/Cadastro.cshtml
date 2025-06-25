@@ -3,7 +3,21 @@
     ViewData["Title"] = "Cadastrar Turma";
 }
 @model BlackBelt.Models.Turma
-<h3>Cadastrar Turma</h3>
+
+<style>
+    .btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+</style>
+
+
+<h1 class="text-center m-2">Cadastrar Turma</h1>
+
+<div class="container" style="width:500px;">
 <form asp-action="CadastrarTurma" asp-controller="Turmas" method="post">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome">
@@ -30,10 +44,14 @@
         <label for="Horario">Horario</label>
         <span asp-validation-for="Horario" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
-</form>
+  
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:100px;" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+            <button type="submit" class="btn btn-cadastrar" style="border-radius: 20px;">Salvar</button>
 
-<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Voltar</a>
+        </div>
+</form>
+</div>
 
 @if (TempData["ErroCadastroTurma"] != null)
 {

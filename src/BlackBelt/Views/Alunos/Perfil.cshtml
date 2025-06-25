@@ -5,12 +5,23 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/Alunos.css" />
 }
-<h3>Perfil Aluno</h3>
 
-<div class="container">
+<style>
+.btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
-
-
+</style>
+</br>
+c
+<h3 class="text-center m-2">Perfil Aluno</h3>
+<br/>
+<div class="container" style="width:500px;">
+       
 <form asp-action="CadastroHabilidade" asp-controller="Alunos" method="post">
     <input type="hidden" asp-for="Id" />
     <input type="hidden" asp-for="Dt_Matricula" />
@@ -25,18 +36,21 @@
         <label for="Faixa">Faixa</label>
         <span asp-validation-for="Faixa" class="text-danger"></span>
     </div>
-    
-    <button type="submit" class="btn btn-primary col-12">Cadastrar Habilidade</button>
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:180px;" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
+            <button class="btn btn-cadastrar"  type="submit">Cadastrar Habilidade</button>
+        </div>
+   
 </form>
 
-<table>
+    <table class="m-2" >
     <thead>
         <tr>
-            <td>
-                Nome Habilidade
+                <td style="padding: 20px;">
+               <b>Nome</b>
             </td>
-            <td>
-                Avaliação
+                <td style="padding: 20px;">
+                    <b>Avaliação</b>
             </td>
         </tr>
     </thead>
@@ -47,15 +61,15 @@
             @foreach (var habilidade in habilidades)
             {
                 <tr>
-                    <td>
+                        <td style="padding: 10px;">
                         @habilidade.Nome.ToString()
                     </td>
-                    <td>
+                        <td style="padding: 10px;">
                         @habilidade.Avaliacao.ToString()
                     </td>
                     <td>
-                        <a role="button" class="btn btn-warning" asp-route-id="@habilidade.Id" asp-action="EdicaoHabilidade" asp-controller="Alunos">Editar</a>
-                        <a role="button" class="btn btn-danger" asp-route-id="@habilidade.Id" asp-action="ExclusaoHabilidade" asp-controller="Alunos">Excluir</a>
+                            <a role="button" class="btn btn-secondary m-2" style="border-radius: 20px;" asp-route-id="@habilidade.Id" asp-action="EdicaoHabilidade" asp-controller="Alunos">Editar</a>
+                            <a role="button" class="btn btn-danger m-2" style="border-radius: 20px;" asp-route-id="@habilidade.Id" asp-action="ExclusaoHabilidade" asp-controller="Alunos">Excluir</a>
                     </td>
                 </tr>
             }

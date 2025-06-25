@@ -2,6 +2,19 @@
 @{
     ViewData["Title"] = "Editar Habilidade";
 }
+<style>
+.btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+</style>
+
+<h1 class="text-center m-3">Editar Habilidade</h1>
+
+<div class="container" style="width:500px;">
 
 <form asp-action="EditarHabilidade" asp-controller="Alunos" method="post">
     <input type="hidden" asp-for="Id" value="@Model.Id"/>
@@ -16,6 +29,11 @@
         <label for="Avaliacao">Avaliacao</label>
         <span asp-validation-for="Avaliacao" class="text-danger"></span>
     </div>
+       
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:180px;" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
+            <button type="submit" class="btn btn-cadastrar" type="submit">Salvar</button>
+        </div>
 
-    <button type="submit" class="btn btn-primary col-12">Salvar</button>
 </form>
+</div>

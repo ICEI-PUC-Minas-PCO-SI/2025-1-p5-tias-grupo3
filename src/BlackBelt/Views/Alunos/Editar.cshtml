@@ -3,7 +3,20 @@
     ViewData["Title"] = "Editar Aluno";
 }
 @model BlackBelt.Models.Aluno
-<h3>Editar Aluno</h3>
+
+<style>
+.btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+</style>
+<h3 class="text-center m-2">Editar Aluno</h3>
+
+<div class="container" style="width:500px;">
+
 <form asp-action="EditarAluno" asp-controller="Alunos" method="post">
     <input type="hidden" asp-for="Id" />
     <input type="hidden" asp-for="Dt_Matricula" />
@@ -52,11 +65,15 @@
         <label for="floatingSelect">Turma</label>
         <span asp-validation-for="Id_Turma" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+  
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:100px;" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
+            <button type="submit" class="btn btn-cadastrar" style="border-radius: 20px;">Salvar</button>
 
+        </div>
 </form>
+</div>
 
-<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
 
 @if (TempData["ErroCadastroAluno"] != null)
 {

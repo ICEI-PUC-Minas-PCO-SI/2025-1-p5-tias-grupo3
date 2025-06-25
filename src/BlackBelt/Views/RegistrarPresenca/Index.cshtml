@@ -6,8 +6,31 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/RegistrarPresenca.css" />
 }
+<style>
+    .btn-voltar {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 300px;
+    }
 
-<div class="container">
+    .container-centralizado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabelaInfo th,
+    .tabelaInfo td {
+        padding: 0.75rem 1.5rem;
+    }
+</style>
+
+<h1 class="text-center m-5">Registro de Presença</h1>
+
+<div class="container container-centralizado">
     <div>
         <table class="tabelaInfo">
             <thead>
@@ -32,9 +55,9 @@
                             <th scope="col">@turma.Horario.ToString()</th>
                             <td>
                                 <div class="btn-group" role="group">
-                                    @if (User.IsInRole("Admin") || User.IsInRole("Instrutor"))
+                                    @if (User.IsInRole("Admin") | User.IsInRole("Instrutor"))
                                     {
-                                        <a role="button" class="btn btn-warning" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="LancarPresenca">Lançar Presença</a>
+                                        <a role="button" style="border-radius: 20px;" class="btn btn-danger m-2" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="LancarPresenca">Lançar Presença</a>
                                     }
                                 </div>
                             </td>
@@ -44,6 +67,9 @@
             </tbody>
         </table>
     </div>
+</div>
+<div>
+    <a class="btn btn-dark m-4" style="border-radius: 20px; width:100px" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
 </div>
 @{
 }

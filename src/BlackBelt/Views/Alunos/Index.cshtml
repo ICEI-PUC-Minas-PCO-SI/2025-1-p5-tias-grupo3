@@ -6,15 +6,33 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/Alunos.css" asp-append-version="true" />
 }
+<style>
+    .btn-perfil {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+       
+    }
+
+    .btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    </style>
 
 <h1 class="text-center m-3">Alunos</h1>
 
 <!-- Filtros -->
 <form method="get" asp-controller="Alunos" asp-action="Index" class="row filter-section justify-content-center">
-    <div class="col-md-4 mb-2">
+    <div class="col-md-4 mb-2" style="width:370px;">
         <input type="text" name="filtroNome" value="@ViewBag.FiltroNome" class="form-control rounded-pill border border-dark" placeholder="Filtrar por nome" />
     </div>
-    <div class="col-md-4 mb-2">
+    <div class="col-md-4 mb-2" style="width:370px;">
         <input type="text" name="filtroTurma" value="@ViewBag.FiltroTurma" class="form-control rounded-pill border border-dark" placeholder="Filtrar por turma" />
     </div>
     <div class="col-md-2 mb-2">
@@ -22,7 +40,7 @@
     </div>
 </form>
 
-<div class="container mt-4">
+<div class="container mt-4" style="width:1000px;">
     @if (Model == null || !Model.Any())
     {
         <p>Nenhum aluno encontrado.</p>
@@ -47,12 +65,12 @@
 
                         @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
                         {
-                            <a class="btn btn-warning px-4" asp-controller="Alunos" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
+                            <a class="btn btn-secondary px-4" style="border-radius: 20px;" asp-controller="Alunos" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
                         }
                         
                         @if (User.IsInRole("Admin"))
                         {
-                            <a class="btn btn-danger px-4" asp-controller="Alunos" asp-action="Excluir" asp-route-id="@aluno.Id">Excluir</a>
+                            <a class="btn btn-danger px-4" style="border-radius: 20px;" asp-controller="Alunos" asp-action="Excluir" asp-route-id="@aluno.Id">Excluir</a>
                         }
                     </div>
 

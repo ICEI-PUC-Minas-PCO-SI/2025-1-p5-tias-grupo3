@@ -3,7 +3,21 @@
     ViewData["Title"] = "Cadastrar Usuário";
 }
 @model BlackBelt.Models.Usuario
-<h3>Cadastrar Usuário</h3>
+
+<style>
+    .btn-cadastrar {
+        background-color: #C49A6C;
+        color: white;
+        border-radius: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+</style>
+
+<h1 class="text-center m-2">Cadastrar usuário</h1>
+
+<div class="container" style="width:500px;">
+
 <form asp-action="CadastrarUsuario" asp-controller="Usuarios" method="post">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" asp-for="Nome">
@@ -45,11 +59,15 @@
         <label for="Senha">Senha</label>
         <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary mb-3">Salvar</button>
+  
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:100px;" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
+            <button type="submit" class="btn btn-cadastrar" style="border-radius: 20px;">Salvar</button>
 
+        </div>
 </form>
+</div>
 
-<a class="nav-link text-light btn btn-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Voltar</a>
 
 @if (TempData["ErroCadastroUsuario"] != null)
 {
