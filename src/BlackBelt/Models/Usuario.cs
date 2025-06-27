@@ -21,6 +21,7 @@ namespace BlackBelt.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
+        [MinLength(14, ErrorMessage = "O telefone informado está incompleto!")]
         public string Telefone { get; set; }
 
         [DataType(DataType.Date)]

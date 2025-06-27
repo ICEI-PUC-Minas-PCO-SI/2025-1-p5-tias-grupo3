@@ -7,7 +7,7 @@
 }
 
 <style>
-.btn-cadastrar {
+    .btn-cadastrar {
         background-color: #C49A6C;
         color: white;
         border-radius: 20px;
@@ -19,9 +19,9 @@
 </br>
 
 <h3 class="text-center m-2">Perfil Aluno</h3>
-<br/>
+<br />
 <div class="container" style="width:500px;">
-       
+
     <form asp-action="CadastroHabilidade" asp-controller="Alunos" method="post">
         <input type="hidden" asp-for="Id" />
         <input type="hidden" asp-for="Dt_Matricula" />
@@ -30,27 +30,27 @@
             <label for="Nome">Nome</label>
             <span asp-validation-for="Nome" class="text-danger"></span>
         </div>
-    
+
         <div class="form-floating mb-3">
             <input type="text" class="form-control" asp-for="Faixa" value="@Model.Faixa.ToString()">
             <label for="Faixa">Faixa</label>
             <span asp-validation-for="Faixa" class="text-danger"></span>
         </div>
-            <div class="text-center mb-4 m-3">
-                <a class="btn btn-dark" style="border-radius: 20px;width:180px;" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
-                <button class="btn btn-cadastrar"  type="submit">Cadastrar Habilidade</button>
-            </div>
-   
+        <div class="text-center mb-4 m-3">
+            <a class="btn btn-dark" style="border-radius: 20px;width:180px;" asp-area="" asp-controller="Alunos" asp-action="Index">Voltar</a>
+            <button class="btn btn-cadastrar" type="submit">Cadastrar Habilidade</button>
+        </div>
+
     </form>
 
-        <table class="m-2" >
+    <table class="m-2">
         <thead>
             <tr>
-                    <td style="padding: 20px;">
-                   <b>Nome</b>
+                <td style="padding: 20px;">
+                    <b>Nome</b>
                 </td>
-                    <td style="padding: 20px;">
-                        <b>Avaliação</b>
+                <td style="padding: 20px;">
+                    <b>Avaliação</b>
                 </td>
             </tr>
         </thead>
@@ -61,10 +61,10 @@
                 @foreach (var habilidade in habilidades)
                 {
                     <tr>
-                            <td style="padding: 10px;">
+                        <td style="padding: 10px;">
                             @habilidade.Nome.ToString()
                         </td>
-                            <td style="padding: 10px;">
+                        <td style="padding: 10px;">
                             @habilidade.Avaliacao.ToString()
                         </td>
                         <td>

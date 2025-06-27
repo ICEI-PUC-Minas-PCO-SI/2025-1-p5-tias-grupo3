@@ -23,7 +23,7 @@
         <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="Cpf" value="@Model.Cpf.ToString()">
+        <input type="text" id="cpfInput" class="form-control" asp-for="Cpf" value="@Model.Cpf.ToString()">
         <label for="Cpf">CPF</label>
         <span asp-validation-for="Cpf" class="text-danger"></span>
     </div>
@@ -33,7 +33,7 @@
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="Telefone" value="@Model.Telefone.ToString()">
+        <input type="text" id="telefoneInput" class="form-control" asp-for="Telefone" value="@Model.Telefone.ToString()">
         <label for="Telefone">Telefone</label>
         <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
@@ -61,4 +61,34 @@
 </form>
 </div>
 
+@* adicionando função pra mascara de cpf e telefone *@
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            // mascara pro CPF
+            $('#cpfInput').mask('000.000.000-00');
+            aplicarMascaraTelefone();
+
+            // remove a máscara de CPF antes de enviar pro banco
+            $('form').on('submit', function () {
+                const rawCpf = $('#cpfInput').val().replace(/\D/g, '');
+                $('#cpfInput').val(rawCpf);
+
+                const telefoneSemMascara = $('#telefoneInput').val().replace(/\D/g, '');
+                $('#telefoneInput').val(telefoneSemMascara);
+            });
+
+            // mascara pro telefone
+            function aplicarMascaraTelefone() {
+                const input = $('#telefoneInput');
+                input.unmask();
+
+                const numeros = input.val().replace(/\D/g, '');
+                input.mask('(00) 0000-0000');
+            }
+        });
+    </script>
+}
