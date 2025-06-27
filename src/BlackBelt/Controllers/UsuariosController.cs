@@ -33,6 +33,12 @@ namespace BlackBelt.Controllers
         {
             try
             {
+                //removendo mascara do cpf
+                usuario.Cpf = new string(usuario.Cpf.Where(char.IsDigit).ToArray());
+
+                // removendo mascara do telefone
+                usuario.Telefone = new string(usuario.Telefone.Where(char.IsDigit).ToArray());
+
                 usuario.SenhaHash = CriptografiaSenha.SenhaHash(usuario.Senha);
                 usuario.Senha = null;
                 if (_usuarioRepository.CadastrarUsuario(usuario) != null)

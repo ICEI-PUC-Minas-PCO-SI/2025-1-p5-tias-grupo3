@@ -12,8 +12,8 @@ namespace BlackBelt.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo obrigatório")]
-        [MaxLength(11)]
-        [MinLength(11, ErrorMessage = "A quantidade mínima são 11 caracteres")]
+        [MaxLength(14)]
+        [MinLength(14, ErrorMessage = "O CPF informado está incompleto!")]
         public string Cpf { get; set; }
 
         [DataType(DataType.EmailAddress)]
