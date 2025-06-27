@@ -15,7 +15,7 @@ Carolina Alves Baião Pessoa<br>
 Lucas Henrique da Silva Rabelo<br>
 Pedro Arley Paes Maia<br>
 Rafael Romagnoli Conforte Cesario<br>
-Sandy Costa Santos<br>
+Sandy Costa <br>
 Vinícius de Andrade Rodrigues
 
 ## Professor
