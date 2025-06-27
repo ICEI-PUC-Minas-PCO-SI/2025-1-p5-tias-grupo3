@@ -6,7 +6,7 @@
 
 `1º semestre/2025`
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O projeto, desenvolvido pelo grupo Black Belt, tem como objetivo criar e implementar um sistema automatizado de gestão da frequência e do desempenho dos alunos da academia Sigma, especializada na prática de Jiu-jitsu. A solução visa oferecer maior precisão no controle das presenças, possibilitar o acompanhamento individualizado da evolução técnica de cada praticante e disponibilizar dados estratégicos para auxiliar professores e gestores no planejamento e na organização das turmas. Com isso, busca-se melhorar a experiência dos alunos, otimizar os processos administrativos da academia e contribuir para a retenção dos praticantes por meio de um acompanhamento mais eficaz e personalizado.
 
 ## Integrantes
 
