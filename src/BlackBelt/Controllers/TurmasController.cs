@@ -102,7 +102,7 @@ namespace BlackBelt.Controllers
             }
             catch (Exception ex)
             {
-                TempData["ErroExcluirTurma"] = "Não foi possível excluir turma. Tente Novamente mais tarde.";
+                TempData["ErroExcluirTurma"] = "Não foi possível excluir turma. Tente novamente mais tarde.";
                 return RedirectToAction("Index");
             }
         }
