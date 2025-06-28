@@ -1,7 +1,7 @@
 # Especificação do Projeto
-<span style="color:red">Pré-requisitos</a></span>
-Especificação do Problema
-Nesta seção, é apresentada a definição do problema e a ideia de solução a partir da perspectiva do usuário, contemplando:
+<span style="color:red">Pré-requisitos</a></span><br>
+Especificação do Problema<br>
+Nesta seção, é apresentada a definição do problema e a ideia de solução a partir da perspectiva do usuário, contemplando:<br>
 
 Definição do problema: A prática do Jiu-jitsu exige acompanhamento contínuo da evolução técnica e física dos praticantes. Atualmente, a Academia Sigma enfrenta dificuldades no controle manual de frequência e na ausência de um sistema estruturado para registro do desempenho individual dos alunos, tornando o acompanhamento e a personalização das aulas limitados.
 
