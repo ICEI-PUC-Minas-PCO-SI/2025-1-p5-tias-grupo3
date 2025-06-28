@@ -55,14 +55,14 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 
 ## Histórias de Usuários
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|Gestor|	Visualizar relatórios de frequência e desempenho|	Tomar decisões sobre treinos e retenção
-|Secretário|	Cadastrar novos alunos|	Controlar matrículas com rapidez e segurança|
-|Secretário|	Editar dados dos alunos|	Corrigir informações sem precisar de apoio técnico|
-|Instrutor|	Registrar presença dos alunos em aula|	Controlar frequência e planejar treinos|
-|Instrutor|	Inserir comentários sobre evolução técnica|	Acompanhar pontos fortes e dificuldades dos alunos|
-|Gestor|	Cadastrar e gerenciar instrutores|	Manter a equipe atualizada no sistema|
-|Instrutor|	Consultar histórico técnico do aluno|	Avaliar evolução e planejar graduações|
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`            |<br>
+|Gestor|	Visualizar relatórios de frequência e desempenho|	Tomar decisões sobre treinos e retenção |<br>
+|Secretário|	Cadastrar novos alunos|	Controlar matrículas com rapidez e segurança|<br>
+|Secretário|	Editar dados dos alunos|	Corrigir informações sem precisar de apoio técnico|<br>
+|Instrutor|	Registrar presença dos alunos em aula|	Controlar frequência e planejar treinos|<br>
+|Instrutor|	Inserir comentários sobre evolução técnica|	Acompanhar pontos fortes e dificuldades dos alunos|<br>
+|Gestor|	Cadastrar e gerenciar instrutores|	Manter a equipe atualizada no sistema|<br>
+|Instrutor|	Consultar histórico técnico do aluno|	Avaliar evolução e planejar graduações|<br>
 
 ##Requisitos
 
