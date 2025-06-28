@@ -65,7 +65,7 @@ Mapa de Stakeholders (Resumo)<br>
 
 ## Requisitos
 
-## Requisitos Funcionais<br>
+### Requisitos Funcionais<br>
 
 |ID|	Descrição |	Prioridade |<br>
 |RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |<br>
@@ -80,7 +80,7 @@ Mapa de Stakeholders (Resumo)<br>
 |RF-010|	Emissão de relatórios de frequência |	Desejável |<br>
 
 
-## Requisitos Não Funcionais<br>
+### Requisitos Não Funcionais<br>
 
 |ID|	Descrição |	Prioridade |<br>
 |RNF-001| Sistema responsivo para mobile e desktop |	Essencial |<br>
@@ -89,7 +89,7 @@ Mapa de Stakeholders (Resumo)<br>
 |RNF-004| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |<br>
 
 
-## Restrições<br>
+### Restrições<br>
 
 |ID|	Restrição |<br>
 |001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |<br>
