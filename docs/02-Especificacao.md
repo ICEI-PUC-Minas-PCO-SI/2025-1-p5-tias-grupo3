@@ -7,21 +7,21 @@ Definição do problema: A prática do Jiu-jitsu exige acompanhamento contínuo 
 
 Ideia de solução: Desenvolver um sistema automatizado de gerenciamento de frequência e desempenho dos alunos de Jiu-jitsu, permitindo registro de presenças, cadastro de alunos, acompanhamento técnico individualizado, geração de relatórios e gerenciamento de turmas e instrutores. Dessa forma, professores, gestores e secretários poderão organizar melhor as aulas, planejar treinos personalizados e tomar decisões baseadas em dados.
 
-Visão Geral
+## Visão Geral
 Nesta parte do documento, serão abordados:
 
--Diagrama de personas: descrição dos perfis de usuários que utilizarão o sistema<br>
--Histórias de usuários: necessidades e motivações de cada persona<br>
--Requisitos funcionais: funcionalidades que o sistema deverá oferecer<br>
--Requisitos não funcionais: características técnicas relacionadas a desempenho, usabilidade e segurança<br>
--Restrições do projeto: limitações identificadas para o desenvolvimento<br>
+- Diagrama de personas: descrição dos perfis de usuários que utilizarão o sistema<br>
+- Histórias de usuários: necessidades e motivações de cada persona<br>
+- Requisitos funcionais: funcionalidades que o sistema deverá oferecer<br>
+- Requisitos não funcionais: características técnicas relacionadas a desempenho, usabilidade e segurança<br>
+- Restrições do projeto: limitações identificadas para o desenvolvimento<br>
 
 Técnicas e Ferramentas Utilizadas<br>
 Para realizar esta especificação do projeto, foram utilizadas:<br>
 Técnicas: análise de stakeholders, criação de personas, elicitação de requisitos, definição de histórias de usuários e priorização de requisitos<br>
 Ferramentas: Microsoft Word para documentação, Diagrams.net para modelagem de casos de uso, Lucidchart para diagramas complementares e GitHub para versionamento e publicação do projeto
 
-##Personas
+## Personas
 
 Persona 1 – Gabriela Paes (Gestora Administrativa)
 Idade: 35 anos
@@ -44,14 +44,13 @@ Tecnologia: Básica (usa smartphone para redes sociais e consulta de vídeos té
 Características: Didático, atento à evolução individual, mas prefere métodos rápidos e práticos de registro
 Motivação: Registrar presença e evolução técnica sem precisar usar planilhas manuais demoradas
 
-Mapa de Stakeholders (Resumo)
-Stakeholder	Interesse	Influência
-Gestores	Resultados e relatórios para decisões estratégicas	Alta
-Secretários	Agilidade no cadastro e consulta de dados	Média
-Instrutores	Facilidade de registro e acompanhamento técnico	Alta
-Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
+Mapa de Stakeholders (Resumo)<br>
+|Stakeholder|	Interesse	Influência |<br>
+|Gestores|	Resultados e relatórios para decisões estratégicas	|Alta| <br>
+|Secretários|	Agilidade no cadastro e consulta de dados	|Média|<br>
+|Instrutores|	Facilidade de registro e acompanhamento técnico	|Alta|<br>
+|Alunos|	Receber acompanhamento individualizado	|Baixa (usuários indiretos)|<br>
 
-(Para o diagrama visual completo, me avise caso queira para inserir nos slides.)
 
 ## Histórias de Usuários
 
@@ -64,9 +63,10 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 |Gestor|	Cadastrar e gerenciar instrutores|	Manter a equipe atualizada no sistema|<br>
 |Instrutor|	Consultar histórico técnico do aluno|	Avaliar evolução e planejar graduações|<br>
 
-##Requisitos
+## Requisitos
 
-Requisitos Funcionais<br>
+## Requisitos Funcionais<br>
+
 |ID|	Descrição |	Prioridade |<br>
 |RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |<br>
 |RF-002|	Cadastro de alunos |	Essencial |<br>
@@ -80,7 +80,8 @@ Requisitos Funcionais<br>
 |RF-010|	Emissão de relatórios de frequência |	Desejável |<br>
 
 
-Requisitos Não Funcionais<br>
+## Requisitos Não Funcionais<br>
+
 |ID|	Descrição |	Prioridade |<br>
 |RNF-001| Sistema responsivo para mobile e desktop |	Essencial |<br>
 |RNF-002| Autenticação segura de usuários |	Essencial |<br>
@@ -88,18 +89,20 @@ Requisitos Não Funcionais<br>
 |RNF-004| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |<br>
 
 
-Restrições<br>
+## Restrições<br>
+
 |ID|	Restrição |<br>
 |001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |<br>
 |002|	Deverá utilizar arquitetura MVC com .NET e SQL Server, conforme definido no projeto |<br>
 |003|	Não há custo previsto pois é projeto acadêmico |<br>
 
-Diagrama de Casos de Uso<br>
+
+## Diagrama de Casos de Uso<br>
 
 ![image](https://github.com/user-attachments/assets/29fbe25d-6416-4b4b-9c47-e6cefb5facb1)
 
 
-Principais casos:<br>
+## Principais casos:<br>
 
 Login<br>
 Cadastrar/editar/excluir alunos<br>
