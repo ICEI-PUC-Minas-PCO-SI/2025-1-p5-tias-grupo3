@@ -5,7 +5,7 @@
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/Usuarios.css" />
+    <link rel="stylesheet" href="~/css/Usuarios.css" asp-append-version="true" />
 }
 <style>
     .btn-cadastrar {
@@ -32,6 +32,28 @@
     {
 
     }
+    <form method="get" asp-controller="Usuarios" asp-action="Index" class="row filter-section justify-content-center">
+        <div class="col-md-4 mb-2" style="width: 25%;">
+            <input type="text" name="filtroNome" value="@ViewBag.FiltroNome"
+                   class="form-control rounded-pill border border-dark"
+                   placeholder="Filtrar por nome" />
+        </div>
+
+        <div class="col-md-4 mb-2" style="width: 25%;">
+            <select name="filtroTipo" class="form-control rounded-pill border border-dark">
+                <option value="">Filtrar por tipo de usuário</option>
+                <option value="Admin" selected="@(ViewBag.FiltroTipo == "Admin")">Admin</option>
+                <option value="Instrutor" selected="@(ViewBag.FiltroTipo == "Instrutor")">Instrutor</option>
+                <option value="Auxiliar" selected="@(ViewBag.FiltroTipo == "Auxiliar")">Auxiliar</option>
+            </select>
+        </div>
+
+        <div class="col-md-2 mb-2 d-flex" style="width:30%; gap:10px;">
+            <button type="submit" class="btn filter-btn w-100 rounded-pill">Filtrar</button>
+            <a href="@Url.Action("Index", "Usuarios")" class="btn btn-outline-secondary rounded-pill w-100">Limpar</a>
+        </div>
+    </form>
+
     <div>
         <table class="tabelaInfo">
             <thead>
