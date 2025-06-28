@@ -40,7 +40,7 @@ namespace BlackBelt.Context
                 .HasOne(p => p.Aluno)
                 .WithMany(a => a.Presencas)
                 .HasForeignKey(p => p.Id_Aluno)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Habilidade>()
                 .HasOne(h => h.Aluno)
