@@ -1,101 +1,109 @@
-# Especificação do projeto
+# Especificação do Projeto
+<span style="color:red">Pré-requisitos</a></span>
+Especificação do Problema
+Nesta seção, é apresentada a definição do problema e a ideia de solução a partir da perspectiva do usuário, contemplando:
 
-<span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
+Definição do problema: A prática do Jiu-jitsu exige acompanhamento contínuo da evolução técnica e física dos praticantes. Atualmente, a Academia Sigma enfrenta dificuldades no controle manual de frequência e na ausência de um sistema estruturado para registro do desempenho individual dos alunos, tornando o acompanhamento e a personalização das aulas limitados.
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Ideia de solução: Desenvolver um sistema automatizado de gerenciamento de frequência e desempenho dos alunos de Jiu-jitsu, permitindo registro de presenças, cadastro de alunos, acompanhamento técnico individualizado, geração de relatórios e gerenciamento de turmas e instrutores. Dessa forma, professores, gestores e secretários poderão organizar melhor as aulas, planejar treinos personalizados e tomar decisões baseadas em dados.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+Visão Geral
+Nesta parte do documento, serão abordados:
 
-## Personas
+> -Diagrama de personas: descrição dos perfis de usuários que utilizarão o sistema
+> -Histórias de usuários: necessidades e motivações de cada persona
+> -Requisitos funcionais: funcionalidades que o sistema deverá oferecer
+> -Requisitos não funcionais: características técnicas relacionadas a desempenho, usabilidade e segurança
+> -Restrições do projeto: limitações identificadas para o desenvolvimento
 
-Exemplo: _Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente por meio de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros._
+Técnicas e Ferramentas Utilizadas
+Para realizar esta especificação do projeto, foram utilizadas:
+Técnicas: análise de stakeholders, criação de personas, elicitação de requisitos, definição de histórias de usuários e priorização de requisitos
+Ferramentas: Microsoft Word para documentação, Diagrams.net para modelagem de casos de uso, Lucidchart para diagramas complementares e GitHub para versionamento e publicação do projeto
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+##Personas
 
-> **Links úteis**:
-> - [Rock content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Persona 1 – Gabriela Paes (Gestora Administrativa)
+Idade: 35 anos
+Profissão: Gerente Administrativa
+Tecnologia: Intermediária (usa sistemas de gestão financeira, WhatsApp Business e planilhas Excel)
+Características: Organizada, liderança firme, busca dados claros para decisões rápidas
+Motivação: Acompanhar o desempenho geral dos alunos para melhorar retenção e faturamento
 
-## Histórias de usuários
+Persona 2 – Larissa Souza (Secretária/Recepcionista)
+Idade: 23 anos
+Profissão: Recepcionista/Secretária
+Tecnologia: Básica a intermediária (domina aplicativos de gestão de matrícula, controle de pagamentos e redes sociais)
+Características: Comunicativa, ágil no atendimento, realiza cadastros e confirma presença dos alunos
+Motivação: Realizar cadastros e consultas de frequência com rapidez, evitando erros no atendimento diário
 
-Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
+Persona 3 – Paulo Mendes (Instrutor de Jiu-jitsu)
+Idade: 29 anos
+Profissão: Professor de Jiu-jitsu faixa-preta
+Tecnologia: Básica (usa smartphone para redes sociais e consulta de vídeos técnicos)
+Características: Didático, atento à evolução individual, mas prefere métodos rápidos e práticos de registro
+Motivação: Registrar presença e evolução técnica sem precisar usar planilhas manuais demoradas
+
+Mapa de Stakeholders (Resumo)
+Stakeholder	Interesse	Influência
+Gestores	Resultados e relatórios para decisões estratégicas	Alta
+Secretários	Agilidade no cadastro e consulta de dados	Média
+Instrutores	Facilidade de registro e acompanhamento técnico	Alta
+Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
+
+(Para o diagrama visual completo, me avise caso queira para inserir nos slides.)
+
+## Histórias de Usuários
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Gestor|	Visualizar relatórios de frequência e desempenho|	Tomar decisões sobre treinos e retenção
+|Secretário|	Cadastrar novos alunos|	Controlar matrículas com rapidez e segurança|
+|Secretário|	Editar dados dos alunos|	Corrigir informações sem precisar de apoio técnico|
+|Instrutor|	Registrar presença dos alunos em aula|	Controlar frequência e planejar treinos|
+|Instrutor|	Inserir comentários sobre evolução técnica|	Acompanhar pontos fortes e dificuldades dos alunos|
+|Gestor|	Cadastrar e gerenciar instrutores|	Manter a equipe atualizada no sistema|
+|Instrutor|	Consultar histórico técnico do aluno|	Avaliar evolução e planejar graduações|
 
-Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
+##Requisitos
 
-> **Links úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 common user story mistakes](https://airfocus.com/blog/user-story-mistakes/)
+> - Requisitos Funcionais
+|ID|	Descrição |	Prioridade |
+|RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |
+|RF-002|	Cadastro de alunos |	Essencial |
+|RF-003|	Edição de dados dos alunos	| Essencial |
+|RF-004|	Exclusão de alunos |	Essencial |
+|RF-005|	Registro de frequência |	Essencial |
+|RF-006|	Cadastro de turmas	| Essencial |
+|RF-007|	Cadastro de instrutores |	Essencial |
+|RF-008|	Edição e exclusão de turmas e instrutores |	Essencial |
+|RF-009|	Registro de comentários técnicos no perfil do aluno	| Importante |
+|RF-010|	Emissão de relatórios de frequência |	Desejável |
 
-## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
+> - Requisitos Não Funcionais
+|ID|	Descrição |	Prioridade |
+|RNF-001	| Sistema responsivo para mobile e desktop A	Essencial |
+|RNF-002	| Autenticação segura de usuários |	Essencial |
+|RNF-003	| Armazenamento de dados em banco relacional |	Essencial |
+|RNF-004	| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |
 
-### Requisitos funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+> - Restrições
+|ID|	Restrição |
+|001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |
+|002|	Deverá utilizar arquitetura MVC com .NET e SQL Server, conforme definido no projeto |
+|003|	Não há custo previsto pois é projeto acadêmico |
 
-### Requisitos não funcionais
+Diagrama de Casos de Uso
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
-|RNF-002| Deve processar as requisições do usuário em no máximo 3 segundos |  BAIXA | 
+Imagem
 
-Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+Principais casos:
 
-- [Requisitos funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos não funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-
-Lembre-se de que cada requisito deve corresponder a uma e somente uma característica-alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas histórias de usuários foram cobertos.
-
-> **Links úteis**:
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [Entenda o que são requisitos de software, a diferença entre requisito funcional e não funcional, e como identificar e documentar cada um deles](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-## Restrições
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-O projeto está restrito aos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|001| O projeto deverá ser entregue até o final do semestre |
-|002| O custo total do projeto não deve exceder o orçamento definido       |
-
-## Diagrama de casos de uso
-
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos. Ele utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. O diagrama contempla a fronteira do sistema e o detalhamento dos requisitos funcionais, com a indicação dos atores, casos de uso e seus relacionamentos.
-
-As referências abaixo irão auxiliá-lo na geração do artefato “diagrama de casos de uso”.
-
-> **Links úteis**:
-> - [Criando casos de uso](https://www.ibm.com/docs/pt-br/engineering-lifecycle-management-suite/design-rhapsody/10.0?topic=cases-creating-use)
-> - [Como criar diagrama de caso de uso: tutorial passo a passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+Login
+Cadastrar/editar/excluir alunos
+Registrar frequência
+Registrar comentários técnicos
+Emitir relatórios
+Cadastrar/editar/excluir turmas
+Cadastrar/editar/excluir instrutores
