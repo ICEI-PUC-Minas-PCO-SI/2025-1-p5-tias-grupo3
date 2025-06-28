@@ -10,15 +10,15 @@ Ideia de solução: Desenvolver um sistema automatizado de gerenciamento de freq
 Visão Geral
 Nesta parte do documento, serão abordados:
 
-> -Diagrama de personas: descrição dos perfis de usuários que utilizarão o sistema
-> -Histórias de usuários: necessidades e motivações de cada persona
-> -Requisitos funcionais: funcionalidades que o sistema deverá oferecer
-> -Requisitos não funcionais: características técnicas relacionadas a desempenho, usabilidade e segurança
-> -Restrições do projeto: limitações identificadas para o desenvolvimento
+-Diagrama de personas: descrição dos perfis de usuários que utilizarão o sistema<br>
+-Histórias de usuários: necessidades e motivações de cada persona<br>
+-Requisitos funcionais: funcionalidades que o sistema deverá oferecer<br>
+-Requisitos não funcionais: características técnicas relacionadas a desempenho, usabilidade e segurança<br>
+-Restrições do projeto: limitações identificadas para o desenvolvimento<br>
 
-Técnicas e Ferramentas Utilizadas
-Para realizar esta especificação do projeto, foram utilizadas:
-Técnicas: análise de stakeholders, criação de personas, elicitação de requisitos, definição de histórias de usuários e priorização de requisitos
+Técnicas e Ferramentas Utilizadas<br>
+Para realizar esta especificação do projeto, foram utilizadas:<br>
+Técnicas: análise de stakeholders, criação de personas, elicitação de requisitos, definição de histórias de usuários e priorização de requisitos<br>
 Ferramentas: Microsoft Word para documentação, Diagrams.net para modelagem de casos de uso, Lucidchart para diagramas complementares e GitHub para versionamento e publicação do projeto
 
 ##Personas
@@ -66,45 +66,45 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 
 ##Requisitos
 
-Requisitos Funcionais
-|ID|	Descrição |	Prioridade |
-|RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |
-|RF-002|	Cadastro de alunos |	Essencial |
-|RF-003|	Edição de dados dos alunos	| Essencial |
-|RF-004|	Exclusão de alunos |	Essencial |
-|RF-005|	Registro de frequência |	Essencial |
-|RF-006|	Cadastro de turmas	| Essencial |
-|RF-007|	Cadastro de instrutores |	Essencial |
-|RF-008|	Edição e exclusão de turmas e instrutores |	Essencial |
-|RF-009|	Registro de comentários técnicos no perfil do aluno	| Importante |
-|RF-010|	Emissão de relatórios de frequência |	Desejável |
+Requisitos Funcionais<br>
+|ID|	Descrição |	Prioridade |<br>
+|RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |<br>
+|RF-002|	Cadastro de alunos |	Essencial |<br>
+|RF-003|	Edição de dados dos alunos	| Essencial |<br>
+|RF-004|	Exclusão de alunos |	Essencial |<br>
+|RF-005|	Registro de frequência |	Essencial |<br>
+|RF-006|	Cadastro de turmas	| Essencial |<br>
+|RF-007|	Cadastro de instrutores |	Essencial |<br>
+|RF-008|	Edição e exclusão de turmas e instrutores |	Essencial |<br>
+|RF-009|	Registro de comentários técnicos no perfil do aluno	| Importante |<br>
+|RF-010|	Emissão de relatórios de frequência |	Desejável |<br>
 
 
-Requisitos Não Funcionais
-|ID|	Descrição |	Prioridade |
-|RNF-001| Sistema responsivo para mobile e desktop A	Essencial |
-|RNF-002| Autenticação segura de usuários |	Essencial |
-|RNF-003| Armazenamento de dados em banco relacional |	Essencial |
-|RNF-004| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |
+Requisitos Não Funcionais<br>
+|ID|	Descrição |	Prioridade |<br>
+|RNF-001| Sistema responsivo para mobile e desktop |	Essencial |<br>
+|RNF-002| Autenticação segura de usuários |	Essencial |<br>
+|RNF-003| Armazenamento de dados em banco relacional |	Essencial |<br>
+|RNF-004| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |<br>
 
 
-Restrições
-|ID|	Restrição |
-|001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |
-|002|	Deverá utilizar arquitetura MVC com .NET e SQL Server, conforme definido no projeto |
-|003|	Não há custo previsto pois é projeto acadêmico |
+Restrições<br>
+|ID|	Restrição |<br>
+|001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |<br>
+|002|	Deverá utilizar arquitetura MVC com .NET e SQL Server, conforme definido no projeto |<br>
+|003|	Não há custo previsto pois é projeto acadêmico |<br>
 
-Diagrama de Casos de Uso
+Diagrama de Casos de Uso<br>
 
 ![image](https://github.com/user-attachments/assets/29fbe25d-6416-4b4b-9c47-e6cefb5facb1)
 
 
-Principais casos:
+Principais casos:<br>
 
-Login
-Cadastrar/editar/excluir alunos
-Registrar frequência
-Registrar comentários técnicos
-Emitir relatórios
-Cadastrar/editar/excluir turmas
-Cadastrar/editar/excluir instrutores
+Login<br>
+Cadastrar/editar/excluir alunos<br>
+Registrar frequência<br>
+Registrar comentários técnicos<br>
+Emitir relatórios<br>
+Cadastrar/editar/excluir turmas<br>
+Cadastrar/editar/excluir instrutores<br>
