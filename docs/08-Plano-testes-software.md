@@ -33,6 +33,9 @@ Por exemplo:
 <br>
 <br>
 <br>
+
+---
+
 | **Caso de teste**  | **CT-001 – Cadastrar aluno**  |
 |:---:|:---:|
 | **Requisito associado** | RF-002 - O sistema deve permitir o cadastro de alunos <br> RF-008 - O sistema deve permitir cadastro de aluno em uma turma |
