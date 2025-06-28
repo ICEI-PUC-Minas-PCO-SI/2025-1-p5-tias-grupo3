@@ -66,7 +66,7 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 
 ##Requisitos
 
-> - Requisitos Funcionais
+Requisitos Funcionais
 |ID|	Descrição |	Prioridade |
 |RF-001|	Login de usuários (gerente, secretária, instrutor)	| Essencial |
 |RF-002|	Cadastro de alunos |	Essencial |
@@ -80,15 +80,15 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 |RF-010|	Emissão de relatórios de frequência |	Desejável |
 
 
-> - Requisitos Não Funcionais
+Requisitos Não Funcionais
 |ID|	Descrição |	Prioridade |
-|RNF-001	| Sistema responsivo para mobile e desktop A	Essencial |
-|RNF-002	| Autenticação segura de usuários |	Essencial |
-|RNF-003	| Armazenamento de dados em banco relacional |	Essencial |
-|RNF-004	| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |
+|RNF-001| Sistema responsivo para mobile e desktop A	Essencial |
+|RNF-002| Autenticação segura de usuários |	Essencial |
+|RNF-003| Armazenamento de dados em banco relacional |	Essencial |
+|RNF-004| Interface amigável para usuários com diferentes níveis de experiência |	Essencial |
 
 
-> - Restrições
+Restrições
 |ID|	Restrição |
 |001|	O projeto deverá ser entregue até o final do semestre (Julho de 2025) |
 |002|	Deverá utilizar arquitetura MVC com .NET e SQL Server, conforme definido no projeto |
@@ -96,7 +96,8 @@ Alunos	Receber acompanhamento individualizado	Baixa (usuários indiretos)
 
 Diagrama de Casos de Uso
 
-Imagem
+![image](https://github.com/user-attachments/assets/29fbe25d-6416-4b4b-9c47-e6cefb5facb1)
+
 
 Principais casos:
 
