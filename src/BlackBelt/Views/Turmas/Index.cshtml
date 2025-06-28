@@ -5,7 +5,7 @@
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/Turmas.css" />
+    <link rel="stylesheet" href="~/css/Turmas.css" asp-append-version="true" />
 }
 <style>
 .btn-cadastrar {
@@ -24,6 +24,20 @@
         <a class="btn btn-dark" style="border-radius: 20px; width:180px" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
         <a class="btn btn-cadastrar" asp-area="" asp-controller="Turmas" asp-action="Cadastro">Cadastrar Turma</a>
     </div>
+
+    <!-- Filtros -->
+    <form method="get" asp-controller="Turmas" asp-action="Index" class="row filter-section justify-content-center">
+        <div class="col-md-4 mb-2" style="width:270px;">
+            <input type="text" name="filtroNome" value="@ViewBag.FiltroNome" class="form-control rounded-pill border border-dark" placeholder="Filtrar por nome da turma" />
+        </div>
+        <div class="col-md-4 mb-2" style="width:270px;">
+            <input type="text" name="filtroInstrutor" value="@ViewBag.FiltroInstrutor" class="form-control rounded-pill border border-dark" placeholder="Filtrar por instrutor" />
+        </div>
+        <div class="col-md-2 mb-2 d-flex" style="width:30%; gap:10px;">
+            <button type="submit" class="btn filter-btn w-100 rounded-pill">Filtrar</button>
+            <a href="@Url.Action("Index", "Turmas")" class="btn btn-outline-secondary rounded-pill w-100">Limpar</a>
+        </div>
+    </form>
     
     <div>
         <table class="tabelaInfo">
