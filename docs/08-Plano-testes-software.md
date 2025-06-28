@@ -29,6 +29,23 @@ Por exemplo:
 | Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
 
 
+
+|                 **Caso de teste**                |                                                                                                                                              **CT-001 – Cadastrar aluno**                                                                                                                                              |
+| :----------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|              **Requisito associado**             |                                                                                               RF-002 - O sistema deve permitir o cadastro de alunos <br> RF-008 - O sistema deve permitir cadastro de aluno em uma turma                                                                                               |
+|               **Objetivo do teste**              |                                                                                                                                  Verificar se um usuário consegue cadastrar um aluno.                                                                                                                                  |
+|                    **Passos**                    | - Acessar o navegador <br> - Acessar o sistema (LINK DO SISTEMA) <br> - Realizar login como Administrador ou Instrutor <br> - Clicar na guia de alunos <br> - Clicar em cadastrar aluno <br> - Preencher os campos obrigatórios (nome, CPF, e-mail, telefone, data de nascimento e turma) <br> - Clicar em "Cadastrar" |
+|               **Critério de êxito**              |                                                                                                                                         - O cadastro foi realizado com sucesso.                                                                                                                                        |
+| **Responsável pela elaboração do caso de teste** |                                                                                                                                                       Pedro Arley                                                                                                                                                      |
+
+
+
+
+
+
+
+
+
 ## Ferramentas de testes (opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
