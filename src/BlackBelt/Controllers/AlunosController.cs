@@ -19,9 +19,25 @@ namespace BlackBelt.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin,Auxiliar,Instrutor")]
-        public IActionResult Index()
+        public IActionResult Index(string filtroNome, string filtroTurma)
         {
-            IEnumerable<Aluno> alunos = _alunoRepository.BuscarTodosAlunos();
+            var alunos = _alunoRepository.BuscarTodosAlunos(); // busca todos os alunos
+
+            // verifica se filtros estão vazios, se não estiverem, busca eles nos registros retornados
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                alunos = alunos.Where(a => a.Nome != null && a.Nome.Contains(filtroNome, StringComparison.OrdinalIgnoreCase));
+            }
+
+            if (!string.IsNullOrEmpty(filtroTurma))
+            {
+                alunos = alunos.Where(a => a.Turma != null && a.Turma.Nome.Contains(filtroTurma, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Passa os filtros de volta para a view
+            ViewBag.FiltroNome = filtroNome;
+            ViewBag.FiltroTurma = filtroTurma;
+
             return View(alunos);
         }
 
