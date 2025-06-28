@@ -38,6 +38,34 @@ Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as info
 | 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphones nessa faixa de preço. |
 
 
+<br>
+<br>
+<br>
+
+
+| Nº do cenário | Descrição do cenário |
+|---------------|----------------------|
+| **1** | Você é um instrutor que deseja criar um usuário com nome de “Mica Galvão”. Encontre onde possui a parte de alunos e cadastre esse novo aluno preenchendo todos os campos. |
+| **2** | Você é um instrutor e deseja visualizar todos os alunos que possuam “Rafael” no nome. Encontre a parte de alunos no sistema e filtre por nome. |
+| **3** | Você é um administrador que precisa excluir um instrutor demitido recentemente. Encontre onde possui a lista de instrutores e exclua o último. |
+| **4** | Você é um instrutor que deseja adicionar uma nova habilidade a um aluno da turma **Dragão Negro**. Encontre a lista de usuários e adicione uma nova habilidade ao perfil de um usuário desta turma. |
+| **5** | Você é um instrutor que precisa editar o perfil de um aluno, pois seu telefone está incorreto. Encontre a lista de usuários e edite seu número. |
+| **6** | Você é um administrador que precisa cadastrar um novo auxiliar para ajudar nas demandas do dia a dia. Encontre a lista de usuários e crie um usuário do tipo **Auxiliar**, preenchendo todos os campos necessários. |
+| **7** | Você é um administrador e deseja visualizar quais instrutores estão cadastrados atualmente no sistema. Encontre a lista de usuários e verifique o tipo de usuário de cada um. |
+| **8** | Você é um administrador e deseja cadastrar uma nova turma com nome de **“Treino Kids”** para às **07:00**. Encontre a parte de turmas e realize o cadastro para qualquer instrutor. |
+| **9** | Você é um administrador e deseja visualizar qual foi a data de cadastro da turma **“Cobra Kai”**. Encontre a parte de turmas e verifique a data de cadastro para esta turma. |
+| **10** | Você é um administrador e deseja excluir a turma **“Treino Kids”**. Encontre a parte de turmas e realize a exclusão. |
+| **11** | Você é um instrutor e deseja realizar a chamada dos alunos da turma **Cobra Kai**. Encontre a realização de frequência e faça a chamada para os alunos presentes. |
+| **12** | Você é um instrutor e deseja realizar a chamada somente para o aluno **“Rafael Romagnoli”** da turma **“Dragão Negro”**. Encontre a realização de frequência e registre presença somente para este usuário. |
+
+
+
+
+<br>
+<br>
+<br>
+
+
 > **Links úteis**:
 > - [Teste de usabilidade: o que é e como fazer passo a passo](https://neilpatel.com/br/blog/teste-de-usabilidade/)
 > - [Teste de usabilidade: tudo o que você precisa saber!](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
