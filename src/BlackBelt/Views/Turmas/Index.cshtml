@@ -49,31 +49,32 @@
                             <th scope="col">@turma.Nome.ToString()</th>
                             <th scope="col">@turma.Instrutor.Nome.ToString()</th>
                             <th scope="col">@turma.Horario.ToString()</th>
+                            <th scope="col">@turma.Dt_Cadastro.ToString("dd/MM/yyyy")</th>
                             @switch (@turma.Status)
                             {
                                 case 1:
                                     <th scope="col">Ativa</th>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <a role="button" class="btn btn-secondary m-2" style="border-radius: 20px;" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Editar">Editar</a>
+                                            @if (User.IsInRole("Admin"))
+                                            {
+                                                <button type="button"
+                                                        class="btn btn-danger m-2 abrir-modal-exclusao"
+                                                        style="border-radius: 20px;"
+                                                        data-id="@turma.Id"
+                                                        data-nome="@turma.Nome">
+                                                    Desativar
+                                                </button>
+                                            }
+                                        </div>
+                                    </td>
                                     break;
                                 case 2:
                                     <th scope="col">Desativada</th>
                                     break;
                             }
-                            <th scope="col">@turma.Dt_Cadastro.ToString("dd/MM/yyyy")</th>
-                            <td>
-                                <div class="btn-group" role="group">
-                                    <a role="button" class="btn btn-secondary m-2" style="border-radius: 20px;" asp-route-id="@turma.Id" asp-controller="Turmas" asp-action="Editar">Editar</a>
-                                    @if (User.IsInRole("Admin"))
-                                    {
-                                        <button type="button"
-                                                class="btn btn-danger m-2 abrir-modal-exclusao"
-                                                style="border-radius: 20px;"
-                                                data-id="@turma.Id"
-                                                data-nome="@turma.Nome">
-                                            Excluir
-                                        </button>
-                                    }
-                                </div>
-                            </td>
+                            
                         </tr>
                     }
                 }
@@ -88,13 +89,13 @@
         <div class="modal-content">
             <form id="formExcluirTurma" method="post" asp-action="ExcluirTurma" asp-controller="Turmas">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalExclusaoLabel">Confirmar Exclusão</h5>
+                    <h5 class="modal-title" id="modalExclusaoLabel">Confirmar desativação</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="Id" id="modalTurmaId" />
                     <input type="hidden" name="Id_Usuario" id="modalTurmaId" />
-                    <p>Tem certeza que deseja excluir <strong id="modalTurmaNome"></strong> da lista de turmas?</p>
+                    <p>Tem certeza que deseja desativar <strong id="modalTurmaNome"></strong> da lista de turmas?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
@@ -130,6 +131,6 @@
 @if (TempData["ErroExcluirTurma"] != null)
 {
     <script>
-        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroCadastroTurma"])));
+        alert(@Html.Raw(JsonSerializer.Serialize(TempData["ErroExcluirTurma"])));
     </script>
 }

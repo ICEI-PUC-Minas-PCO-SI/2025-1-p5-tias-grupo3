@@ -48,9 +48,10 @@ namespace BlackBelt.Repositories
         public void ExcluirTurma(int id)
         {
             var turma = BuscarTurma(id);
+            turma.Status = 2;
             if (turma != null)
             {
-                _context.Turmas.Remove(turma);
+                _context.Turmas.Update(turma);
                 _context.SaveChanges();
             }
         }
