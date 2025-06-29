@@ -15,9 +15,19 @@ namespace BlackBelt.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public IActionResult Index()
+        public IActionResult Index(string filtroNome, string filtroTipo)
         {
-            IEnumerable<Usuario> usuarios = _usuarioRepository.BuscarTodosUsuarios();
+            var usuarios = _usuarioRepository.BuscarTodosUsuarios();
+
+            if (!string.IsNullOrEmpty(filtroNome))
+                usuarios = usuarios.Where(u => u.Nome.Contains(filtroNome, StringComparison.OrdinalIgnoreCase));
+
+            if (!string.IsNullOrEmpty(filtroTipo))
+                usuarios = usuarios.Where(u => u.Tipo_Usuario.Equals(filtroTipo, StringComparison.OrdinalIgnoreCase));
+
+            ViewBag.FiltroNome = filtroNome;
+            ViewBag.FiltroTipo = filtroTipo;
+
             return View(usuarios);
         }
 
