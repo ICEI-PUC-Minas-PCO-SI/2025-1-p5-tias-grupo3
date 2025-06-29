@@ -1,6 +1,6 @@
 # Conclusão
 
-O desenvolvimento deste sistema de gerenciamento de frequência e desempenho para a Academia Sigma proporcionou ao grupo a oportunidade de aplicar, de forma prática, os conhecimentos adquiridos ao longo do curso, integrando áreas como análise de requisitos, modelagem de software, arquitetura MVC e desenvolvimento web.
+O desenvolvimento do sistema Black Belt para a Academia Sigma proporcionou ao grupo a oportunidade de aplicar, de forma prática, os conhecimentos adquiridos ao longo do curso, integrando áreas como análise de requisitos, modelagem de software, arquitetura MVC e desenvolvimento web.
 
 A solução proposta busca resolver um problema real enfrentado pela academia, automatizando processos manuais que antes eram suscetíveis a falhas e demorados. Com o sistema, gestores, secretários e instrutores poderão registrar presenças, acompanhar a evolução técnica dos alunos, gerar relatórios detalhados e planejar aulas mais personalizadas, promovendo uma experiência de ensino mais eficiente e motivadora para os praticantes de Jiu-jitsu.
 
