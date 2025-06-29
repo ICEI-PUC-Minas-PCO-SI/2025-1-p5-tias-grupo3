@@ -15,3 +15,4 @@ Coloque aqui o conjunto de slides.
 ## Foto do Grupo
 
 ![Black Belt](https://github.com/user-attachments/assets/94857835-23c5-4021-b917-c23618030deb)
+#####  Apresentação para comunidade (Foto: Sandy Costa, 23 de Junho de 2025). 
