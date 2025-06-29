@@ -3,7 +3,7 @@
 <span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>, <a href="03-Metodologia.md"> Metodologia</a>, <a href="05-Projeto-interface.md"> Projeto de interface</a>
 
 ## Arquitetura de Software e Tecnologias Utilizadas 
-O sistema será desenvolvido em plataforma Web, adotando a arquitetura MVC (Model-View-Controller), com separação clara entre as responsabilidades das camadas: <br>
+O sistema foi desenvolvido em plataforma Web, adotando a arquitetura MVC (Model-View-Controller), com separação clara entre as responsabilidades das camadas: <br>
 
 1. Camada de Apresentação (View - Front-End): <br>
 - Responsável pela interface com o usuário (professores, gestores e alunos), oferecendo uma navegação intuitiva e responsiva. <br>
