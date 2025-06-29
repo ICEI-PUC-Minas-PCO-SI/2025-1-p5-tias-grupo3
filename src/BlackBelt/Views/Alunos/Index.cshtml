@@ -12,9 +12,8 @@
         background-color: #C49A6C;
         color: white;
         border-radius: 20px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-       
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
     }
 
     .btn-cadastrar {
@@ -24,78 +23,86 @@
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    </style>
+</style>
 
 <h1 class="text-center m-3">Alunos</h1>
 
-<!-- Filtros -->
-<form method="get" asp-controller="Alunos" asp-action="Index" class="row filter-section justify-content-center">
-    <div class="col-md-4 mb-2" style="width:270px;">
-        <input type="text" name="filtroNome" value="@ViewBag.FiltroNome" class="form-control rounded-pill border border-dark" placeholder="Filtrar por nome" />
-    </div>
-    <div class="col-md-4 mb-2" style="width:270px;">
-        <input type="text" name="filtroTurma" value="@ViewBag.FiltroTurma" class="form-control rounded-pill border border-dark" placeholder="Filtrar por turma" />
-    </div>
-    <div class="col-md-2 mb-2 d-flex" style="width:30%; gap:10px;">
-        <button type="submit" class="btn filter-btn w-100 rounded-pill">Filtrar</button>
-        <a href="@Url.Action("Index", "Alunos")" class="btn btn-outline-secondary rounded-pill w-100">Limpar</a>
-    </div>
-</form>
 
-<div class="container mt-4" style="width:1000px;">
+
+<div class="container mt-4 text-center" style="width:1000px;">
+    <div class="mb-5">
+        <a class="btn btn-dark" style="border-radius: 20px; width:180px" asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+        <a class="btn btn-cadastrar" asp-area="" asp-controller="Alunos" asp-action="Cadastro">Cadastrar Aluno</a>
+    </div>
+    <!-- Filtros -->
+    <form method="get" asp-controller="Alunos" asp-action="Index" class="row filter-section justify-content-center">
+        <div class="col-md-4 mb-2" style="width:270px;">
+            <input type="text" name="filtroNome" value="@ViewBag.FiltroNome" class="form-control rounded-pill border border-dark" placeholder="Filtrar por nome" />
+        </div>
+        <div class="col-md-4 mb-2" style="width:270px;">
+            <input type="text" name="filtroTurma" value="@ViewBag.FiltroTurma" class="form-control rounded-pill border border-dark" placeholder="Filtrar por turma" />
+        </div>
+        <div class="col-md-2 mb-2 d-flex" style="width:30%; gap:10px;">
+            <button type="submit" class="btn filter-btn w-100 rounded-pill">Filtrar</button>
+            <a href="@Url.Action("Index", "Alunos")" class="btn btn-outline-secondary rounded-pill w-100">Limpar</a>
+        </div>
+    </form>
     @if (Model == null || !Model.Any())
     {
         <p>Nenhum aluno encontrado.</p>
     }
     else
     {
-        <ul class="list-group">
-            @foreach (var aluno in Model)
-            {
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <div>
-                        <strong>Nome:</strong> @aluno.Nome <br />
-                        <strong>Turma:</strong> @aluno.Turma?.Nome <br />
-                        <strong>Telefone:</strong> @aluno.Telefone <br />
-                        <strong>Dt Nascimento:</strong> @aluno.Dt_Nascimento.ToString("dd/MM/yyyy")
-                    </div>
-                    <div class="d-flex justify-content-center gap-2 flex-wrap">
-                        @if (User.IsInRole("Admin") || User.IsInRole("Instrutor"))
+        <div>
+            <table class="tabelaInfo">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Turma</th>
+                        <th scope="col">Faixa</th>
+                        <th scope="col">Data de Nascimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (Aluno aluno in Model)
                         {
-                            <a class="btn btn-perfil px-4" asp-controller="Alunos" asp-action="Perfil" asp-route-id="@aluno.Id">Perfil</a>
+                            <tr>
+                                <th scope="col">@aluno.Nome.ToString()</th>
+                                <th scope="col">@aluno.Turma.Nome.ToString()</th>
+                                <th scope="col">@aluno.Faixa.ToString()</th>
+                                <th scope="col">@aluno.Dt_Nascimento.ToString()</th>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
+                                        {
+                                            <a role="button" class="btn btn-secondary m-2" style="border-radius: 20px;" asp-route-id="@aluno.Id" asp-controller="Alunos" asp-action="Editar">Editar</a>
+                                        }
+                                        @if (User.IsInRole("Admin") || User.IsInRole("Instrutor"))
+                                        {
+                                            <a class="btn btn-perfil m-2" style="border-radius: 20px;" asp-controller="Alunos" asp-action="Perfil" asp-route-id="@aluno.Id">Perfil</a>
+                                        }
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <button type="button"
+                                                    class="btn btn-danger m-2 abrir-modal-exclusao"
+                                                    style="border-radius: 20px;"
+                                                    data-id="@aluno.Id"
+                                                    data-nome="@aluno.Nome">
+                                                Excluir
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
                         }
-
-                        @if (User.IsInRole("Admin") || User.IsInRole("Auxiliar"))
-                        {
-                            <a class="btn btn-secondary px-4" style="border-radius: 20px;" asp-controller="Alunos" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
-                        }
-                        
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <button type="button"
-                                    class="btn btn-danger abrir-modal-exclusao"
-                                    style="border-radius: 20px;"
-                                    data-id="@aluno.Id"
-                                    data-nome="@aluno.Nome">
-                                Excluir
-                            </button>
-                        }
-                    </div>
-
-                </li>
-            }
-        </ul>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
 
-    <!-- Botões -->
-    <div class="d-flex justify-content-between mt-4">
-        <a asp-controller="Home" asp-action="Index">
-            <button class="btn btn-voltar px-4">Voltar</button>
-        </a>
-        <a asp-controller="Alunos" asp-action="Cadastro">
-            <button class="btn btn-cadastrar px-4">Cadastrar Aluno</button>
-        </a>
-    </div>
 </div>
 
 <!-- Modal de confirmação de exclusão de alunos -->

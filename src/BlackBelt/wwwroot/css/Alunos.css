@@ -3,6 +3,12 @@
     font-family: 'Arial', sans-serif;
 }
 
+table {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
 /* Header (opcional se estiver usando _Layout.cshtml) */
 .header {
     background-color: #b90000;
@@ -40,12 +46,6 @@
 .filter-btn {
     background-color: #3b2b1a;
     color: white;
-}
-
-.btn-perfil {
-    background-color: #b90000;
-    color: white;
-    border-radius: 20px;
 }
 
 .btn-voltar {
