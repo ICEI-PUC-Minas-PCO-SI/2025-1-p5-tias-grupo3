@@ -93,7 +93,6 @@ Atendimento às histórias de usuário: Cada tela foi criada considerando as nec
 ## Interface do sistema
 
 ![1](https://github.com/user-attachments/assets/d3861be6-95b6-46fb-bd8c-5112a0cb9de5)
-![2](https://github.com/user-attachments/assets/1c0e0963-fcb3-42e3-8501-dd05eea09aa5)
 ![3](https://github.com/user-attachments/assets/4bf68e3e-8cee-4172-b6b8-25f64038636c)
 ![4](https://github.com/user-attachments/assets/67722492-0e46-481e-9258-023f01b0a717)
 ![5](https://github.com/user-attachments/assets/748190d1-0c87-4baa-ab11-a4a5a6a229f4)
@@ -102,7 +101,4 @@ Atendimento às histórias de usuário: Cada tela foi criada considerando as nec
 ![8](https://github.com/user-attachments/assets/76dc6e7f-1d7c-42c1-ad6f-3b91647cc554)
 ![9](https://github.com/user-attachments/assets/eeb9a4f4-6e9f-44f7-948f-6e712a2f031d)
 ![10](https://github.com/user-attachments/assets/49a2beb2-21b1-4a64-92ef-65de57df614e)
-![11](https://github.com/user-attachments/assets/b4b66ac7-8908-43f0-9f8b-0651ba690de6)
-![12](https://github.com/user-attachments/assets/3364f9dc-c968-421b-bf3a-57f41217459b)
-![13](https://github.com/user-attachments/assets/fb894149-b103-4f94-8127-ea9a9ddd62a8)
-![14](https://github.com/user-attachments/assets/b3454a69-b504-4ea1-99cd-ee398f83587e)
+
