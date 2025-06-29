@@ -6,8 +6,6 @@ O teste de usabilidade permite avaliar a qualidade da interface com o usuário d
 
 Para cada voluntário do teste, é fundamental coletar e apresentar todos os dados/métricas previamente definidos. No entanto, atendendo à LGPD (Lei Geral de Proteção de Dados), nenhum dado sensível que permita identificar o voluntário deverá ser apresentado.
 
-> Exemplo:
-
 O objetivo do plano de testes de usabilidade é obter informações quanto à expectativa dos usuários em relação à funcionalidade da aplicação de forma geral.
 
 Para tanto, foram elaborados quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
@@ -28,19 +26,21 @@ Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo util
 
 Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
 
-> Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico, você deve detalhar quais funcionalidades foram avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
 ## Cenários de teste de usabilidade
 
 | Nº do cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iPhone. Encontre no site um iPhone e veja detalhes de localização e contato da loja que o está anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphones nessa faixa de preço. |
+| **1** | Você é um instrutor que deseja criar um usuário com nome de “Mica Galvão”. Encontre onde possui a parte de alunos e cadastre esse novo aluno preenchendo todos os campos. |
+| **2** | Você é um instrutor e deseja visualizar todos os alunos que possuam “Rafael” no nome. Encontre a parte de alunos no sistema e filtre por nome. |
+| **3** | Você é um administrador que precisa excluir um instrutor demitido recentemente. Encontre onde possui a lista de instrutores e exclua o último. |
+| **4** | Você é um instrutor que deseja adicionar uma nova habilidade a um aluno da turma **Dragão Negro**. Encontre a lista de usuários e adicione uma nova habilidade ao perfil de um usuário desta turma. |
+| **5** | Você é um instrutor que precisa editar o perfil de um aluno, pois seu telefone está incorreto. Encontre a lista de usuários e edite seu número. |
+| **6** | Você é um administrador que precisa cadastrar um novo auxiliar para ajudar nas demandas do dia a dia. Encontre a lista de usuários e crie um usuário do tipo **Auxiliar**, preenchendo todos os campos necessários. |
+| **7** | Você é um administrador e deseja visualizar quais instrutores estão cadastrados atualmente no sistema. Encontre a lista de usuários e verifique o tipo de usuário de cada um. |
+| **8** | Você é um administrador e deseja cadastrar uma nova turma com nome de **“Treino Kids”** para às **07:00**. Encontre a parte de turmas e realize o cadastro para qualquer instrutor. |
+| **9** | Você é um administrador e deseja visualizar qual foi a data de cadastro da turma **“Cobra Kai”**. Encontre a parte de turmas e verifique a data de cadastro para esta turma. |
+| **10** | Você é um administrador e deseja excluir a turma **“Treino Kids”**. Encontre a parte de turmas e realize a exclusão. |
+| **11** | Você é um instrutor e deseja realizar a chamada dos alunos da turma **Cobra Kai**. Encontre a realização de frequência e faça a chamada para os alunos presentes. |
+| **12** | Você é um instrutor e deseja realizar a chamada somente para o aluno **“Rafael Romagnoli”** da turma **“Dragão Negro”**. Encontre a realização de frequência e registre presença somente para este usuário. |
 
-
-> **Links úteis**:
-> - [Teste de usabilidade: o que é e como fazer passo a passo](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber!](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de testes de usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
