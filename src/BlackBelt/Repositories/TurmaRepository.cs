@@ -26,6 +26,22 @@ namespace BlackBelt.Repositories
                 .OrderBy(t => t.Nome);
         }
 
+        public IEnumerable<Turma> BuscarTurmasPresenca()
+        {
+            return _context.Turmas
+                .OrderBy(t => t.Nome)
+                .Select(t => new Turma
+                {
+                    Id = t.Id,
+                    Nome = t.Nome,
+                    Horario = t.Horario,
+                    Status = t.Status,
+                    Dt_Cadastro = t.Dt_Cadastro,
+                    Instrutor = t.Instrutor,
+                });
+                
+        }
+
         public Turma BuscarTurma(int id)
         {
             var turma = _context.Turmas.FirstOrDefault(t => t.Id == id);

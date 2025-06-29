@@ -57,8 +57,17 @@
                                 <div class="btn-group" role="group">
                                     @if (User.IsInRole("Admin") | User.IsInRole("Instrutor"))
                                     {
-                                        <a role="button" style="border-radius: 20px;" class="btn btn-danger m-2" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="LancarPresenca">Lançar Presença</a>
+                                        if (turma.Status == 1)
+                                        {
+                                            <a role="button" style="border-radius: 20px;" class="btn btn-danger m-2" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="LancarPresenca">Lançar Presença</a>
+                                            <a role="button" style="border-radius: 20px;" class="btn btn-danger m-2" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="Historico">Histórico</a>
+                                        }
+                                        else
+                                        {
+                                            <a role="button" style="border-radius: 20px;" class="btn btn-danger m-2" asp-route-id="@turma.Id" asp-controller="RegistrarPresenca" asp-action="Historico">Histórico</a>
+                                        }
                                     }
+
                                 </div>
                             </td>
                         </tr>

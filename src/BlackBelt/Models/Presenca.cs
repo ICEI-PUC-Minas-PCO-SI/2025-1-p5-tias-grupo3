@@ -17,8 +17,5 @@ namespace BlackBelt.Models
 
         [ForeignKey("Id_Aluno")]
         public Aluno? Aluno { get; set; }
-
-        
-        
     }
 }

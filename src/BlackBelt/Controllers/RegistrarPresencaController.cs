@@ -24,7 +24,7 @@ namespace BlackBelt.Controllers
         {
             try
             {
-                IEnumerable<Turma> turmas = _turmaRepository.BuscarTodasTurmas();
+                IEnumerable<Turma> turmas = _turmaRepository.BuscarTurmasPresenca();
                 return View(turmas);
             }
             catch (Exception ex)
@@ -78,6 +78,22 @@ namespace BlackBelt.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin,Instrutor")]
+        public IActionResult Historico(int id)
+        {
+            try
+            {
+                var aulas = _presencaRepository.BuscarPresencasPorTurma(id);
+                return View(aulas);
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return View();
         }
     }
 }
