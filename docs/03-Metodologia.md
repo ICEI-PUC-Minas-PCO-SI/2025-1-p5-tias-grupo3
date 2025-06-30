@@ -65,12 +65,16 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 Atualizado em: 21/04/2024
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |<br>
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |<br>
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️ | 05/02/2024      |<br>
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | ✔️ |                 |<br>
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ✔️ |                 |<br>
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ✔️  |       |<br>
+| Responsável   | Tarefa/Requisito  | Iniciado em    | Prazo      | Status | Terminado em    |<br>
+| :----         |    :----          |      :----:    | :----:     | :----: | :----:          |<br>
+| Vinicius| Login  | 12/05/2025      | 30/06/2025                 | ✔️ | 05/02/2024      |<br>
+| Vinicius e Lucas | CRUD de Usuários  | 12/05/2025 | 30/06/2025  | ✔️ | 05/02/2024      |<br>
+| Lucas e Vinicius | CRUD de Turmas	  |28/05/2025 | 30/06/2025   | ✔️ |                 |<br>
+| Pedro e Vinicius | CRUD de Alunos	  | 28/05/2025 | 30/06/2025   | ✔️ |                 |<br>
+| Lucas e Pedro | Menu Principal	  | 12/05/2025| 30/06/2025     | ✔️  |       |<br>
+| Caolina, Vinicius e Lucas   | Perfil do Aluno	 |30/06/2025 | 12/02/2005 | ✔️  |       |<br>
+| Bruna e Vinicius| Registrar Presença| 28/05/2025| 30/06/2025   | ✔️  |       |<br>
+| Vinicus | Modificar estrutura do banco | 29/05/2025| 30/06/2025 | ✔️  |       |<br>
 
 #### Sprint 2 <br>
 
@@ -78,10 +82,22 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    | <br>
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          | <br>
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |<br>
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | ✔️    |                 | <br>
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ✔️    |                 |<br>
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ✔️    |                 |<br>
+| AlunaX        | 	Integração Login   | 01/02/2024     |30/06/2025 | ✔️    | 05/02/2024      |<br>
+| AlunaZ        |Integração Home	    | 03/02/2024     | 30/06/2025 | ✔️    |                 | <br>
+| AlunoY        | Integração Turmas	  | 01/02/2024     | 30/06/2025 | ✔️    |                 |<br>
+| AlunoK        |Integração Usuários	  |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
+| AlunoK        |Integração Alunos		  |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
+| Bruna         |Registrar Aula	        |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
+| AlunoK        |Ajuste exclusão de turmas         	  |  30/06/2025    | 12/03/2024 | ✔️ |                 |<br>
+| AlunoK        |Ajuste exclusão de alunos		  |  30/06/2025    | 12/03/2024 | ✔️  |                 |<br>
+| AlunoK        |	Documentação de testes		  |  30/06/2025    | 12/03/2024 | ✔️  |                 |<br>
+| Carolina      |Pop-ups (opcional)			  |  27/06/2025 | 30/06/2025 | ✔️ |                 |<br>
+| AlunoK        |Ajuste na frequência			  |  30/06/2025    | 30/06/2025 | ✔️ |                 |<br>
+| AlunoK        | Atualizar banco com exclusão			  | 30/06/2025  | 30/06/2025 | ✔️ |                 |<br>
+| Carolina       | Ajustar os filtros de pesquisa		  | 27/06/2025  | 30/06/2025 | ✔️ |                 |<br>
+
+
+
 
 
 Legenda:
@@ -91,21 +107,11 @@ Legenda:
 - ❌: não iniciado
 
 
-> **Links úteis**:
-> - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+
 
 ### Processo
 
 Coloque informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links úteis**:
-> - [Planejamento e gestão ágil de projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Como criar backlogs no GitHub](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial slack](https://slack.com/intl/en-br/)
 
 
 ## Relação de ambientes de trabalho
@@ -121,8 +127,8 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3.git|<br>
-| Documentos do projeto               | Google Docs                        |https://docs.google.com/document/d/1iHhh2hjOmBgQGTWVt_aO8kXqRS3qxbHHrhcOum2YHgo/edit?usp=sharing |<br>
-| Projeto de interface                | Figma                              | https://www.figma.com/design/YLEuOfqvxmMry87SxlO8mm/Black-Belt?node-id=0-1&p=f&t=VtBiJCURuEpvY7Ud-0| <br>
-| Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
-| Hospedagem                          | Vercel                             | http://....                            |
+| Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1iHhh2hjOmBgQGTWVt_aO8kXqRS3qxbHHrhcOum2YHgo/edit?usp=sharing |<br>
+| Link Figma                          | Figma                              | https://www.figma.com/design/YLEuOfqvxmMry87SxlO8mm/Black-Belt?node-id=0-1&p=f&t=VtBiJCURuEpvY7Ud-0| <br>
+| Link Caso de Teste                  | Word                               | https://sgapucminasbr my.sharepoint.com/personal/1452976_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EbYkJV8cdrpCg2ftZamBx1MBr_ypgZHEQDfnDPPJxNpvbg&e=ofIhjb  | <br>
+| Hospedagem - Explicação sobre a hospedagem no Tópico 7 – Arquitetura de Solução |
  
