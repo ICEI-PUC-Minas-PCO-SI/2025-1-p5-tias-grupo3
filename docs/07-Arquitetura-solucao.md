@@ -44,7 +44,8 @@ Hospedado em instância SQL Server, localmente ou em nuvem, garantindo acesso se
 Acesso ao Sistema: <br>
 Realizado por meio de navegador web em dispositivos desktop ou mobile, com autenticação de usuário e controle de permissões por perfil (gestor, instrutor, secretária). <br>
 
-![image](https://github.com/user-attachments/assets/c8a776fa-6ddb-4cfc-9d4d-d1277abd9ee5)
+![image](https://github.com/user-attachments/assets/8935696c-479c-414d-bafe-04dccebbd5b0)
+
 
 ### Benefícios da Arquitetura <br>
 - Manutenção facilitada (separação clara de responsabilidades) <br>
