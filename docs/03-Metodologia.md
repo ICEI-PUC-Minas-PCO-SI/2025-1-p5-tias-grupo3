@@ -29,40 +29,27 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
 
-> **Links úteis**:
-> - [Documentação](https://docs.google.com/document/d/1iHhh2hjOmBgQGTWVt_aO8kXqRS3qxbHHrhcOum2YHgo/edit?usp=sharing) <br>
-> - [Link Figma] (https://www.figma.com/design/YLEuOfqvxmMry87SxlO8mm/Black-Belt?node-id=0-1&p=f&t=VtBiJCURuEpvY7Ud-0) <br>
-> - [Link Trello](https://trello.com/invite/b/6814ae14f3805d476e3b9e53/ATTI436aa969575c9c0f8c9370f0fef8ed8876D1B3AD/black-belt) <br>
-> - [Github](https://github.com/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3.git)<br>
-> - [Link Caso de Teste](https://sgapucminasbr-my.sharepoint.com/personal/1452976_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EbYkJV8cdrpCg2ftZamBx1MBr_ypgZHEQDfnDPPJxNpvbg&e=ofIhjb )<br>
+## Planejamento do projeto<br>
 
-## Planejamento do projeto
+###  Divisão de papéis <br>
 
-###  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
+#### Sprint 1<br>
+- _Scrum master_: Vinicius<br>
+- Protótipos: Lucas e Vinicius<br>
+- Testes: Pedro e Rafael<br>
+- Documentação: Sandy e Bruna<br>
 
-#### Sprint 1
-- _Scrum master_: Vinicius
-- Protótipos: Lucas e Vinicius
-- Testes: Pedro e Rafael
-- Documentação: Sandy e Bruna
+#### Sprint 2<br>
+- _Scrum master_: Vinicius<br>
+- Desenvolvedor _front-end_: Lucas, Carolina e Bruna<br>
+- Desenvolvedor _back-end_: Carolina e Vinicius<br>
+- Testes: Pedro e Rafael<br>
 
-#### Sprint 2
-- _Scrum master_: Vinicius
-- Desenvolvedor _front-end_: Lucas, Carolina e Bruna
-- Desenvolvedor _back-end_: Carolina e Vinicius
-- Testes: Pedro e Rafael
-
-###  Quadro de tarefas
-
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
+###  Quadro de tarefas<br>
 
 #### Sprint 1 <br>
-
-Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito  | Iniciado em    | Prazo      | Status | Terminado em |<br>
 | :----         |    :----          |      :----:    | :----:     | :----: | :----:       |<br>
@@ -77,8 +64,6 @@ Atualizado em: 21/04/2024
 
 #### Sprint 2 <br>
 
-Atualizado em: 21/04/2024
-
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    | <br>
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          | <br>
 | Carolina e Lucas| 	Login     | 29/05/2025      |30/06/2025 | ✔️    | 24/06/2025     |<br>
@@ -91,16 +76,11 @@ Atualizado em: 21/04/2024
 | Pedro e Rafael|	Documentação de teste |  28/06/2025   | 30/06/2025 | ✔️  |28/06/2025  |<br>
 | Carolina      |Pop-ups (opcional)	 |  27/06/2025 | 30/06/2025 | ✔️ | 28/06/2025  |<br>
 
-
-
-
-Legenda:
-- ✔️: terminado
-- 📝: em execução
-- ⌛: atrasado
-- ❌: não iniciado
-
-
+Legenda:<br>
+- ✔️: terminado <br>
+- 📝: em execução <br>
+- ⌛: atrasado <br>
+- ❌: não iniciado <br>
 
 
 ### Processo <br>
@@ -109,14 +89,7 @@ O grupo seguiu a metodologia ágil Scrum para organizar e acompanhar o desenvolv
 Para o gerenciamento do projeto, utilizamos a ferramenta Trello, onde as tarefas foram organizadas em quadros com colunas que indicavam o status de cada atividade, como "A Fazer", "Em andamento" e "Concluído". Essa organização visual permitiu à equipe acompanhar o progresso das entregas, facilitar a comunicação e garantir que todos estivessem cientes de suas responsabilidades. <br>
 
 ## Relação de ambientes de trabalho<br>
-
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. Todos os ambientes e frameworks utilizados no desenvolvimento da aplicação estão listados na seção abaixo.<br>
-
 ### Ferramentas<br>
-
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.<br>
-
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.<br>
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |<br>
 |-------------------------------------|------------------------------------|----------------------------------------|<br>
