@@ -44,6 +44,8 @@ Hospedado em instância SQL Server, localmente ou em nuvem, garantindo acesso se
 Acesso ao Sistema: <br>
 Realizado por meio de navegador web em dispositivos desktop ou mobile, com autenticação de usuário e controle de permissões por perfil (gestor, instrutor, secretária). <br>
 
+![image](https://github.com/user-attachments/assets/c8a776fa-6ddb-4cfc-9d4d-d1277abd9ee5)
+
 ### Benefícios da Arquitetura <br>
 - Manutenção facilitada (separação clara de responsabilidades) <br>
 - Escalabilidade (possibilidade de integração futura com outras modalidades e funcionalidades) <br>
@@ -112,40 +114,16 @@ CREATE TABLE Prescricao (
 Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).
 
 
-## Tecnologias
-
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-
-| **Dimensão**   | **Tecnologia**  |
-| ---            | ---             |
-| Front-end      | HTML + CSS + JS + React |
-| Back-end       | Node.js         |
-| SGBD           | MySQL           |
-| Deploy         | Vercel          |
-
 
 ## Hospedagem
 
 Explique como a hospedagem e o lançamento da plataforma foram realizados.
 
-> **Links úteis**:
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando seu site no Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
 
 ## Qualidade de software
 
-Conceituar qualidade é uma tarefa complexa, mas ela pode ser vista como um método gerencial que, por meio de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A demanda por um sistema de gestão de desempenho dos alunos para a academia está diretamente relacionada ao Objetivo de Desenvolvimento Sustentável (ODS) 9 - Indústria, Inovação e Infraestrutura, proposto pela ONU. Esse objetivo incentiva a inovação e a modernização dos processos para tornar as empresas mais eficientes e sustentáveis.   
 
-No contexto do desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem atendidas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, esse nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+Ao implementar um sistema automatizado para gestão de desempenho dos alunos, a academia promoverá o uso da tecnologia para melhorar sua infraestrutura e otimizar a gestão de recursos. Isso pode contribuir para um ambiente mais organizado, melhor planejamento dos horários e alocação de profissionais, além de reduzir desperdícios operacionais.   
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software. Com base nessas características e nas respectivas subcaracterísticas, identifique as subcaracterísticas que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software, considerando alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão à equipe avaliar os objetos de interesse.
-
-> **Links úteis**:
-> - [ISO/IEC 25010:2011 - Systems and Software Engineering — Systems and Software Quality Requirements and Evaluation (SQuaRE) — System and Software Quality Models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de software - Engenharia de Software](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209)
+Além disso, esse projeto também dialoga com o ODS 3 - Saúde e Bem-Estar, pois a análise dos dados de frequência pode ajudar a academia a incentivar hábitos mais saudáveis entre os alunos e possibilitar um maior desenvolvimento dentro da arte marcial. Permitindo os mestres orientadores serem mais precisos em suas aulas, identificando padrões de comparecimento e criando estratégias para reduzir a evasão e aumentar o engajamento na prática de atividades físicas. 
