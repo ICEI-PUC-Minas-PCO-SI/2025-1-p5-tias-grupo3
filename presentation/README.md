@@ -6,7 +6,7 @@
 
 ## Slides
 
-[Copy of Academia Sigma.pdf](https://github.com/user-attachments/files/20971137/Academia.Sigma.pdf)
+[Academia Sigma (Git).pdf](https://github.com/user-attachments/files/20971142/Academia.Sigma.Git.pdf)
 
 
 ## Foto do Grupo
