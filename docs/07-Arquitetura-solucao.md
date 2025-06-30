@@ -2,17 +2,102 @@
 
 <span style="color:red">Pré-requisitos: <a href="05-Projeto-interface.md"> Projeto de interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+A solução proposta foi estruturada utilizando a arquitetura MVC (Model-View-Controller), garantindo separação clara de responsabilidades e melhor organização do código para manutenção futura. O sistema será desenvolvido como uma aplicação web, acessível por diferentes dispositivos (desktop, tablet e smartphone).
 
-![Arquitetura da Solução](images/arquitetura.png)
+### Componentes da Solução 
+1. Front-end (View – Camada de Apresentação) <br>
+Descrição: <br>
+Responsável pela interface com o usuário (gestores, instrutores e secretários), permitindo a interação direta com as funcionalidades do sistema de forma intuitiva e responsiva.
+
+Tecnologias Utilizadas: <br>
+
+HTML5 <br>
+CSS3 <br>
+Bootstrap <br>
+
+2. Back-end (Controller – Camada de Lógica de Negócio) <br>
+Descrição: <br>
+Gerencia a lógica do sistema, processamento de regras de negócio, autenticação de usuários e validação de dados, conectando a interface ao banco de dados. <br>
+
+Tecnologias Utilizadas: <br>
+
+Linguagem: C# <br>
+Framework: ASP.NET MVC (Model-View-Controller) <br>
+Plataforma: .NET <br>
+
+3. Banco de Dados (Model – Camada de Dados)
+Descrição:<br>
+Responsável pelo armazenamento seguro e consistente de todas as informações, incluindo cadastros, registros de frequência e dados técnicos dos alunos. <br>
+
+Tecnologia Utilizada:
+Banco de Dados Relacional: SQL Server <br>
+
+## Ambiente de Hospedagem
+O ambiente de hospedagem previsto para a aplicação é composto por: <br>
+
+Servidor Web:<br>
+Hospedagem do sistema ASP.NET MVC em ambiente compatível com .NET, podendo ser um servidor IIS (Internet Information Services) local ou cloud.
+
+Servidor de Banco de Dados: <br>
+Hospedado em instância SQL Server, localmente ou em nuvem, garantindo acesso seguro às tabelas do sistema. <br>
+
+Acesso ao Sistema: <br>
+Realizado por meio de navegador web em dispositivos desktop ou mobile, com autenticação de usuário e controle de permissões por perfil (gestor, instrutor, secretária). <br>
+
+### Benefícios da Arquitetura <br>
+- Manutenção facilitada (separação clara de responsabilidades) <br>
+- Escalabilidade (possibilidade de integração futura com outras modalidades e funcionalidades) <br>
+- Segurança e desempenho adequados ao ambiente acadêmico e de gestão da academia <br>
 
 ## Diagrama de classes
 
-O diagrama de classes ilustra graficamente a estrutura do software e como cada uma das classes estará interligada. Essas classes servem de modelo para materializar os objetos que serão executados na memória.
 
-> **Links úteis**:
-> - [Diagramas de classes - documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.7.0?topic=diagrams-class)
-> - [O que é um diagrama de classe UML?](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
++----------------+          +----------------+         +--------------------+
+|     Usuario    |<>--------|     Perfil     |         |    Comentario      |
++----------------+          +----------------+         +--------------------+
+| - id           |          | - id           |         | - id               |
+| - nome         |          | - nome         |         | - dataHora         |
+| - email        |          +----------------+         | - conteudo         |
+| - senha        |                                    | - autor (Usuario)  |
+| - tipoPerfil   |                                    | - aluno (Aluno)    |
++----------------+                                    +--------------------+
+
+        ▲
+        |
+        |
++---------------+          +------------------+        +------------------+
+|    Aluno      |<>--------|     Turma        |<>------|   Instrutor      |
++---------------+          +------------------+        +------------------+
+| - matricula   |          | - id             |        | - id             |
+| - cpf         |          | - nome           |        | - nome           |
+| - endereco    |          | - horario        |        | - cpf            |
+| - telefone    |          | - modalidade     |        | - formacao       |
+| - email       |          +------------------+        | - contato        |
++---------------+                                    +------------------+
+
+        |
+        | 1
+        |------------------------+
+                                 |
+                            +-------------------+
+                            |     Frequencia     |
+                            +-------------------+
+                            | - id              |
+                            | - data            |
+                            | - presente        |
+                            | - aluno           |
+                            | - turma           |
+                            +-------------------+
+
+                            +-------------------+
+                            |   Desempenho      |
+                            +-------------------+
+                            | - id              |
+                            | - aluno           |
+                            | - atributos       |
+                            | - observacoes     |
+                            +-------------------+
+
 
 ##  Modelo de dados
 
