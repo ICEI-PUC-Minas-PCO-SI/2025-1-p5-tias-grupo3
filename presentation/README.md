@@ -6,10 +6,7 @@
 
 ## Slides
 
-Coloque aqui o conjunto de slides.
-
-> O arquivo deve estar no formato PDF e conter a apresentação completa do projeto, abordando todos os itens trabalhados nos demais artefatos. 
-
+[Copy of Academia Sigma.pdf](https://github.com/user-attachments/files/20971137/Copy.of.Academia.Sigma.pdf)
 
 
 ## Foto do Grupo
