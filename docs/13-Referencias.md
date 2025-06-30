@@ -1,19 +1,13 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc.) utilizadas no desenvolvimento do trabalho.
+- ASSIS, Michel dos Santos; MORAES, Luciana de. Desenvolvimento de um Sistema Web para Gerenciamento de Academia. Revista Científica Multidisciplinar Núcleo do Conhecimento, ano 05, vol. 06, p. 48-68, jun. 2020. Disponível em: https://www.nucleodoconhecimento.com.br/tecnologia-da-informacao/sistema-web-para-gerenciamento. Acesso em: 28 jun. 2025. <br>
 
-Exemplo:
+- GASPARINI, Isabela; BARBOSA, Simone D. J.; SILVA, Cleidson R. B. da. Interação Humano-Computador e Experiência do Usuário. Porto Alegre: Bookman, 2021. <br>
 
-- BENYON, David. **Interação humano-computador**. 2. ed. São Paulo: Pearson Prentice Hall, 2011.
+- GOMES, Matheus do Nascimento et al. Sistema para Controle de Frequência de Alunos em Academias de Artes Marciais. Revista de Engenharia e Pesquisa Aplicada (REPA), v. 6, n. 2, p. 141-153, 2021. Disponível em: https://seer.ucp.br/seer/index.php/repa/article/view/2251. Acesso em: 28 jun. 2025. <br>
 
-- CORMEN, Thomas H et al. **Algoritmos:** teoria e prática. 4. ed. Rio de Janeiro: GEN LTC, 2024.
- 
-- ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019.
+- OLIVEIRA, Allan et al. Modelagem de Processos de Negócio: Uma Revisão Integrativa. Revista de Gestão e Secretariado, v. 12, n. 1, p. 137-159, 2021. Disponível em: https://periodicos.feevale.br/seer/index.php/rege/sec/article/view/2465. Acesso em: 28 jun. 2025. <br>
 
-- RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial:** uma abordagem moderna. 4. ed. Rio de Janeiro, RJ: LTC, 2022.
+- PINHEIRO, Marco Aurélio; FIGUEIREDO, Débora C. Metodologias de Desenvolvimento de Software: Uma Revisão Sistemática de Literatura. Revista Tecnologia e Sociedade, Curitiba, v. 16, n. 42, p. 1-19, 2020. Disponível em: https://revistas.utfpr.edu.br/rts/article/view/11914. Acesso em: 28 jun. 2025. <br>
 
-- SUTHERLAND, Jeffrey Victor; SUTHERLAND, J. J. **Scrum:** a arte de fazer o dobro do trabalho na metade do tempo. Rio de Janeiro, RJ: Sextante, 2019. 254 p.
-
-> **Links úteis**:
-> - [Padrão PUC Minas de normalização ABNT](http://portal.pucminas.br/biblioteca/documentos/GUIA-COMPLETO-ABNT-Elaborar-formatar-trabalho-cientificoNOVO.pdf)
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/)
+- SILVA, Arthur Henrique da et al. Aplicação da Metodologia BPM para Modelagem de Processos de Negócio: Estudo de Caso em uma Academia. Revista Tecnológica, v. 30, n. 2, p. 91-100, 2021. Disponível em: https://periodicos.ifg.edu.br/index.php/tecnologica/article/view/1193. Acesso em: 28 jun. 2025. <br> 
