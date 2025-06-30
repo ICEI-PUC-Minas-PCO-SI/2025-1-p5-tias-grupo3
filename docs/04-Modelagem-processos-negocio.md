@@ -10,13 +10,22 @@ Atualmente, o controle de frequência e acompanhamento técnico dos alunos de Ji
 - Comunicação verbal ou via WhatsApp entre instrutores e gestão para compartilhar informações sobre evolução ou faltas recorrentes dos alunos.<br>
 - Controle de matrículas e turmas realizado pela secretária por meio de planilhas digitais simples no computador da recepção, sem integração com relatórios de frequência ou evolução. <br>
 
+### Problemas identificados no processo atual
+- Alto risco de perda ou extravio de informações registradas em papel. <br>
+- Falta de integração entre frequência, matrícula e evolução técnica dos alunos. <br>
+- Retrabalho constante, pois dados registrados em papel precisam ser transcritos para planilhas digitais posteriormente. <br>
+- Dificuldade de acesso rápido a informações estratégicas pelos gestores, como alunos com baixa frequência ou evolução estagnada.<br>
+- Dependência de múltiplos arquivos e cadernos, gerando desorganização e falhas de comunicação.<br>
+
 ## Descrição geral da proposta (Modelagem TO BE)
 
-Tendo identificado os gargalos dos modelos AS-IS, apresentem uma descrição da proposta de solução, buscando maior eficiência com a introdução da tecnologia. Abordem também os limites dessa solução e seu alinhamento com as estratégias e objetivos do contexto de negócio escolhido.
+A solução proposta consiste na implantação de um sistema web integrado que automatiza o registro de frequência, cadastro de alunos, turmas e acompanhamento técnico individual, permitindo acesso simultâneo por gestores, instrutores e secretários. Com isso, os dados passam a ser armazenados em banco de dados relacional, garantindo segurança, integridade e facilidade de consulta.
 
-Cole aqui os modelos da solução proposta (modelo TO-BE), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina. Cada processo identificado deve ter seu modelo TO-BE específico. Descrevam as oportunidades de melhoria de cada processo da solução proposta.
-
-Apresente aqui uma descrição da sua proposta, abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente também as oportunidades de melhoria.
+### Principais mudanças e oportunidades de melhoria
+- Eliminação do registro manual em papel, substituindo por registro direto no sistema via notebook, tablet ou smartphone. <br>
+- Integração dos cadastros de alunos, frequência, turmas e evolução técnica, possibilitando emissão de relatórios automáticos.<br>
+- Acesso rápido a indicadores de desempenho e frequência, apoiando a gestão pedagógica e administrativa.<br>
+- Comunicação facilitada entre secretários, gestores e instrutores por meio do sistema centralizado.<br>
 
 ## Modelagem dos processos
 
