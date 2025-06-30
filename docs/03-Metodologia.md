@@ -65,16 +65,16 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 Atualizado em: 21/04/2024
 
-| Responsável   | Tarefa/Requisito  | Iniciado em    | Prazo      | Status | Terminado em    |<br>
-| :----         |    :----          |      :----:    | :----:     | :----: | :----:          |<br>
-| Vinicius| Login  | 12/05/2025      | 30/06/2025                 | ✔️ | 05/02/2024      |<br>
-| Vinicius e Lucas | CRUD de Usuários  | 12/05/2025 | 30/06/2025  | ✔️ | 05/02/2024      |<br>
-| Lucas e Vinicius | CRUD de Turmas	  |28/05/2025 | 30/06/2025   | ✔️ |                 |<br>
-| Pedro e Vinicius | CRUD de Alunos	  | 28/05/2025 | 30/06/2025   | ✔️ |                 |<br>
-| Lucas e Pedro | Menu Principal	  | 12/05/2025| 30/06/2025     | ✔️  |       |<br>
-| Caolina, Vinicius e Lucas   | Perfil do Aluno	 |30/06/2025 | 12/02/2005 | ✔️  |       |<br>
-| Bruna e Vinicius| Registrar Presença| 28/05/2025| 30/06/2025   | ✔️  |       |<br>
-| Vinicus | Modificar estrutura do banco | 29/05/2025| 30/06/2025 | ✔️  |       |<br>
+| Responsável   | Tarefa/Requisito  | Iniciado em    | Prazo      | Status | Terminado em |<br>
+| :----         |    :----          |      :----:    | :----:     | :----: | :----:       |<br>
+| Vinicius| Login  | 12/05/2025      | 30/06/2025                 | ✔️ | 27/06/2025      |<br>
+| Vinicius e Lucas | CRUD de Usuários  | 01/06/2025  | 30/06/2025  | ✔️ | 01/06/2025     |br>
+| Lucas e Vinicius | CRUD de Turmas	  |28/05/2025 | 30/06/2025   | ✔️ |  01/06/2025      |<br>
+| Pedro e Vinicius | CRUD de Alunos	  | 28/05/2025 | 30/06/2025  | ✔️ | 16/06/2025       |<br>
+| Lucas e Pedro | Menu Principal	    | 12/05/2025| 30/06/2025     | ✔️  |   27/06/2025  |<br>
+| Caolina, Vinicius e Lucas   | Perfil do Aluno	 |30/06/2025 | 12/02/2005 | ✔️  |28/06/2025 |<br>
+| Bruna e Vinicius| Registrar Presença| 28/05/2025| 30/06/2025   | ✔️  | 20/06/2025      |<br>
+| Vinicus | Modificar estrutura do banco | 29/05/2025| 30/06/2025 | ✔️  |  27/06/2025    |<br>
 
 #### Sprint 2 <br>
 
@@ -82,20 +82,15 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    | <br>
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          | <br>
-| AlunaX        | 	Integração Login   | 01/02/2024     |30/06/2025 | ✔️    | 05/02/2024      |<br>
-| AlunaZ        |Integração Home	    | 03/02/2024     | 30/06/2025 | ✔️    |                 | <br>
-| AlunoY        | Integração Turmas	  | 01/02/2024     | 30/06/2025 | ✔️    |                 |<br>
-| AlunoK        |Integração Usuários	  |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
-| AlunoK        |Integração Alunos		  |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
-| Bruna         |Registrar Aula	        |  01/01/2024    | 30/06/2025 | ✔️  |                 |<br>
-| AlunoK        |Ajuste exclusão de turmas         	  |  30/06/2025    | 12/03/2024 | ✔️ |                 |<br>
-| AlunoK        |Ajuste exclusão de alunos		  |  30/06/2025    | 12/03/2024 | ✔️  |                 |<br>
-| AlunoK        |	Documentação de testes		  |  30/06/2025    | 12/03/2024 | ✔️  |                 |<br>
-| Carolina      |Pop-ups (opcional)			  |  27/06/2025 | 30/06/2025 | ✔️ |                 |<br>
-| AlunoK        |Ajuste na frequência			  |  30/06/2025    | 30/06/2025 | ✔️ |                 |<br>
-| AlunoK        | Atualizar banco com exclusão			  | 30/06/2025  | 30/06/2025 | ✔️ |                 |<br>
-| Carolina       | Ajustar os filtros de pesquisa		  | 27/06/2025  | 30/06/2025 | ✔️ |                 |<br>
-
+| Carolina e Lucas| 	Login     | 29/05/2025      |30/06/2025 | ✔️    | 24/06/2025     |<br>
+| Lucas         |   Home	    | 29/05/2025    | 30/06/2025 | ✔️    |  21/06/2025    | <br>
+| Lucas         |   Turmas	  | 29/05/2025    | 30/06/2025 | ✔️    |  21/06/2025    |<br>
+| Lucas         |   Usuários	|  29/05/2025   | 30/06/2025 | ✔️  |   21/06/2025     |<br>
+| Carolina e Lucas|   Alunos		|  29/05/2025 | 30/06/2025 | ✔️  |   24/06/2025    |<br>
+| Bruna         |    Aula	    |  16/06/2025   | 30/06/2025 | ✔️  |  16/06/2025      |<br>
+| Vinicius      | Banco de Dados  |13/05/2025 | 30/06/2025 | ✔️  |16/06/2025    |<br>
+| Pedro e Rafael|	Documentação de teste |  28/06/2025   | 30/06/2025 | ✔️  |28/06/2025  |<br>
+| Carolina      |Pop-ups (opcional)	 |  27/06/2025 | 30/06/2025 | ✔️ | 28/06/2025  |<br>
 
 
 
@@ -109,26 +104,27 @@ Legenda:
 
 
 
-### Processo
+### Processo <br>
 
-Coloque informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O grupo seguiu a metodologia ágil Scrum para organizar e acompanhar o desenvolvimento do projeto. As tarefas foram divididas em sprints, com prazos definidos para cada entrega parcial e reuniões periódicas para alinhamento da equipe, revisão do progresso e replanejamento quando necessário. 
+Para o gerenciamento do projeto, utilizamos a ferramenta Trello, onde as tarefas foram organizadas em quadros com colunas que indicavam o status de cada atividade, como "A Fazer", "Em andamento" e "Concluído". Essa organização visual permitiu à equipe acompanhar o progresso das entregas, facilitar a comunicação e garantir que todos estivessem cientes de suas responsabilidades. <br>
 
+## Relação de ambientes de trabalho<br>
 
-## Relação de ambientes de trabalho
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. Todos os ambientes e frameworks utilizados no desenvolvimento da aplicação estão listados na seção abaixo.<br>
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. Todos os ambientes e frameworks utilizados no desenvolvimento da aplicação estão listados na seção abaixo.
+### Ferramentas<br>
 
-### Ferramentas
+Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.<br>
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
+Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.<br>
 
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
-
-| Ambiente                            | Plataforma                         | Link de acesso                         |
-|-------------------------------------|------------------------------------|----------------------------------------|
+| Ambiente                            | Plataforma                         | Link de acesso                         |<br>
+|-------------------------------------|------------------------------------|----------------------------------------|<br>
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-SI/2025-1-p5-tias-grupo3.git|<br>
 | Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1iHhh2hjOmBgQGTWVt_aO8kXqRS3qxbHHrhcOum2YHgo/edit?usp=sharing |<br>
 | Link Figma                          | Figma                              | https://www.figma.com/design/YLEuOfqvxmMry87SxlO8mm/Black-Belt?node-id=0-1&p=f&t=VtBiJCURuEpvY7Ud-0| <br>
 | Link Caso de Teste                  | Word                               | https://sgapucminasbr my.sharepoint.com/personal/1452976_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EbYkJV8cdrpCg2ftZamBx1MBr_ypgZHEQDfnDPPJxNpvbg&e=ofIhjb  | <br>
-| Hospedagem - Explicação sobre a hospedagem no Tópico 7 – Arquitetura de Solução |
+| Hospedagem - Explicação sobre a hospedagem no Tópico 7 – Arquitetura de Solução |<br>
+
  
