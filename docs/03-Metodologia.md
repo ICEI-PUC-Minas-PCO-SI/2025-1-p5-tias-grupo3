@@ -21,15 +21,6 @@ O projeto segue a seguinte convenção para o nome de branches: <br>
 - `Versao-1.0 `: Primeira versão completa do sistema funcionando. Inclui funcionalidades principais, correções de layout e integração inicial. <br>
 - `Versao-1.1	`: Segunda versão estável, com melhorias adicionais de usabilidade, ajustes visuais e refinamentos nas funcionalidades implementadas. <br>
 
-  
-Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas: (TIRAR ESSA PARTE?)
-
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
-
-
 ## Planejamento do projeto<br>
 
 ###  Divisão de papéis <br>
