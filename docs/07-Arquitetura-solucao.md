@@ -60,11 +60,7 @@ Realizado por meio de navegador web em dispositivos desktop ou mobile, com auten
 
 ##  Modelo de dados
 
-O desenvolvimento da solução proposta requer a existência de bases de dados que permitam realizar o cadastro de dados e os controles associados aos processos identificados, assim como suas recuperações.
-
-Utilizando a notação do DER (Diagrama Entidade-Relacionamento), elabore um modelo, usando alguma ferramenta, que contemple todas as entidades e atributos associados às atividades dos processos identificados. Deve ser gerado um único DER que suporte todos os processos escolhidos, visando, assim, uma base de dados integrada. O modelo deve contemplar também o controle de acesso dos usuários (partes interessadas nos processos) de acordo com os papéis definidos nos modelos do processo de negócio.
-
-Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos.
+![image](https://github.com/user-attachments/assets/ada56f3b-d165-4c95-81bf-b0de38b8c236)
 
 
 ### Modelo físico
@@ -118,7 +114,9 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foram realizados.
+Atualmente, a hospedagem e o lançamento da plataforma ainda não foram realizados, pois o cliente (Academia Sigma) está em processo de análise para definição da melhor opção de ambiente que gere o menor custo possível.
+
+A escolha da hospedagem será feita considerando fatores como viabilidade financeira, segurança, escalabilidade e suporte técnico, de forma a garantir que o sistema seja implantado em um ambiente que atenda às necessidades operacionais da academia sem comprometer o orçamento disponível. Assim que a decisão for concluída, será realizado o processo de configuração do servidor, publicação da aplicação e treinamento dos usuários finais para utilização plena da solução.
 
 
 ## Qualidade de software
