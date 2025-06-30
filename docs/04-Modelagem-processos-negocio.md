@@ -4,9 +4,11 @@
 
 ## Modelagem da situação atual (Modelagem AS IS)<br>
 
-Apresente uma descrição textual de como os sistemas atuais resolvem o problema que seu projeto se propõe a resolver. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional.
-
-Com o tema do projeto definido, escolham alguns processos no contexto de negócios. Para ilustrar os potenciais ganhos com a automatização, imaginem processos manuais, ineficientes e/ou com muitas idas e vindas, gerando, assim, retrabalho. Colem aqui os modelos dos processos atuais (modelo AS-IS), elaborados com o apoio da ferramenta baseada em BPMN utilizada na disciplina.
+Atualmente, o controle de frequência e acompanhamento técnico dos alunos de Jiu-jitsu na Academia Sigma é realizado manualmente, com utilização de: <br>
+- Planilhas impressas para registro de presença, preenchidas em cada aula pelo instrutor. <br>
+- Cadernos ou fichas físicas onde os instrutores anotam observações sobre o desempenho técnico de cada aluno, como golpes aprendidos ou dificuldades específicas.<br>
+- Comunicação verbal ou via WhatsApp entre instrutores e gestão para compartilhar informações sobre evolução ou faltas recorrentes dos alunos.<br>
+- Controle de matrículas e turmas realizado pela secretária por meio de planilhas digitais simples no computador da recepção, sem integração com relatórios de frequência ou evolução. <br>
 
 ## Descrição geral da proposta (Modelagem TO BE)
 
