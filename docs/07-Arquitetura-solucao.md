@@ -75,16 +75,16 @@ Por meio do Entity Framework, foi possível gerar as tabelas diretamente a parti
 
 Essa abordagem foi escolhida por se adequar às boas práticas de desenvolvimento .NET e por estar alinhada aos recursos aprendidos nas disciplinas do curso. <br>
 
-﻿'using BlackBelt.Models;
-using Microsoft.EntityFrameworkCore;
+﻿'using BlackBelt.Models; <br>
+using Microsoft.EntityFrameworkCore; <br>
 
-namespace BlackBelt.Context
+namespace BlackBelt.Context <br>
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext <br>
     {
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
+        public AppDbContext(DbContextOptions options) : base(options) <br>
+        {<br>
+        }<br>
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Aluno> Alunos  { get; set; }
