@@ -29,22 +29,34 @@ A solução proposta consiste na implantação de um sistema web integrado que a
 
 ## Modelagem dos processos
 
-[PROCESSO 1 - Nome do processo](./processes/processo-1-nome-do-processo.md "Detalhamento do processo 1.")
+### PROCESSO 1 – Registro de Frequência <br>
+AS-IS <br>
+Instrutor preenche lista impressa de presença.<br>
+Secretária recolhe lista e lança manualmente na planilha digital.<br>
+Gestor solicita planilha quando precisa de relatórios.<br>
 
-[PROCESSO 2 - Nome do processo](./processes/processo-2-nome-do-processo.md "Detalhamento do processo 2.")
+TO-BE <br>
+Instrutor realiza login no sistema e registra presença dos alunos online. <br>
+Frequência é atualizada em tempo real no banco de dados. <br>
+Gestor acessa relatórios a qualquer momento. <br>
+
+### PROCESSO 2 – Acompanhamento Técnico dos Alunos
+AS-IS <br>
+Instrutor anota observações em fichas de papel. <br>
+Fichas são arquivadas fisicamente. <br>
+Gestor não tem acesso prático às anotações. <br>
+
+TO-BE <br>
+Instrutor registra comentários técnicos diretamente no perfil do aluno no sistema. <br>
+Dados ficam salvos no banco de dados e disponíveis para consulta por gestores. <br>
+Relatórios podem ser gerados com evolução técnica de cada aluno. <br>
 
 
 ## Indicadores de desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Coloque no mínimo 5 indicadores.
+Os indicadores de desempenho apresentados podem ser gerados a partir dos dados adquiridos pelo sistema atual, uma vez que todas as informações necessárias – como frequência, evolução técnica, cadastro de turmas e alunos – já são armazenadas de forma estruturada no banco de dados.
 
-Use o seguinte modelo:
+Como proposta futura, recomenda-se o investimento na criação de uma tela específica de relatórios dentro do sistema, que apresente esses indicadores de forma organizada e visualmente trabalhada, por meio de gráficos e dashboards. Essa funcionalidade agregaria valor à plataforma, permitindo que gestores e instrutores tomem decisões mais rápidas e assertivas, sem a necessidade de exportação manual e análise externa dos dados.
 
-| **Indicador** | **Objetivos** | **Descrição** | **Fonte de dados** | **Fórmula de cálculo** |
-| ---           | ---           | ---           | ---             | ---             |
-| Percentual de reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total de atendimentos | Tabela Reclamações | número total de reclamações / número total de atendimentos |
-| Taxa de requisições atendidas | Melhorar a prestação de serviços medindo a porcentagem de requisições atendidas| Mede a % de requisições atendidas na semana | Tabela Solicitações | (número de requisições atendidas / número total de requisições) * 100 |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês | Tabela Pedidos | (número de pedidos entregues / número total de pedidos) * 100 |
+![image](https://github.com/user-attachments/assets/a29443f8-7653-4b8b-93a0-a256a6728ece)
 
-
-Obs.: todas as informações necessárias para gerar os indicadores devem estar no diagrama de classe a ser apresentado posteriormente.
