@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/bff42400-653f-4763-acc7-e1e0b7e42f56)
 # Metodologia <br>
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>
