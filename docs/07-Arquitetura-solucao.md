@@ -52,51 +52,7 @@ Realizado por meio de navegador web em dispositivos desktop ou mobile, com auten
 ## Diagrama de classes
 
 
-+----------------+          +----------------+         +--------------------+
-|     Usuario    |<>--------|     Perfil     |         |    Comentario      |
-+----------------+          +----------------+         +--------------------+
-| - id           |          | - id           |         | - id               |
-| - nome         |          | - nome         |         | - dataHora         |
-| - email        |          +----------------+         | - conteudo         |
-| - senha        |                                    | - autor (Usuario)  |
-| - tipoPerfil   |                                    | - aluno (Aluno)    |
-+----------------+                                    +--------------------+
-
-        ▲
-        |
-        |
-+---------------+          +------------------+        +------------------+
-|    Aluno      |<>--------|     Turma        |<>------|   Instrutor      |
-+---------------+          +------------------+        +------------------+
-| - matricula   |          | - id             |        | - id             |
-| - cpf         |          | - nome           |        | - nome           |
-| - endereco    |          | - horario        |        | - cpf            |
-| - telefone    |          | - modalidade     |        | - formacao       |
-| - email       |          +------------------+        | - contato        |
-+---------------+                                    +------------------+
-
-        |
-        | 1
-        |------------------------+
-                                 |
-                            +-------------------+
-                            |     Frequencia     |
-                            +-------------------+
-                            | - id              |
-                            | - data            |
-                            | - presente        |
-                            | - aluno           |
-                            | - turma           |
-                            +-------------------+
-
-                            +-------------------+
-                            |   Desempenho      |
-                            +-------------------+
-                            | - id              |
-                            | - aluno           |
-                            | - atributos       |
-                            | - observacoes     |
-                            +-------------------+
+![image](https://github.com/user-attachments/assets/72891e1e-2471-4527-854a-9dc022ef1b72)
 
 
 ##  Modelo de dados
@@ -107,23 +63,6 @@ Utilizando a notação do DER (Diagrama Entidade-Relacionamento), elabore um mod
 
 Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos.
 
-### Modelo ER
-
-O Modelo ER representa, por meio de um diagrama, como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
-
-> **Links úteis**:
-> - [Como fazer um diagrama entidade relacionamento](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
-
-### Esquema relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-
-![Exemplo de um modelo relacional](images/modelo_relacional.png "Exemplo de modelo relacional.")
----
-
-> **Links úteis**:
-> - [Criando um modelo relacional - documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/12.0.0?topic=designer-creating-relational-model)
 
 ### Modelo físico
 
