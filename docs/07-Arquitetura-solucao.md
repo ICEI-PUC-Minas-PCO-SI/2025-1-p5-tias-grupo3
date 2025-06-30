@@ -133,9 +133,13 @@ namespace BlackBelt.Context <br>
 
 ## Hospedagem
 
-Atualmente, a hospedagem e o lançamento da plataforma ainda não foram realizados, pois o cliente (Academia Sigma) está em processo de análise para definição da melhor opção de ambiente que gere o menor custo possível.
+A hospedagem da plataforma foi realizada utilizando a plataforma Render, que oferece ambiente de deploy automatizado, escalável e com fácil integração aos repositórios Git. Para garantir portabilidade, consistência e facilidade no processo de publicação, foi utilizada também a ferramenta Docker, permitindo empacotar a aplicação com todas as suas dependências em containers.
 
-A escolha da hospedagem será feita considerando fatores como viabilidade financeira, segurança, escalabilidade e suporte técnico, de forma a garantir que o sistema seja implantado em um ambiente que atenda às necessidades operacionais da academia sem comprometer o orçamento disponível. Assim que a decisão for concluída, será realizado o processo de configuração do servidor, publicação da aplicação e treinamento dos usuários finais para utilização plena da solução.
+Essa abordagem possibilitou: <br>
+
+- Deploy mais rápido e seguro, reduzindo problemas de incompatibilidade entre ambientes de desenvolvimento e produção.<br>
+- Escalabilidade, pois a Render gerencia a infraestrutura conforme a demanda de acesso.<br>
+- Facilidade de manutenção, pois o uso de containers Docker simplifica atualizações futuras do sistema.<br>
 
 
 ## Qualidade de software
