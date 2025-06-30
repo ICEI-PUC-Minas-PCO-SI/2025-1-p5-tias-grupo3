@@ -75,13 +75,13 @@ Por meio do Entity Framework, foi possível gerar as tabelas diretamente a parti
 
 Essa abordagem foi escolhida por se adequar às boas práticas de desenvolvimento .NET e por estar alinhada aos recursos aprendidos nas disciplinas do curso. <br>
 
-﻿'using BlackBelt.Models; <br>
+﻿---using BlackBelt.Models; <br>
 using Microsoft.EntityFrameworkCore; <br>
 
 namespace BlackBelt.Context <br>
-{
+{<br>
     public class AppDbContext : DbContext <br>
-    {
+    {<br>
         public AppDbContext(DbContextOptions options) : base(options) <br>
         {<br>
         }<br>
@@ -128,7 +128,7 @@ namespace BlackBelt.Context <br>
         }
 
     }
-}'
+}
 
 
 ## Hospedagem
