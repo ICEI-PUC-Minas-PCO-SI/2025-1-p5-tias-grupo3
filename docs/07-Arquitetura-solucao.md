@@ -65,51 +65,70 @@ Realizado por meio de navegador web em dispositivos desktop ou mobile, com auten
 
 ### Modelo físico
 
-Insira aqui o script de criação das tabelas do banco de dados.
+A criação das tabelas do banco de dados foi realizada utilizando o Entity Framework, pois essa ferramenta oferece maior produtividade e integração com o projeto, permitindo o desenvolvimento orientado a objetos de forma prática e eficiente. <br>
 
-Veja um exemplo:
+Por meio do Entity Framework, foi possível gerar as tabelas diretamente a partir das classes de modelo criadas no código (Code First), garantindo: <br>
 
-```sql
--- Criação da tabela Medico
-CREATE TABLE Medico (
-    MedCodigo INTEGER PRIMARY KEY,
-    MedNome VARCHAR(100)
-);
+- Facilidade de manutenção e alteração no modelo de dados conforme as mudanças nos requisitos do sistema.<br>
+- Redução de erros manuais, pois o mapeamento é feito automaticamente pelo framework, evitando inconsistências entre a aplicação e o banco. <br>
+- Agilidade no desenvolvimento, eliminando a necessidade de criação manual de cada tabela e relação diretamente no SQL Server. <br>
 
--- Criação da tabela Paciente
-CREATE TABLE Paciente (
-    PacCodigo INTEGER PRIMARY KEY,
-    PacNome VARCHAR(100)
-);
+Essa abordagem foi escolhida por se adequar às boas práticas de desenvolvimento .NET e por estar alinhada aos recursos aprendidos nas disciplinas do curso. <br>
 
--- Criação da tabela Consulta
-CREATE TABLE Consulta (
-    ConCodigo INTEGER PRIMARY KEY,
-    MedCodigo INTEGER,
-    PacCodigo INTEGER,
-    Data DATE,
-    FOREIGN KEY (MedCodigo) REFERENCES Medico(MedCodigo),
-    FOREIGN KEY (PacCodigo) REFERENCES Paciente(PacCodigo)
-);
+﻿'using BlackBelt.Models;
+using Microsoft.EntityFrameworkCore;
 
--- Criação da tabela Medicamento
-CREATE TABLE Medicamento (
-    MdcCodigo INTEGER PRIMARY KEY,
-    MdcNome VARCHAR(100)
-);
+namespace BlackBelt.Context
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }
 
--- Criação da tabela Prescricao
-CREATE TABLE Prescricao (
-    ConCodigo INTEGER,
-    MdcCodigo INTEGER,
-    Posologia VARCHAR(200),
-    PRIMARY KEY (ConCodigo, MdcCodigo),
-    FOREIGN KEY (ConCodigo) REFERENCES Consulta(ConCodigo),
-    FOREIGN KEY (MdcCodigo) REFERENCES Medicamento(MdcCodigo)
-);
-```
-Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Aluno> Alunos  { get; set; }
+        public DbSet<Login> Logins { get; set; }
+        public DbSet<Turma> Turmas { get; set; }
+        public DbSet<Presenca> Presencas { get; set; }
+        public DbSet<Habilidade> Habilidades { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Turma>()
+                .HasOne(t => t.Instrutor)
+                .WithMany(i => i.Turmas)
+                .HasForeignKey(t => t.Id_Instrutor)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Aluno>()
+                .HasOne(a => a.Turma)
+                .WithMany(t => t.Alunos)
+                .HasForeignKey(a => a.Id_Turma)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Presenca>()
+                .HasOne(p => p.Turma)
+                .WithMany(t => t.Presencas)
+                .HasForeignKey(p => p.Id_Turma)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Presenca>()
+                .HasOne(p => p.Aluno)
+                .WithMany(a => a.Presencas)
+                .HasForeignKey(p => p.Id_Aluno)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Habilidade>()
+                .HasOne(h => h.Aluno)
+                .WithMany(a => a.Habilidades)
+                .HasForeignKey(h => h.Id_Aluno)
+                .OnDelete(DeleteBehavior.Cascade);
+
+        }
+
+    }
+}'
 
 
 ## Hospedagem
