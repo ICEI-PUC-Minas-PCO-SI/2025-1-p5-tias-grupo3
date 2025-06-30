@@ -88,6 +88,6 @@ Para o gerenciamento do projeto, utilizamos a ferramenta Trello, onde as tarefas
 | Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1iHhh2hjOmBgQGTWVt_aO8kXqRS3qxbHHrhcOum2YHgo/edit?usp=sharing |<br>
 | Link Figma                          | Figma                              | https://www.figma.com/design/YLEuOfqvxmMry87SxlO8mm/Black-Belt?node-id=0-1&p=f&t=VtBiJCURuEpvY7Ud-0| <br>
 | Link Caso de Teste                  | Word                               | https://sgapucminasbr my.sharepoint.com/personal/1452976_sga_pucminas_br/_layouts/15/guestaccess.aspx?share=EbYkJV8cdrpCg2ftZamBx1MBr_ypgZHEQDfnDPPJxNpvbg&e=ofIhjb  | <br>
-| Hospedagem - Explicação sobre a hospedagem no Tópico 7 – Arquitetura de Solução |<br>
+| Hospedagem                          | Render                             | https://blackbeltprod.onrender.com | <br>
 
  
